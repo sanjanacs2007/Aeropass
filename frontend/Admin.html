@@ -19,98 +19,99 @@
         <style>
         :root {
             /* ================================================================= */
-            /* AERO PASS: PASTEL YELLOW & PINK COMBO (LIGHT MODE)                */
-            /* Creamy Lemon Chiffon (#fef08a) + Strawberry Milk Pink (#fbcfe8)  */
+            /* AERO PASS: LIGHT THEME — PASTEL SKY-BLUE, LAVENDER & FROSTED WHITE */
+            /* Primary bg: #DDF2F5 \| Secondary bg: #EAF5FA \| Card: #F8FBFF       */
             /* ================================================================= */
-            --color-surface: #fffdfa;                 /* Soft milky cream mist */
-            --color-surface-container-lowest: #ffffff; /* Crisp porcelain white card */
-            --color-surface-container-low: #fff8f8;    /* Soft pastel strawberry-cream */
-            --color-surface-container-high: #fce7f3;   /* Delicate pastel pink border */
-            --color-surface-variant: #fef2f2;
-            --color-surface-tint: #ec4899;
+            --color-surface: #CFE3E8;                  /* Main background - dull sky-blue */
+            --color-surface-container-lowest: #F8FBFF; /* Card background */
+            --color-surface-container-low: #E4EAF0;    /* Secondary background - dull sky-blue */
+            --color-surface-container-high: #D9E7F0;   /* Borders */
+            --color-surface-variant: #E8E1F8;          /* Background gradient variant */
+            --color-surface-tint: #7FB8D0;             /* Primary accent tint - dull sky-blue */
 
-            --color-on-surface: #2d132c;               /* Deep plum slate contrast */
-            --color-on-surface-variant: #6b4360;       /* Muted berry slate */
-            --color-outline: #a78b9b;                  /* Gentle outline */
-            --color-outline-variant: #fbcfe8;
+            --color-on-surface: #000000;               /* Main text - black */
+            --color-on-surface-variant: #374151;       /* Secondary text - dark grey */
+            --color-outline: #D9E7F0;                  /* Borders */
+            --color-outline-variant: #D9E7F0;
 
-            /* Pastel Yellow & Pink Accents */
-            --color-primary: #ec4899;                  /* Pastel Vibrant Rose Pink */
-            --color-primary-container: #fce7f3;        /* Soft pastel pink pill */
-            --color-on-primary: #ffffff;
-            --color-on-primary-container: #9d174d;
-            --color-primary-fixed: #fdf2f8;
-            --color-on-primary-fixed-variant: #831843;
+            /* Pastel Cyan & Periwinkle Accents - duller */
+            --color-primary: #7FB8D0;                  /* Primary accent - dull sky-blue */
+            --color-primary-container: #E8E1F8;        /* Light container */
+            --color-on-primary: #000000;
+            --color-on-primary-container: #000000;
+            --color-primary-fixed: #E8E1F8;
+            --color-on-primary-fixed-variant: #7FB8D0;
 
-            --color-secondary: #f59e0b;                /* Warm Pastel Honey Yellow */
-            --color-secondary-container: #fef9c3;      /* Soft butter yellow pill */
-            --color-on-secondary: #ffffff;
-            --color-on-secondary-container: #713f12;
-            --color-secondary-fixed: #fef08a;
-            --color-secondary-fixed-dim: #fde047;
+            --color-secondary: #9AA5D8;                /* Secondary accent - dull periwinkle */
+            --color-secondary-container: #F2F8FC;      /* Sidebar / secondary background */
+            --color-on-secondary: #000000;
+            --color-on-secondary-container: #000000;
+            --color-secondary-fixed: #F2F8FC;
+            --color-secondary-fixed-dim: #9AA5D8;
 
-            --color-tertiary: #10b981;                 /* Soft Pastel Mint */
-            --color-tertiary-container: #d1fae5;
-            --color-on-tertiary: #ffffff;
-            --color-tertiary-fixed: #d1fae5;
-            --color-on-tertiary-fixed: #065f46;
-            --color-tertiary-fixed-dim: #a7f3d0;
+            --color-tertiary: #F5E88A;                 /* Highlight */
+            --color-tertiary-container: #F5E88A;
+            --color-on-tertiary: #29394A;
+            --color-tertiary-fixed: #F5E88A;
+            --color-on-tertiary-fixed: #29394A;
+            --color-tertiary-fixed-dim: #F5E88A;
 
-            --color-error: #f43f5e;                    /* Pastel Coral */
-            --color-error-container: #ffe4e6;
-            --color-on-error: #ffffff;
-            --color-on-error-container: #9f1239;
+            --color-error: #EF5350;                    /* Error */
+            --color-error-container: #FDECEC;
+            --color-on-error: #29394A;
+            --color-on-error-container: #EF5350;
 
-            --ticket-notch-bg: #fff8f8;
-            --page-ambient-gradient: radial-gradient(1300px 850px at 15% 0%, #fdf2f8 0%, #fefce8 50%, #fff7ed 100%), #fffaf8;
+            --ticket-notch-bg: #F2F8FC;
+            --page-ambient-gradient: radial-gradient(1300px 850px at 15% 0%, #EAF5FA 0%, #DDF2F5 50%, #E8E1F8 100%), #DDF2F5;
+            color-scheme: light;
         }
 
         html.dark, [data-theme="dark"] {
             /* ================================================================= */
-            /* AERO PASS: MIDNIGHT SUNSET PASTEL (DARK MODE)                     */
-            /* Deep twilight plum & midnight velvet with glowing pink & gold     */
+            /* AERO PASS: DARK NAVY, BLUE & CYAN THEME \(DARK MODE\)                     */
+            /* Already dark - same values     */
             /* ================================================================= */
-            --color-surface: #120e18;                  /* Deep twilight velvet */
-            --color-surface-container-lowest: #1b1424; /* Elevated dark plum card */
-            --color-surface-container-low: #251b32;    /* Elevated container */
-            --color-surface-container-high: #3d284e;   /* Soft luminous plum border */
-            --color-surface-variant: #281d36;
-            --color-surface-tint: #f472b6;
+            --color-surface: #101713;                  /* Deep twilight velvet */
+            --color-surface-container-lowest: #233329; /* Elevated dark plum card */
+            --color-surface-container-low: #19251D;    /* Elevated container */
+            --color-surface-container-high: #2B3D31;   /* Soft luminous plum border */
+            --color-surface-variant: #2B3D31;
+            --color-surface-tint: #34D399;
 
-            --color-on-surface: #fdf2f8;               /* Moonlight rose-white text */
-            --color-on-surface-variant: #d4b8ca;       /* Soft moonlit plum text */
-            --color-outline: #8c6882;
-            --color-outline-variant: #4e3247;
+            --color-on-surface: #F4F7F3;               /* Moonlight rose-white text */
+            --color-on-surface-variant: #A6B5A8;       /* Soft moonlit plum text */
+            --color-outline: #35483B;
+            --color-outline-variant: #35483B;
 
-            /* Luminous Pastel Pink & Gold Dark Accents */
-            --color-primary: #f472b6;                  /* Luminous pastel pink */
-            --color-primary-container: #500724;        /* Deep midnight plum container */
-            --color-on-primary: #120e18;
-            --color-on-primary-container: #fbcfe8;
-            --color-primary-fixed: #2e1025;
-            --color-on-primary-fixed-variant: #f472b6;
+            /* Cyan, Blue & Gold Accents */
+            --color-primary: #34D399;                  /* Cyan */
+            --color-primary-container: #233329;        /* Dark cyan container */
+            --color-on-primary: #101713;
+            --color-on-primary-container: #34D399;
+            --color-primary-fixed: #19251D;
+            --color-on-primary-fixed-variant: #34D399;
 
-            --color-secondary: #fde047;                /* Luminous pastel gold */
-            --color-secondary-container: #451a03;      /* Deep honey amber container */
-            --color-on-secondary: #120e18;
-            --color-on-secondary-container: #fef08a;
-            --color-secondary-fixed: #2b1704;
-            --color-secondary-fixed-dim: #eab308;
+            --color-secondary: #65A982;                /* Blue */
+            --color-secondary-container: #233329;      /* Secondary background */
+            --color-on-secondary: #101713;
+            --color-on-secondary-container: #65A982;
+            --color-secondary-fixed: #19251D;
+            --color-secondary-fixed-dim: #65A982;
 
-            --color-tertiary: #86efac;                 /* Luminous pastel mint */
-            --color-tertiary-container: #064e3b;
-            --color-on-tertiary: #120e18;
-            --color-tertiary-fixed: #064e3b;
-            --color-on-tertiary-fixed: #a7f3d0;
-            --color-tertiary-fixed-dim: #059669;
+            --color-tertiary: #D6B46A;                 /* Gold */
+            --color-tertiary-container: #233329;
+            --color-on-tertiary: #101713;
+            --color-tertiary-fixed: #233329;
+            --color-on-tertiary-fixed: #D6B46A;
+            --color-tertiary-fixed-dim: #D6B46A;
 
-            --color-error: #fda4af;
-            --color-error-container: #4c0519;
-            --color-on-error: #120e18;
-            --color-on-error-container: #fecdd3;
+            --color-error: #F07878;
+            --color-error-container: #233329;
+            --color-on-error: #F4F7F3;
+            --color-on-error-container: #F07878;
 
-            --ticket-notch-bg: #251b32;
-            --page-ambient-gradient: radial-gradient(1300px 850px at 15% 0%, #291227 0%, #1d172e 50%, #261c10 100%), #120e18;
+            --ticket-notch-bg: #19251D;
+            --page-ambient-gradient: radial-gradient(1300px 850px at 15% 0%, #19251D 0%, #101713 50%, #101713 100%), #101713;
         }
 
         /* Ambient Pastel Page Background */
@@ -120,79 +121,88 @@
             transition: background 0.3s ease, color 0.3s ease;
         }
 
-        /* Hero Banner Pastel Yellow & Pink Combo */
+        /* Hero Banner Pastel Sky-Blue & Lavender Combo */
         .pastel-hero-banner {
-            background: linear-gradient(135deg, #fef08a 0%, #fed7aa 35%, #fbcfe8 75%, #f472b6 100%) !important;
-            color: #3b122d !important;
-            border: 2px solid #f9a8d4 !important;
-            box-shadow: 0 12px 35px -5px rgba(244, 114, 182, 0.28) !important;
+            background: linear-gradient(135deg, #EAF5FA 0%, #E8E1F8 35%, #F8FBFF 75%, #8DDCE8 100%) !important;
+            color: #000000 !important;
+            border: 2px solid #8DDCE8 !important;
+            box-shadow: 0 12px 35px -5px rgba(141, 220, 232, 0.3) !important;
         }
         html.dark .pastel-hero-banner {
-            background: linear-gradient(135deg, #3d1c2c 0%, #2e1738 50%, #362713 100%) !important;
-            color: #fdf2f8 !important;
-            border: 2px solid #f472b6 !important;
-            box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.5) !important;
+            background: linear-gradient(135deg, #19251D 0%, #233329 50%, #2B3D31 100%) !important;
+            color: #F4F7F3 !important;
+            border: 2px solid #34D399 !important;
+            box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.6) !important;
         }
 
-        /* Boarding Pass Pastel Header */
+        /* Boarding Pass Sky-Blue Header */
         .pastel-pass-header {
-            background: linear-gradient(135deg, #fef9c3 0%, #fed7aa 50%, #fce7f3 100%) !important;
-            color: #3b122d !important;
-            border-bottom: 2px solid #f9a8d4 !important;
+            background: linear-gradient(135deg, #EAF5FA 0%, #E8E1F8 50%, #F8FBFF 100%) !important;
+            color: #000000 !important;
+            border-bottom: 2px solid #8DDCE8 !important;
         }
         html.dark .pastel-pass-header {
-            background: linear-gradient(135deg, #3d1c2c 0%, #2e1738 50%, #362713 100%) !important;
-            color: #fdf2f8 !important;
-            border-bottom: 2px solid #f472b6 !important;
+            background: linear-gradient(135deg, #19251D 0%, #233329 50%, #2B3D31 100%) !important;
+            color: #F4F7F3 !important;
+            border-bottom: 2px solid #34D399 !important;
         }
 
-        /* Flight Spotlight Card Pastel Header */
+        /* Flight Spotlight Card Sky-Blue Header */
         .pastel-flight-header {
-            background: linear-gradient(135deg, #fef08a 0%, #fed7aa 40%, #fbcfe8 100%) !important;
-            color: #3b122d !important;
-            border: 2px solid #f9a8d4 !important;
-            box-shadow: 0 10px 30px -5px rgba(244, 114, 182, 0.25) !important;
+            background: linear-gradient(135deg, #EAF5FA 0%, #E8E1F8 40%, #8DDCE8 100%) !important;
+            color: #000000 !important;
+            border: 2px solid #8DDCE8 !important;
+            box-shadow: 0 10px 30px -5px rgba(141, 220, 232, 0.3) !important;
         }
         html.dark .pastel-flight-header {
-            background: linear-gradient(135deg, #3d1c2c 0%, #2e1738 50%, #362713 100%) !important;
-            color: #fdf2f8 !important;
-            border: 2px solid #f472b6 !important;
-            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5) !important;
+            background: linear-gradient(135deg, #19251D 0%, #233329 50%, #2B3D31 100%) !important;
+            color: #F4F7F3 !important;
+            border: 2px solid #34D399 !important;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.6) !important;
         }
 
-        /* Pastel Brand Logo Badge (Yellow-Pink Gradient) */
+        /* Brand Logo Badge (Highlight-Cyan Gradient) */
         .pastel-brand-badge {
-            background: linear-gradient(135deg, #fde047 0%, #f472b6 100%) !important;
-            color: #3b122d !important;
-            border: 1.5px solid #f9a8d4 !important;
+            background: linear-gradient(135deg, #F5E88A 0%, #8DDCE8 100%) !important;
+            color: #000000 !important;
+            border: 1.5px solid #8DDCE8 !important;
         }
         html.dark .pastel-brand-badge {
-            background: linear-gradient(135deg, #ca8a04 0%, #db2777 100%) !important;
-            color: #fdf2f8 !important;
-            border: 1.5px solid #f472b6 !important;
+            background: linear-gradient(135deg, #D6B46A 0%, #34D399 100%) !important;
+            color: #101713 !important;
+            border: 1.5px solid #34D399 !important;
         }
 
-        /* Primary Button (Radiant Pastel Pink to Orange-Yellow) */
+        /* Primary Button (Pastel Cyan to Periwinkle) */
         .btn-pastel-primary {
-            background: linear-gradient(135deg, #f472b6 0%, #fb923c 100%) !important;
-            color: #ffffff !important;
-            box-shadow: 0 4px 14px rgba(244, 114, 182, 0.35) !important;
+            background: linear-gradient(135deg, #8DDCE8 0%, #A5B6E8 100%) !important;
+            color: #000000 !important;
+            box-shadow: 0 4px 14px rgba(141, 220, 232, 0.35) !important;
             transition: all 0.2s ease !important;
         }
         .btn-pastel-primary:hover {
-            background: linear-gradient(135deg, #ec4899 0%, #f97316 100%) !important;
-            box-shadow: 0 6px 18px rgba(244, 114, 182, 0.45) !important;
+            background: linear-gradient(135deg, #8DDCE8 0%, #A5B6E8 100%) !important;
+            box-shadow: 0 6px 18px rgba(141, 220, 232, 0.45) !important;
             transform: translateY(-1px) !important;
         }
 
+        html.dark .btn-pastel-primary {
+            background: linear-gradient(135deg, #34D399 0%, #65A982 100%) !important;
+            color: #101713 !important;
+            box-shadow: 0 4px 14px rgba(52, 211, 153, 0.22) !important;
+        }
+        html.dark .btn-pastel-primary:hover {
+            background: linear-gradient(135deg, #34D399 0%, #65A982 100%) !important;
+            box-shadow: 0 6px 18px rgba(52, 211, 153, 0.3) !important;
+        }
         /* Glass card styling */
         .glass-card {
-            background: rgba(255, 255, 255, 0.94);
+            background: rgba(248, 251, 255, 0.94);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
         }
         html.dark .glass-card {
-            background: rgba(27, 20, 36, 0.92);
+            background: rgba(35, 51, 41, 0.92);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
         }
@@ -230,30 +240,30 @@
 
         /* SVG Map Elements in Dark Mode */
         html.dark .map-terminal-envelope {
-            fill: #1b1424 !important;
-            stroke: #3d284e !important;
+            fill: #19251D !important;
+            stroke: #35483B !important;
         }
         html.dark .map-apron-bg {
-            fill: #120e18 !important;
+            fill: #101713 !important;
         }
         html.dark .map-boulevard-bg {
-            fill: #22182d !important;
-            stroke: #3d284e !important;
+            fill: #233329 !important;
+            stroke: #35483B !important;
         }
         html.dark .map-walkway-bg {
-            fill: #271a33 !important;
-            stroke: #3d284e !important;
+            fill: #2B3D31 !important;
+            stroke: #35483B !important;
         }
         html.dark .map-pier-bg {
-            fill: #1f1528 !important;
-            stroke: #3d284e !important;
+            fill: #19251D !important;
+            stroke: #35483B !important;
         }
         html.dark .map-grid-line {
-            stroke: #2e1d3d !important;
+            stroke: #35483B !important;
         }
         html.dark .map-gate-card {
-            fill: #271731 !important;
-            stroke: #f472b6 !important;
+            fill: #233329 !important;
+            stroke: #34D399 !important;
         }
 
         @keyframes navDash {
@@ -270,8 +280,8 @@
             animation: scanLaser 2s ease-in-out infinite;
         }
         @keyframes pulseGlow {
-            0%, 100% { box-shadow: 0 0 15px rgba(244, 114, 182, 0.3); }
-            50% { box-shadow: 0 0 32px rgba(244, 114, 182, 0.6); }
+            0%, 100% { box-shadow: 0 0 15px rgba(37, 198, 218, 0.3); }
+            50% { box-shadow: 0 0 32px rgba(37, 198, 218, 0.6); }
         }
         .pulse-glow-emerald {
             animation: pulseGlow 2.5s infinite;
@@ -285,13 +295,61 @@
             animation: shake 0.35s ease-in-out;
         }
         ::-webkit-scrollbar { width: 6px; height: 6px; }
-        ::-webkit-scrollbar-track { background: rgba(252, 231, 243, 0.5); }
-        ::-webkit-scrollbar-thumb { background: #fbcfe8; border-radius: 9999px; }
-        ::-webkit-scrollbar-thumb:hover { background: #f472b6; }
-        html.dark ::-webkit-scrollbar-track { background: rgba(37, 27, 50, 0.7); }
-        html.dark ::-webkit-scrollbar-thumb { background: #3d284e; }
-        html.dark ::-webkit-scrollbar-thumb:hover { background: #f472b6; }
-    </style>
+        ::-webkit-scrollbar-track { background: rgba(218, 231, 240, 0.5); }
+        ::-webkit-scrollbar-thumb { background: #D9E7F0; border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #8DDCE8; }
+        html.dark ::-webkit-scrollbar-track { background: rgba(25, 37, 29, 0.7); }
+        html.dark ::-webkit-scrollbar-thumb { background: #35483B; }
+        html.dark ::-webkit-scrollbar-thumb:hover { background: #34D399; }
+            /* Dark-only utility palette for surfaces that use fixed light utilities. */
+        html.dark [class~="bg-white"]:not([class*="dark:bg-"]):not([class*="scanline-pulse"]):not([class*="relative p-4 bg-white"]):not([class*="w-28 h-28 bg-white"]) { background-color: #233329 !important; }
+        html.dark [class*="bg-white/"]:not([class*="dark:bg-"]):not([class*="scanline-pulse"]) { background-color: #233329 !important; }
+        html.dark [class*="bg-slate-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-gray-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-teal-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-cyan-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-sky-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-blue-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-emerald-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-rose-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-pink-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-amber-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-orange-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-yellow-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-indigo-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-violet-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-purple-50"]:not([class*="dark:bg-"]) { background-color: #19251D !important; }
+        html.dark [class*="bg-slate-100"]:not([class*="dark:bg-"]), html.dark [class*="bg-gray-100"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-sky-100"]:not([class*="dark:bg-"]), html.dark [class*="bg-cyan-100"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-emerald-100"]:not([class*="dark:bg-"]), html.dark [class*="bg-amber-100"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-indigo-100"]:not([class*="dark:bg-"]), html.dark [class*="bg-pink-100"]:not([class*="dark:bg-"]) { background-color: #233329 !important; }
+        html.dark [class*="bg-slate-200"]:not([class*="dark:bg-"]), html.dark [class*="bg-slate-300"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-gray-200"]:not([class*="dark:bg-"]) { background-color: #2B3D31 !important; }
+        html.dark [class*="border-slate-"]:not([class*="dark:border-"]), html.dark [class*="border-gray-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-teal-"]:not([class*="dark:border-"]), html.dark [class*="border-cyan-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-sky-"]:not([class*="dark:border-"]), html.dark [class*="border-blue-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-emerald-"]:not([class*="dark:border-"]), html.dark [class*="border-rose-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-pink-"]:not([class*="dark:border-"]), html.dark [class*="border-amber-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-orange-"]:not([class*="dark:border-"]), html.dark [class*="border-yellow-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-indigo-"]:not([class*="dark:border-"]), html.dark [class*="border-violet-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-purple-"]:not([class*="dark:border-"]) { border-color: #35483B !important; }
+        html.dark [class*="text-slate-900"]:not([class*="dark:text-"]), html.dark [class*="text-gray-900"]:not([class*="dark:text-"]),
+        html.dark [class*="text-slate-800"]:not([class*="dark:text-"]), html.dark [class*="text-gray-800"]:not([class*="dark:text-"]) { color: #F4F7F3 !important; }
+        html.dark [class*="text-slate-700"]:not([class*="dark:text-"]), html.dark [class*="text-slate-600"]:not([class*="dark:text-"]),
+        html.dark [class*="text-slate-500"]:not([class*="dark:text-"]), html.dark [class*="text-slate-400"]:not([class*="dark:text-"]),
+        html.dark [class*="text-gray-700"]:not([class*="dark:text-"]), html.dark [class*="text-gray-600"]:not([class*="dark:text-"]),
+        html.dark [class*="text-gray-500"]:not([class*="dark:text-"]) { color: #A6B5A8 !important; }
+        html.dark [class*="text-sky-"]:not([class*="dark:text-"]), html.dark [class*="text-cyan-"]:not([class*="dark:text-"]),
+        html.dark [class*="text-teal-"]:not([class*="dark:text-"]), html.dark [class*="text-blue-"]:not([class*="dark:text-"]),
+        html.dark [class*="text-indigo-"]:not([class*="dark:text-"]), html.dark [class*="text-violet-"]:not([class*="dark:text-"]),
+        html.dark [class*="text-purple-"]:not([class*="dark:text-"]) { color: #65A982 !important; }
+        html.dark [class*="text-emerald-"]:not([class*="dark:text-"]), html.dark [class*="text-pink-"]:not([class*="dark:text-"]) { color: #34D399 !important; }
+        html.dark [class*="text-amber-"]:not([class*="dark:text-"]), html.dark [class*="text-yellow-"]:not([class*="dark:text-"]) { color: #E8B85C !important; }
+        html.dark [class*="text-rose-"]:not([class*="dark:text-"]), html.dark [class*="text-red-"]:not([class*="dark:text-"]) { color: #F07878 !important; }
+        html.dark [class*="from-teal-50"][class*="to-cyan-50"]:not([class*="dark:from-"]) { background-image: linear-gradient(110deg, #19251D, #233329 55%, #2B3D31) !important; }
+        html.dark [class*="from-rose-500"][class*="to-pink-500"]:not([class*="dark:from-"]) { background-image: linear-gradient(110deg, #34D399, #65A982) !important; color: #101713 !important; }
+        html.dark [class*="bg-sky-500"][class~="text-white"], html.dark [class*="bg-sky-600"][class~="text-white"],
+        html.dark [class*="bg-emerald-500"][class~="text-white"], html.dark [class*="bg-emerald-600"][class~="text-white"],
+        html.dark [class*="bg-rose-500"][class~="text-white"], html.dark [class*="bg-pink-500"][class~="text-white"] { color: #101713 !important; }
+        html.dark .glass-panel { background: rgba(35, 51, 41, 0.94); border-color: #35483B; }
+        html.dark .scanline-pulse { background-color: #FFFFFF !important; border-color: #35483B !important; }
+        html.dark #qrcode-canvas-container, html.dark #modal-qrcode-canvas, html.dark #digital-pass-card .relative.bg-white,
+        html.dark .scanline-pulse [id*="qrcode"] { background-color: #FFFFFF !important; }
+        html.dark [class*="bg-pink-100"][class*="text-rose-"]:not([class*="dark:text-"]) { color: #34D399 !important; }
+</style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script id="tailwind-config">
         tailwind.config = {
@@ -341,7 +399,7 @@
             }
         };
     </script>
-    <!-- AeroPass Pastel Theme Initialization (Prevents FOUC) -->
+    <!-- AeroPass Navy Theme Initialization (Prevents FOUC) -->
     <script>
         (function() {
             const theme = localStorage.getItem('aeropass_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -397,32 +455,32 @@
     <main class="flex-1 w-full flex flex-col justify-start relative px-4 py-6 md:py-10">
         <div class="w-full max-w-xl mx-auto flex flex-col">
 
-            <!-- Mode Switcher: Registration vs Sign In -->
-            <div class="flex items-center p-1 bg-surface-container-low rounded-2xl border border-surface-container-high mb-6">
+<!-- Mode Switcher: Registration vs Sign In -->
+            <div class="flex items-center p-1.5 bg-surface-container-low rounded-2xl border border-surface-container-high mb-8">
                 <button id="tab-btn-register" onclick="switchAuthTab('register')"
-                    class="flex-1 py-2.5 rounded-xl text-xs font-semibold transition-all bg-primary text-on-primary shadow-sm flex items-center justify-center gap-1.5">
-                    <span class="material-symbols-outlined text-[16px]">how_to_reg</span>
-                    <span>Create Account &amp; Register</span>
+                    class="flex-1 py-3 px-4 rounded-xl text-xs font-semibold transition-all bg-primary text-on-primary shadow-sm flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+                    <span>Create Account & Register</span>
                 </button>
                 <button id="tab-btn-login" onclick="switchAuthTab('login')"
-                    class="flex-1 py-2.5 rounded-xl text-xs font-semibold text-secondary hover:text-on-surface transition-all flex items-center justify-center gap-1.5">
-                    <span class="material-symbols-outlined text-[16px]">login</span>
-                    <span>Sign In (Existing Users &amp; Officers)</span>
+                    class="flex-1 py-3 px-4 rounded-xl text-xs font-semibold text-secondary hover:text-on-surface transition-all flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">login</span>
+                    <span>Sign In (Existing Users & Officers)</span>
                 </button>
             </div>
 
             <div id="auth-panel-register" class="flex flex-col">
                 
                 <!-- Role Switcher for Registration: Passenger vs Airport Security Officer -->
-                <div class="flex items-center p-1 bg-surface-container-low rounded-2xl border border-surface-container-high mb-5">
+                <div class="flex items-center p-1.5 bg-surface-container-low rounded-2xl border border-surface-container-high mb-8">
                     <button id="reg-subtab-passenger" onclick="switchRegisterRole('passenger')" type="button"
-                        class="flex-1 py-2.5 rounded-xl text-xs font-semibold transition-all bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#451a03] dark:to-[#500724] text-[#831843] dark:text-[#fbcfe8] border border-[#f472b6] shadow-xs flex items-center justify-center gap-1.5">
-                        <span class="material-symbols-outlined text-[16px]">flight_takeoff</span>
+                        class="flex-1 py-3 px-4 rounded-xl text-xs font-semibold transition-all bg-gradient-to-r from-[#172A45] to-[#1A3048] dark:from-[#19251D] dark:to-[#233329] text-primary border border-primary/50 shadow-xs flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-[18px]">flight_takeoff</span>
                         <span>Passenger / Traveler Registration</span>
                     </button>
                     <button id="reg-subtab-officer" onclick="switchRegisterRole('officer')" type="button"
-                        class="flex-1 py-2.5 rounded-xl text-xs font-semibold text-secondary hover:text-on-surface transition-all flex items-center justify-center gap-1.5">
-                        <span class="material-symbols-outlined text-[16px]">shield_person</span>
+                        class="flex-1 py-3 px-4 rounded-xl text-xs font-semibold text-secondary hover:text-on-surface transition-all flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-[18px]">shield_person</span>
                         <span>Airport Officer Registration</span>
                     </button>
                 </div>
@@ -430,33 +488,33 @@
                 <!-- SUBVIEW 1: PASSENGER REGISTRATION (STEP 1 & STEP 2) -->
                 <div id="reg-subview-passenger" class="flex flex-col">
                     <!-- Progress Header & Step Indicator -->
-                <div class="flex flex-col gap-space-xs mb-space-md">
-                    <div class="flex items-center justify-between">
-                        <span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider text-primary font-semibold flex items-center gap-1.5">
-                            <span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                            <span id="enrollment-protocol-title">Enrollment Protocol: Identity Verification</span>
-                        </span>
-                        <span id="step-counter-text" class="font-label-mono-sm text-label-mono-sm font-semibold px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant">
-                            Step 01 / 02
-                        </span>
+                    <div class="flex flex-col gap-4 mb-8">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                            <span class="font-label-mono-sm uppercase tracking-wider text-primary font-semibold flex items-center gap-2">
+                                <span class="inline-block w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+                                <span id="enrollment-protocol-title">Enrollment Protocol: Identity Verification</span>
+                            </span>
+                            <span id="step-counter-text" class="font-label-mono-sm font-semibold px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant whitespace-nowrap">
+                                Step 01 / 02
+                            </span>
+                        </div>
+                        <!-- Progress Segmented Bar -->
+                        <div class="grid grid-cols-2 gap-3 w-full">
+                            <div id="progress-bar-step1" class="h-3 rounded-full bg-primary transition-all duration-300"></div>
+                            <div id="progress-bar-step2" class="h-3 rounded-full bg-surface-container-high transition-all duration-300"></div>
+                        </div>
                     </div>
-                    <!-- Progress Segmented Bar -->
-                    <div class="grid grid-cols-2 gap-2 w-full mt-1">
-                        <div id="progress-bar-step1" class="h-2 rounded-full bg-primary transition-all duration-300"></div>
-                        <div id="progress-bar-step2" class="h-2 rounded-full bg-surface-container-high transition-all duration-300"></div>
-                    </div>
-                </div>
 
                 <!-- STEP 1: Name, Email, Phone, KTN, Classification & Password -->
                 <div id="enrollment-step-1" class="flex flex-col transition-opacity duration-300">
                     <!-- Hero Identity Branding Card -->
-                    <div class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-md relative overflow-hidden border border-surface-container-high">
-                        <div class="flex items-center gap-space-sm mb-space-sm">
+                    <div class="flex flex-col bg-surface-container-lowest rounded-xl p-6 sm:p-7 shadow-sm mb-8 relative overflow-hidden border border-surface-container-high">
+                        <div class="flex items-center gap-3 mb-5">
                             <div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center p-1.5 shadow-sm">
                                 <img alt="AeroPass Airport Identity Logo" class="w-full h-full object-contain"
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuChknAMnAP6DAmrc2YaGvJO5rKOgPelU1HSwqr9DFYFRyrBqKIqo6h_8lIxXEI5aEt4yd4DmIdO3GhsY7flm8SjPqVE-uwyMgBsjgOLa7g3YhP_Qv0UykmHtqqBEbIEUhTJS9EtKgT5NDKKPSqhlKJC_deI6aNZFJLP_Jvh9okPugD7pqcMQlFV0TT0l67CfGJC3UJtyWr56MTu1aRdoUGpmxHJNXIiAZcpWlkDlGkn9q-Z7q_smjhU" />
                             </div>
-                            <div class="flex flex-col min-w-0">
+                            <div class="flex flex-col min-w-0 gap-2">
                                 <div class="flex items-center gap-2">
                                     <span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">AeroPass</span>
                                     <span class="font-label-mono-sm text-[10px] px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-bold uppercase">v4.8 Certified</span>
@@ -464,16 +522,16 @@
                                 <span class="font-label-mono-sm text-label-mono-sm text-outline truncate">Global Airport Identity &amp; Terminal Access</span>
                             </div>
                         </div>
-                        <h1 class="font-headline-lg-mobile text-2xl text-on-surface mt-1 mb-1.5 font-bold">Create AeroPass Account</h1>
-                        <p class="font-body-sm text-body-sm text-on-surface-variant">
+                        <h1 class="font-headline-lg-mobile text-2xl text-on-surface mt-4 mb-4 font-bold">Create AeroPass Account</h1>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-5">
                             Biometric fast-track gate clearance, real-time TSA/security queues, and digital passport identity across 180+ international airports.
                         </p>
                         <!-- Aviation Trust Banner -->
-                        <div class="mt-space-md p-space-sm rounded-lg bg-surface-container-low flex items-start gap-2.5 border border-surface-container-high">
-                            <span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">verified_user</span>
+                        <div class="p-4 rounded-lg bg-surface-container-low flex items-center gap-3 border border-surface-container-high mb-6">
+                            <span class="material-symbols-outlined text-primary text-[20px] shrink-0">verified_user</span>
                             <div class="flex flex-col text-on-surface">
                                 <span class="font-label-mono-sm text-label-mono-sm font-semibold uppercase text-primary">ICAO-Standard Authority Notice</span>
-                                <p class="font-body-sm text-label-mono-sm text-on-surface-variant mt-0.5">
+                                <p class="font-body-sm text-label-mono-sm text-on-surface-variant mt-1.5">
                                     Permanent ICAO-Compliant AeroPass ID assigned upon verification to prevent identity duplicate accounts and flight fraud.
                                 </p>
                             </div>
@@ -481,7 +539,7 @@
                     </div>
 
                     <!-- Registration Form -->
-                    <form class="flex flex-col gap-space-md" id="aeropass-enrollment-form" onsubmit="handleProceedToStep2(event)">
+                    <form class="flex flex-col gap-6" id="aeropass-enrollment-form" onsubmit="handleProceedToStep2(event)">
                         <!-- Legal Passport Name Field -->
                         <div class="flex flex-col gap-1.5">
                             <div class="flex items-center justify-between">
@@ -628,7 +686,7 @@
                         </div>
 
                         <!-- Legal Checkbox -->
-                        <div class="p-space-sm rounded-lg bg-surface-container-lowest border border-surface-container-high shadow-xs flex items-start gap-3 mt-1">
+                        <div class="p-3 rounded-lg bg-surface-container-lowest border border-surface-container-high shadow-xs flex items-start gap-3">
                             <input checked="" class="w-5 h-5 rounded mt-0.5 text-primary focus:ring-0 shrink-0 cursor-pointer" id="termsCheck" name="terms" type="checkbox" required />
                             <label class="font-body-sm text-body-sm text-on-surface cursor-pointer select-none" for="termsCheck">
                                 I agree to the <span class="font-semibold text-primary">AeroPass Airport Authority Terms of Carriage</span>, ICAO Biometric Privacy Policy, and automated Gate Turnstile Data Sharing.
@@ -636,25 +694,25 @@
                         </div>
 
                         <!-- Primary CTA to Step 2 -->
-                        <button class="w-full bg-primary hover:bg-primary-container text-on-primary py-3.5 px-space-md rounded-lg font-headline-sm text-base md:text-lg font-bold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all active:scale-[0.99] mt-2 group" type="submit">
+                        <button class="w-full bg-primary hover:bg-primary-container text-on-primary py-3.5 px-6 rounded-lg font-headline-sm text-base md:text-lg font-bold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all active:scale-[0.99] group" type="submit">
                             <span>Proceed to Identity, OCR &amp; OTP Verification</span>
                             <span class="material-symbols-outlined text-[22px] transition-transform group-hover:translate-x-1">arrow_forward</span>
                         </button>
                     </form>
 
                     <!-- Fast-Track SSO Options -->
-                    <div class="flex flex-col items-center gap-3 mt-space-lg">
+                    <div class="flex flex-col items-center gap-3 mt-8">
                         <div class="flex items-center gap-3 w-full">
                             <div class="flex-1 h-px bg-surface-container-high"></div>
                             <span class="font-label-mono-sm text-[11px] uppercase text-outline">Quick Fast-Track Alternatives</span>
                             <div class="flex-1 h-px bg-surface-container-high"></div>
                         </div>
                         <div class="flex flex-col w-full gap-2.5">
-                            <button onclick="mockQuickPassFill('apple')" class="w-full bg-inverse-surface text-inverse-on-surface py-3 px-space-md rounded-lg font-body-sm text-sm font-semibold flex items-center justify-center gap-2.5 shadow-xs hover:opacity-95 transition-opacity" type="button">
+                                <button onclick="mockQuickPassFill('apple')" class="w-full bg-inverse-surface text-inverse-on-surface py-3 px-6 rounded-lg font-body-sm text-sm font-semibold flex items-center justify-center gap-2.5 shadow-xs hover:opacity-95 transition-opacity" type="button">
                                 <span class="font-label-mono-lg text-[18px]"></span>
                                 <span>Continue with Apple ID Pass</span>
                             </button>
-                            <button onclick="mockQuickPassFill('airline')" class="w-full bg-surface-container-lowest border border-surface-container-high text-on-surface py-3 px-space-md rounded-lg font-body-sm text-sm font-semibold flex items-center justify-center gap-2.5 shadow-xs hover:bg-surface-container-high transition-colors" type="button">
+                                <button onclick="mockQuickPassFill('airline')" class="w-full bg-surface-container-lowest border border-surface-container-high text-on-surface py-3 px-6 rounded-lg font-body-sm text-sm font-semibold flex items-center justify-center gap-2.5 shadow-xs hover:bg-surface-container-high transition-colors" type="button">
                                 <span class="material-symbols-outlined text-primary text-[20px]">connecting_airports</span>
                                 <span>Sign in with SkyWings / Airline Partner Pass</span>
                             </button>
@@ -783,10 +841,10 @@
                     <div id="issued-pass-container" class="hidden flex flex-col items-center mt-2 animate-[fadeIn_0.5s_ease]">
                         <div class="w-full pastel-pass-header p-4 rounded-t-2xl flex items-center justify-between shadow-md">
                             <div class="flex items-center gap-2">
-                                <span class="material-symbols-outlined text-2xl text-[#db2777] dark:text-[#f472b6]">airplane_ticket</span>
+                                <span class="material-symbols-outlined text-2xl text-[#db2777] dark:text-[#34D399]">airplane_ticket</span>
                                 <div>
-                                    <h3 class="font-headline-sm text-base font-bold text-[#4a1532] dark:text-[#fdf2f8]">Digital Security Boarding Pass</h3>
-                                    <p class="text-xs text-[#831843] dark:text-[#fbcfe8] font-medium">Ready for Airport Security Checkpoints</p>
+                                    <h3 class="font-headline-sm text-base font-bold text-[#4a1532] dark:text-[#F4F7F3]">Digital Security Boarding Pass</h3>
+                                    <p class="text-xs text-[#831843] dark:text-[#F4F7F3] font-medium">Ready for Airport Security Checkpoints</p>
                                 </div>
                             </div>
                             <span class="font-label-mono-sm text-xs bg-gradient-to-r from-[#f472b6] to-[#fb923c] text-white px-2.5 py-1 rounded-full font-bold shadow-xs">ACTIVE</span>
@@ -1966,12 +2024,12 @@
             if (role === 'passenger') {
                 if (passView) passView.classList.remove('hidden');
                 if (offView) offView.classList.add('hidden');
-                if (passBtn) passBtn.className = "flex-1 py-2.5 rounded-xl text-xs font-semibold transition-all bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#451a03] dark:to-[#500724] text-[#831843] dark:text-[#fbcfe8] border border-[#f472b6] shadow-xs flex items-center justify-center gap-1.5";
+                if (passBtn) passBtn.className = "flex-1 py-2.5 rounded-xl text-xs font-semibold transition-all bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#19251D] dark:to-[#233329] text-[#831843] dark:text-[#F4F7F3] border border-[#f472b6] shadow-xs flex items-center justify-center gap-1.5";
                 if (offBtn) offBtn.className = "flex-1 py-2.5 rounded-xl text-xs font-semibold text-secondary hover:text-on-surface transition-all flex items-center justify-center gap-1.5";
             } else {
                 if (passView) passView.classList.add('hidden');
                 if (offView) offView.classList.remove('hidden');
-                if (offBtn) offBtn.className = "flex-1 py-2.5 rounded-xl text-xs font-semibold transition-all bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#451a03] dark:to-[#500724] text-[#831843] dark:text-[#fbcfe8] border border-[#f472b6] shadow-xs flex items-center justify-center gap-1.5";
+                if (offBtn) offBtn.className = "flex-1 py-2.5 rounded-xl text-xs font-semibold transition-all bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#19251D] dark:to-[#233329] text-[#831843] dark:text-[#F4F7F3] border border-[#f472b6] shadow-xs flex items-center justify-center gap-1.5";
                 if (passBtn) passBtn.className = "flex-1 py-2.5 rounded-xl text-xs font-semibold text-secondary hover:text-on-surface transition-all flex items-center justify-center gap-1.5";
             }
         }
@@ -2044,3 +2102,7 @@
 </body>
 
 </html>
+
+
+
+

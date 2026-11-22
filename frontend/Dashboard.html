@@ -19,98 +19,100 @@
         <style>
         :root {
             /* ================================================================= */
-            /* AERO PASS: PASTEL YELLOW & PINK COMBO (LIGHT MODE)                */
-            /* Creamy Lemon Chiffon (#fef08a) + Strawberry Milk Pink (#fbcfe8)  */
+            /* AERO PASS: LIGHT THEME — SKY-BLUE, LAVENDER & FROSTED WHITE        */
+            /* Matches reference design: brighter pastel sky-blue, lavender       */
+            /* Primary bg: #E8E1F8 \| Card: #F8FBFF \| Accents: sky-blue/pink     */
             /* ================================================================= */
-            --color-surface: #fffdfa;                 /* Soft milky cream mist */
-            --color-surface-container-lowest: #ffffff; /* Crisp porcelain white card */
-            --color-surface-container-low: #fff8f8;    /* Soft pastel strawberry-cream */
-            --color-surface-container-high: #fce7f3;   /* Delicate pastel pink border */
-            --color-surface-variant: #fef2f2;
-            --color-surface-tint: #ec4899;
+            --color-surface: #E8E1F8;                  /* Main background - lavender sky */
+            --color-surface-container-lowest: #F8FBFF; /* Card background - frosted white */
+            --color-surface-container-low: #F0F9FF;    /* Secondary background - sky blue */
+            --color-surface-container-high: #D9E7F0;   /* Borders - soft sky */
+            --color-surface-variant: #E4EAF0;          /* Background variant - neutral */
+            --color-surface-tint: #7FB8D0;             /* Primary accent tint - sky-blue */
 
-            --color-on-surface: #2d132c;               /* Deep plum slate contrast */
-            --color-on-surface-variant: #6b4360;       /* Muted berry slate */
-            --color-outline: #a78b9b;                  /* Gentle outline */
-            --color-outline-variant: #fbcfe8;
+            --color-on-surface: #000000;               /* Main text - black */
+            --color-on-surface-variant: #374151;       /* Secondary text - dark grey */
+            --color-outline: #D9E7F0;                  /* Borders */
+            --color-outline-variant: #D9E7F0;
 
-            /* Pastel Yellow & Pink Accents */
-            --color-primary: #ec4899;                  /* Pastel Vibrant Rose Pink */
-            --color-primary-container: #fce7f3;        /* Soft pastel pink pill */
-            --color-on-primary: #ffffff;
-            --color-on-primary-container: #9d174d;
-            --color-primary-fixed: #fdf2f8;
-            --color-on-primary-fixed-variant: #831843;
+            /* Sky-Blue & Periwinkle Accents */
+            --color-primary: #7FB8D0;                  /* Primary accent - sky-blue */
+            --color-primary-container: #E4EAF0;        /* Light container */
+            --color-on-primary: #000000;
+            --color-on-primary-container: #000000;
+            --color-primary-fixed: #E4EAF0;
+            --color-on-primary-fixed-variant: #7FB8D0;
 
-            --color-secondary: #f59e0b;                /* Warm Pastel Honey Yellow */
-            --color-secondary-container: #fef9c3;      /* Soft butter yellow pill */
-            --color-on-secondary: #ffffff;
-            --color-on-secondary-container: #713f12;
-            --color-secondary-fixed: #fef08a;
-            --color-secondary-fixed-dim: #fde047;
+            --color-secondary: #9AA5D8;                /* Secondary accent - periwinkle */
+            --color-secondary-container: #F2F8FC;      /* Sidebar / secondary background */
+            --color-on-secondary: #000000;
+            --color-on-secondary-container: #000000;
+            --color-secondary-fixed: #F2F8FC;
+            --color-secondary-fixed-dim: #9AA5D8;
 
-            --color-tertiary: #10b981;                 /* Soft Pastel Mint */
-            --color-tertiary-container: #d1fae5;
-            --color-on-tertiary: #ffffff;
-            --color-tertiary-fixed: #d1fae5;
-            --color-on-tertiary-fixed: #065f46;
-            --color-tertiary-fixed-dim: #a7f3d0;
+            --color-tertiary: #F5E88A;                 /* Highlight - soft yellow */
+            --color-tertiary-container: #F5E88A;
+            --color-on-tertiary: #29394A;
+            --color-tertiary-fixed: #F5E88A;
+            --color-on-tertiary-fixed: #29394A;
+            --color-tertiary-fixed-dim: #F5E88A;
 
-            --color-error: #f43f5e;                    /* Pastel Coral */
-            --color-error-container: #ffe4e6;
-            --color-on-error: #ffffff;
-            --color-on-error-container: #9f1239;
+            --color-error: #EF5350;                    /* Error */
+            --color-error-container: #FDECEC;
+            --color-on-error: #29394A;
+            --color-on-error-container: #EF5350;
 
-            --ticket-notch-bg: #fff8f8;
-            --page-ambient-gradient: radial-gradient(1300px 850px at 15% 0%, #fdf2f8 0%, #fefce8 50%, #fff7ed 100%), #fffaf8;
+            --ticket-notch-bg: #F2F8FC;
+            --page-ambient-gradient: radial-gradient(circle at 10% 10%, rgba(224, 242, 254, 0.6) 0%, rgba(240, 249, 255, 0.4) 30%, rgba(248, 250, 252, 1) 100%);
+            color-scheme: light;
         }
 
         html.dark, [data-theme="dark"] {
             /* ================================================================= */
-            /* AERO PASS: MIDNIGHT SUNSET PASTEL (DARK MODE)                     */
-            /* Deep twilight plum & midnight velvet with glowing pink & gold     */
+            /* AERO PASS: DARK NAVY, BLUE & CYAN THEME \(DARK MODE\)                     */
+            /* Already dark - same values     */
             /* ================================================================= */
-            --color-surface: #120e18;                  /* Deep twilight velvet */
-            --color-surface-container-lowest: #1b1424; /* Elevated dark plum card */
-            --color-surface-container-low: #251b32;    /* Elevated container */
-            --color-surface-container-high: #3d284e;   /* Soft luminous plum border */
-            --color-surface-variant: #281d36;
-            --color-surface-tint: #f472b6;
+            --color-surface: #101713;                  /* Deep twilight velvet */
+            --color-surface-container-lowest: #233329; /* Elevated dark plum card */
+            --color-surface-container-low: #19251D;    /* Elevated container */
+            --color-surface-container-high: #2B3D31;   /* Soft luminous plum border */
+            --color-surface-variant: #2B3D31;
+            --color-surface-tint: #34D399;
 
-            --color-on-surface: #fdf2f8;               /* Moonlight rose-white text */
-            --color-on-surface-variant: #d4b8ca;       /* Soft moonlit plum text */
-            --color-outline: #8c6882;
-            --color-outline-variant: #4e3247;
+            --color-on-surface: #F4F7F3;               /* Moonlight rose-white text */
+            --color-on-surface-variant: #A6B5A8;       /* Soft moonlit plum text */
+            --color-outline: #35483B;
+            --color-outline-variant: #35483B;
 
-            /* Luminous Pastel Pink & Gold Dark Accents */
-            --color-primary: #f472b6;                  /* Luminous pastel pink */
-            --color-primary-container: #500724;        /* Deep midnight plum container */
-            --color-on-primary: #120e18;
-            --color-on-primary-container: #fbcfe8;
-            --color-primary-fixed: #2e1025;
-            --color-on-primary-fixed-variant: #f472b6;
+            /* Cyan, Blue & Gold Accents */
+            --color-primary: #34D399;                  /* Cyan */
+            --color-primary-container: #233329;        /* Dark cyan container */
+            --color-on-primary: #101713;
+            --color-on-primary-container: #34D399;
+            --color-primary-fixed: #19251D;
+            --color-on-primary-fixed-variant: #34D399;
 
-            --color-secondary: #fde047;                /* Luminous pastel gold */
-            --color-secondary-container: #451a03;      /* Deep honey amber container */
-            --color-on-secondary: #120e18;
-            --color-on-secondary-container: #fef08a;
-            --color-secondary-fixed: #2b1704;
-            --color-secondary-fixed-dim: #eab308;
+            --color-secondary: #65A982;                /* Blue */
+            --color-secondary-container: #233329;      /* Secondary background */
+            --color-on-secondary: #101713;
+            --color-on-secondary-container: #65A982;
+            --color-secondary-fixed: #19251D;
+            --color-secondary-fixed-dim: #65A982;
 
-            --color-tertiary: #86efac;                 /* Luminous pastel mint */
-            --color-tertiary-container: #064e3b;
-            --color-on-tertiary: #120e18;
-            --color-tertiary-fixed: #064e3b;
-            --color-on-tertiary-fixed: #a7f3d0;
-            --color-tertiary-fixed-dim: #059669;
+            --color-tertiary: #D6B46A;                 /* Gold */
+            --color-tertiary-container: #233329;
+            --color-on-tertiary: #101713;
+            --color-tertiary-fixed: #233329;
+            --color-on-tertiary-fixed: #D6B46A;
+            --color-tertiary-fixed-dim: #D6B46A;
 
-            --color-error: #fda4af;
-            --color-error-container: #4c0519;
-            --color-on-error: #120e18;
-            --color-on-error-container: #fecdd3;
+            --color-error: #F07878;
+            --color-error-container: #233329;
+            --color-on-error: #F4F7F3;
+            --color-on-error-container: #F07878;
 
-            --ticket-notch-bg: #251b32;
-            --page-ambient-gradient: radial-gradient(1300px 850px at 15% 0%, #291227 0%, #1d172e 50%, #261c10 100%), #120e18;
+            --ticket-notch-bg: #19251D;
+            --page-ambient-gradient: radial-gradient(1300px 850px at 15% 0%, #19251D 0%, #101713 50%, #101713 100%), #101713;
         }
 
         /* Ambient Pastel Page Background */
@@ -120,81 +122,90 @@
             transition: background 0.3s ease, color 0.3s ease;
         }
 
-        /* Hero Banner Pastel Yellow & Pink Combo */
+        /* Hero Banner Sky-Blue & Lavender Combo - matches reference */
         .pastel-hero-banner {
-            background: linear-gradient(135deg, #fef08a 0%, #fed7aa 35%, #fbcfe8 75%, #f472b6 100%) !important;
-            color: #3b122d !important;
-            border: 2px solid #f9a8d4 !important;
-            box-shadow: 0 12px 35px -5px rgba(244, 114, 182, 0.28) !important;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e4eaf0 35%, #f8fbff 75%, #7fb8d0 100%) !important;
+            color: #000000 !important;
+            border: 2px solid #7fb8d0 !important;
+            box-shadow: 0 12px 35px -5px rgba(127, 184, 208, 0.3) !important;
         }
         html.dark .pastel-hero-banner {
-            background: linear-gradient(135deg, #3d1c2c 0%, #2e1738 50%, #362713 100%) !important;
-            color: #fdf2f8 !important;
-            border: 2px solid #f472b6 !important;
-            box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.5) !important;
+            background: linear-gradient(135deg, #19251D 0%, #233329 50%, #2B3D31 100%) !important;
+            color: #F4F7F3 !important;
+            border: 2px solid #34D399 !important;
+            box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.6) !important;
         }
 
-        /* Boarding Pass Pastel Header */
+        /* Boarding Pass Sky-Blue Header */
         .pastel-pass-header {
-            background: linear-gradient(135deg, #fef9c3 0%, #fed7aa 50%, #fce7f3 100%) !important;
-            color: #3b122d !important;
-            border-bottom: 2px solid #f9a8d4 !important;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e4eaf0 50%, #f8fbff 100%) !important;
+            color: #000000 !important;
+            border-bottom: 2px solid #7fb8d0 !important;
         }
         html.dark .pastel-pass-header {
-            background: linear-gradient(135deg, #3d1c2c 0%, #2e1738 50%, #362713 100%) !important;
-            color: #fdf2f8 !important;
-            border-bottom: 2px solid #f472b6 !important;
+            background: linear-gradient(135deg, #19251D 0%, #233329 50%, #2B3D31 100%) !important;
+            color: #F4F7F3 !important;
+            border-bottom: 2px solid #34D399 !important;
         }
 
-        /* Flight Spotlight Card Pastel Header */
+        /* Flight Spotlight Card Sky-Blue Header */
         .pastel-flight-header {
-            background: linear-gradient(135deg, #fef08a 0%, #fed7aa 40%, #fbcfe8 100%) !important;
-            color: #3b122d !important;
-            border: 2px solid #f9a8d4 !important;
-            box-shadow: 0 10px 30px -5px rgba(244, 114, 182, 0.25) !important;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e4eaf0 40%, #7fb8d0 100%) !important;
+            color: #000000 !important;
+            border: 2px solid #7fb8d0 !important;
+            box-shadow: 0 10px 30px -5px rgba(127, 184, 208, 0.3) !important;
         }
         html.dark .pastel-flight-header {
-            background: linear-gradient(135deg, #3d1c2c 0%, #2e1738 50%, #362713 100%) !important;
-            color: #fdf2f8 !important;
-            border: 2px solid #f472b6 !important;
-            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5) !important;
+            background: linear-gradient(135deg, #19251D 0%, #233329 50%, #2B3D31 100%) !important;
+            color: #F4F7F3 !important;
+            border: 2px solid #34D399 !important;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.6) !important;
         }
 
-        /* Pastel Brand Logo Badge (Yellow-Pink Gradient) */
+        /* Brand Logo Badge (Highlight-Cyan Gradient) */
         .pastel-brand-badge {
-            background: linear-gradient(135deg, #fde047 0%, #f472b6 100%) !important;
-            color: #3b122d !important;
-            border: 1.5px solid #f9a8d4 !important;
+            background: linear-gradient(135deg, #f5e88a 0%, #7fb8d0 100%) !important;
+            color: #000000 !important;
+            border: 1.5px solid #7fb8d0 !important;
         }
         html.dark .pastel-brand-badge {
-            background: linear-gradient(135deg, #ca8a04 0%, #db2777 100%) !important;
-            color: #fdf2f8 !important;
-            border: 1.5px solid #f472b6 !important;
+            background: linear-gradient(135deg, #D6B46A 0%, #34D399 100%) !important;
+            color: #101713 !important;
+            border: 1.5px solid #34D399 !important;
         }
 
-        /* Primary Button (Radiant Pastel Pink to Orange-Yellow) */
+        /* Primary Button (Sky-Blue to Periwinkle) */
         .btn-pastel-primary {
-            background: linear-gradient(135deg, #f472b6 0%, #fb923c 100%) !important;
-            color: #ffffff !important;
-            box-shadow: 0 4px 14px rgba(244, 114, 182, 0.35) !important;
+            background: linear-gradient(135deg, #7fb8d0 0%, #9aa5d8 100%) !important;
+            color: #000000 !important;
+            box-shadow: 0 4px 14px rgba(127, 184, 208, 0.35) !important;
             transition: all 0.2s ease !important;
         }
         .btn-pastel-primary:hover {
-            background: linear-gradient(135deg, #ec4899 0%, #f97316 100%) !important;
-            box-shadow: 0 6px 18px rgba(244, 114, 182, 0.45) !important;
+            background: linear-gradient(135deg, #7fb8d0 0%, #9aa5d8 100%) !important;
+            box-shadow: 0 6px 18px rgba(127, 184, 208, 0.45) !important;
             transform: translateY(-1px) !important;
         }
 
+        html.dark .btn-pastel-primary {
+            background: linear-gradient(135deg, #34D399 0%, #65A982 100%) !important;
+            color: #101713 !important;
+            box-shadow: 0 4px 14px rgba(52, 211, 153, 0.22) !important;
+        }
+        html.dark .btn-pastel-primary:hover {
+            background: linear-gradient(135deg, #34D399 0%, #65A982 100%) !important;
+            box-shadow: 0 6px 18px rgba(52, 211, 153, 0.3) !important;
+        }
         /* Glass card styling */
         .glass-card {
-            background: rgba(255, 255, 255, 0.94);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
+            background: rgba(248, 251, 255, 0.94);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
         html.dark .glass-card {
-            background: rgba(27, 20, 36, 0.92);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
+            background: rgba(35, 51, 41, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
 
         /* Ticket Notches */
@@ -230,30 +241,30 @@
 
         /* SVG Map Elements in Dark Mode */
         html.dark .map-terminal-envelope {
-            fill: #1b1424 !important;
-            stroke: #3d284e !important;
+            fill: #19251D !important;
+            stroke: #35483B !important;
         }
         html.dark .map-apron-bg {
-            fill: #120e18 !important;
+            fill: #101713 !important;
         }
         html.dark .map-boulevard-bg {
-            fill: #22182d !important;
-            stroke: #3d284e !important;
+            fill: #233329 !important;
+            stroke: #35483B !important;
         }
         html.dark .map-walkway-bg {
-            fill: #271a33 !important;
-            stroke: #3d284e !important;
+            fill: #2B3D31 !important;
+            stroke: #35483B !important;
         }
         html.dark .map-pier-bg {
-            fill: #1f1528 !important;
-            stroke: #3d284e !important;
+            fill: #19251D !important;
+            stroke: #35483B !important;
         }
         html.dark .map-grid-line {
-            stroke: #2e1d3d !important;
+            stroke: #35483B !important;
         }
         html.dark .map-gate-card {
-            fill: #271731 !important;
-            stroke: #f472b6 !important;
+            fill: #233329 !important;
+            stroke: #34D399 !important;
         }
 
         @keyframes navDash {
@@ -270,8 +281,8 @@
             animation: scanLaser 2s ease-in-out infinite;
         }
         @keyframes pulseGlow {
-            0%, 100% { box-shadow: 0 0 15px rgba(244, 114, 182, 0.3); }
-            50% { box-shadow: 0 0 32px rgba(244, 114, 182, 0.6); }
+            0%, 100% { box-shadow: 0 0 15px rgba(37, 198, 218, 0.3); }
+            50% { box-shadow: 0 0 32px rgba(37, 198, 218, 0.6); }
         }
         .pulse-glow-emerald {
             animation: pulseGlow 2.5s infinite;
@@ -285,13 +296,249 @@
             animation: shake 0.35s ease-in-out;
         }
         ::-webkit-scrollbar { width: 6px; height: 6px; }
-        ::-webkit-scrollbar-track { background: rgba(252, 231, 243, 0.5); }
-        ::-webkit-scrollbar-thumb { background: #fbcfe8; border-radius: 9999px; }
-        ::-webkit-scrollbar-thumb:hover { background: #f472b6; }
-        html.dark ::-webkit-scrollbar-track { background: rgba(37, 27, 50, 0.7); }
-        html.dark ::-webkit-scrollbar-thumb { background: #3d284e; }
-        html.dark ::-webkit-scrollbar-thumb:hover { background: #f472b6; }
-    </style>
+        ::-webkit-scrollbar-track { background: rgba(218, 231, 240, 0.5); }
+        ::-webkit-scrollbar-thumb { background: #D9E7F0; border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #8DDCE8; }
+        html.dark ::-webkit-scrollbar-track { background: rgba(25, 37, 29, 0.7); }
+        html.dark ::-webkit-scrollbar-thumb { background: #35483B; }
+        html.dark ::-webkit-scrollbar-thumb:hover { background: #34D399; }
+
+        /* Dashboard home layout: arrange the existing overview cards like a
+           compact travel command center. These rules only affect placement. */
+        html:not(.dark) body { background: #FFFFFF !important; }
+
+        #main-pane-pass > .grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            grid-template-areas:
+                "credentials activity"
+                "compliance compliance"
+                "pass pass";
+            align-items: start;
+            gap: 1rem;
+        }
+        #main-pane-pass > .grid > div:first-child,
+        #main-pane-pass > .grid > div:last-child {
+            display: contents;
+        }
+        #main-pane-pass > .grid > div:first-child > div:nth-child(1) { grid-area: credentials; }
+        #main-pane-pass > .grid > div:first-child > div:nth-child(2) { grid-area: activity; }
+        #main-pane-pass > .grid > div:first-child > div:nth-child(3) { grid-area: compliance; }
+        #main-pane-pass > .grid > div:last-child > #digital-pass-card { grid-area: pass; }
+
+        #digital-pass-card > .p-6 {
+            display: grid;
+            grid-template-columns: minmax(210px, 0.8fr) minmax(0, 1.2fr);
+            grid-template-areas:
+                "qr passenger"
+                "qr code"
+                "qr actions";
+            align-items: center;
+            gap: 0.75rem 1.25rem;
+        }
+        #digital-pass-card > .p-6 > div:first-child { grid-area: passenger; }
+        #digital-pass-card > .p-6 > .relative { grid-area: qr; justify-self: center; }
+        #digital-pass-card > .p-6 > div:nth-child(3) { grid-area: code; }
+        #digital-pass-card > .p-6 > div:nth-child(4) { grid-area: actions; width: 100%; }
+
+        /* Baggage panel readability: retain the sky, lavender and yellow palette
+           while keeping small labels and accent text legible in both themes. */
+        #main-pane-baggage { color: var(--color-on-surface); }
+        #main-pane-baggage #btn-proceed-payment { color: #29394A; }
+        html.dark #main-pane-baggage #btn-proceed-payment { color: #101713; }
+        .baggage-flight-banner { background: linear-gradient(115deg, #12243B, #193C5A 58%, #245876); }
+        html.dark .baggage-flight-banner { background: linear-gradient(115deg, #101713, #19251D 58%, #233329); }
+        .baggage-qty-option { min-height: 3.25rem; line-height: 1.25; transition: background-color .15s, border-color .15s, box-shadow .15s; }
+        .baggage-qty-option[aria-pressed="true"] { border-color: var(--color-primary); background: color-mix(in srgb, var(--color-primary) 20%, var(--color-surface-container-lowest)); box-shadow: inset 0 0 0 1px var(--color-primary); }
+        #main-pane-baggage input[type="number"] { color: var(--color-on-surface); }
+        #main-pane-payments { color: var(--color-on-surface); }
+        #main-pane-payments #payment-ledger-tbody td { vertical-align: middle; }
+        #main-pane-payments #payment-ledger-tbody td:nth-child(3) { color: var(--color-on-surface-variant); }
+        #main-pane-payments #payment-ledger-tbody button { color: #15546B; }
+        #main-pane-payments #payment-ledger-tbody button:hover { color: #102A3A; }
+        html.dark #main-pane-payments #payment-ledger-tbody button { color: #34D399; }
+        html.dark #main-pane-payments #payment-ledger-tbody button:hover { color: #101713; }
+        #main-pane-payments input, #main-pane-payments select { min-width: 0; }
+        #main-pane-map { color: #172B43; }
+        #main-pane-map .text-outline { color: #52657A !important; }
+        #airport-route-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        #airport-route-stats > div { min-width: 0; }
+        #airport-route-stats span { color: #52657A !important; }
+        #airport-route-stats strong { color: #17324D !important; line-height: 1.35; white-space: normal; overflow-wrap: anywhere; }
+        #airport-route-stats strong#nav-destination-stat { color: #805500 !important; }
+        #airport-route-stats strong#nav-time-stat { color: #805500 !important; }
+        #airport-route-stats > div:last-child strong { color: #08705C !important; }
+        #airport-destination-controls { background: transparent; border: 0; box-shadow: none; padding: 0; }
+        #airport-destination-controls .text-outline { color: #52657A !important; }
+        #nav-target-pills { overflow: visible; }
+        #nav-target-pills .nav-dest-pill { white-space: normal !important; text-align: left; line-height: 1.35; max-width: 100%; }
+        #nav-target-pills .material-symbols-outlined { flex: 0 0 auto; }
+        #main-pane-map #nav-target-pills + * { color: #52657A; }
+        #main-pane-map .text-tertiary { color: #805500 !important; }
+        #terminal-map-panel { background: #0B1422; border-color: #33465F; }
+        #terminal-map-panel .border-b { border-color: #33465F !important; }
+        #terminal-map-panel .text-on-surface { color: #F1F5F9 !important; }
+        #terminal-map-panel .text-outline { color: #B9C7D8 !important; }
+        #terminal-map-panel .font-label-mono-sm { color: #D8E2EF; }
+        #terminal-map-canvas { background: #101B2D; border-color: #33465F; padding: 0.75rem; }
+        #airport-map-details h3 { line-height: 1.35; }
+        #airport-map-details p { overflow-wrap: anywhere; }
+        @media (min-width: 900px) {
+            #airport-route-stats { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+        }
+        @media (max-width: 767px) {
+            #terminal-map-panel { padding: 0.875rem; }
+            #terminal-map-canvas { padding: 0.5rem; }
+        }
+        html.dark #main-pane-map { color: #F4F7F3; }
+        html.dark #main-pane-map .text-outline,
+        html.dark #airport-route-stats span { color: #A6B5A8 !important; }
+        html.dark #airport-route-stats strong { color: #F4F7F3 !important; }
+        html.dark #airport-route-stats strong#nav-destination-stat,
+        html.dark #airport-route-stats strong#nav-time-stat { color: #D6B46A !important; }
+        html.dark #airport-route-stats > div:last-child strong { color: #34D399 !important; }
+        html.dark #main-pane-map .text-tertiary { color: #D6B46A !important; }
+        html.dark #main-pane-map #nav-target-pills + * { color: #D6B46A !important; }
+        html.dark #terminal-map-panel { background: #101713; border-color: #35483B; }
+        html.dark #terminal-map-panel .border-b { border-color: #35483B !important; }
+        html.dark #terminal-map-panel .text-on-surface { color: #F4F7F3 !important; }
+        html.dark #terminal-map-panel .text-outline { color: #A6B5A8 !important; }
+        html.dark #terminal-map-panel .font-label-mono-sm { color: #A6B5A8; }
+        html.dark #terminal-map-canvas { background: #19251D; border-color: #35483B; }
+        html.dark #digital-pass-card .pastel-pass-header {
+            background: linear-gradient(135deg, #19251D, #233329 65%, #2B3D31) !important;
+            color: #F4F7F3 !important;
+            border-bottom-color: #34D399 !important;
+        }
+        html.dark #digital-pass-card .pastel-pass-header * { color: #F4F7F3 !important; }
+        html.dark #digital-pass-card .pastel-pass-header .bg-white\/80 { background: rgba(244,247,243,.12); }
+        html.dark #digital-pass-card .pastel-pass-header .border-t { border-color: #35483B !important; }
+        #main-pane-flights { color: var(--color-on-surface); }
+        #main-pane-flights .text-outline { color: var(--color-on-surface-variant) !important; }
+        #main-pane-flights .text-tertiary { color: #536278 !important; }
+        html.dark #main-pane-flights .text-tertiary { color: #D6B46A !important; }
+        #main-pane-flights #passenger-flights-list button { color: #15546B; }
+        #main-pane-flights #passenger-flights-list button:hover { color: #102A3A; }
+        html.dark #main-pane-flights #passenger-flights-list button { color: #34D399; }
+        html.dark #main-pane-flights #passenger-flights-list button:hover { color: #101713; }
+        #main-pane-flights .flight-filter-btn[aria-pressed="true"] { box-shadow: inset 0 0 0 1px var(--color-primary); }
+        @media (max-width: 767px) {
+            #main-pane-pass > .grid {
+                grid-template-columns: minmax(0, 1fr);
+                grid-template-areas:
+                    "credentials"
+                    "activity"
+                    "compliance"
+                    "pass";
+            }
+            #digital-pass-card > .p-6 {
+                grid-template-columns: minmax(0, 1fr);
+                grid-template-areas:
+                    "passenger"
+                    "qr"
+                    "code"
+                    "actions";
+            }
+            #digital-pass-card > .p-6 > .relative { justify-self: center; }
+            #main-pane-baggage { min-width: 0; }
+        }
+        /* Pass & Overview reference layout: pass rail beside credentials and trust panels. */
+        #main-pane-pass { color: #172B43; }
+        #main-pane-pass > .grid {
+            grid-template-columns: minmax(270px, 0.86fr) minmax(0, 1fr) minmax(0, 1fr);
+            grid-template-areas: "pass credentials credentials" "pass security biometric";
+            align-items: stretch;
+            gap: 1rem;
+        }
+        #main-pane-pass > .grid > div:first-child,
+        #main-pane-pass > .grid > div:last-child { display: contents; }
+        #main-pane-pass > .grid > div:first-child > div:nth-child(1) { grid-area: credentials; }
+        #main-pane-pass > .grid > div:first-child > div:nth-child(2) { grid-area: security; }
+        #main-pane-pass > .grid > div:first-child > div:nth-child(3) { grid-area: biometric; }
+        #main-pane-pass > .grid > div:last-child > #digital-pass-card { grid-area: pass; align-self: stretch; }
+        #digital-pass-card { border-color: #B9D7E7; }
+        #digital-pass-card > .p-6 {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0.75rem;
+            padding: 1rem;
+        }
+        #digital-pass-card > .p-6 > .relative { align-self: center; }
+        #digital-pass-card .text-outline { color: #52657A !important; }
+        #digital-pass-card .text-tertiary { color: #805500 !important; }
+        #digital-pass-card button { min-height: 2.75rem; line-height: 1.35; white-space: normal; }
+        #digital-pass-card .pastel-pass-header {
+            background: linear-gradient(135deg, #10243B, #173B55 65%, #20566B) !important;
+            color: #F8FAFC !important;
+            border-bottom: 2px solid #25C6DA !important;
+        }
+        #digital-pass-card .pastel-pass-header * { color: #F8FAFC !important; }
+        #digital-pass-card .pastel-pass-header .bg-white\/80 { background: rgba(255,255,255,.16); }
+        #digital-pass-card .pastel-pass-header .border-t { border-color: rgba(255,255,255,.24) !important; }
+        #digital-pass-card #qrcode-canvas-container { width: min(11rem, 100%); height: auto; aspect-ratio: 1; }
+        #digital-pass-card #qrcode-canvas-container img,
+        #digital-pass-card #qrcode-canvas-container canvas,
+        #digital-pass-card #qrcode-canvas-container svg { max-width: 100%; max-height: 100%; }
+        .pass-trip-overview { background: linear-gradient(115deg, #10243B, #173B55 65%, #20566B); color: #F8FAFC; border: 1px solid #2C647B; }
+        .pass-active-badge { background: #08705C; color: #FFFFFF; }
+        #main-pane-pass .text-outline { color: #52657A !important; }
+        #main-pane-pass .text-on-surface-variant { color: #40546A !important; }
+        @media (max-width: 1023px) {
+            #main-pane-pass > .grid {
+                grid-template-columns: minmax(0, 1fr);
+                grid-template-areas: "pass" "credentials" "security" "biometric";
+            }
+        }
+            /* Dark-only utility palette for surfaces that use fixed light utilities. */
+        html.dark [class~="bg-white"]:not([class*="dark:bg-"]):not([class*="scanline-pulse"]):not([class*="relative p-4 bg-white"]):not([class*="w-28 h-28 bg-white"]) { background-color: #233329 !important; }
+        html.dark [class*="bg-white/"]:not([class*="dark:bg-"]):not([class*="scanline-pulse"]) { background-color: #233329 !important; }
+        html.dark [class*="bg-slate-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-gray-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-teal-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-cyan-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-sky-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-blue-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-emerald-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-rose-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-pink-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-amber-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-orange-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-yellow-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-indigo-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-violet-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-purple-50"]:not([class*="dark:bg-"]) { background-color: #19251D !important; }
+        html.dark [class*="bg-slate-100"]:not([class*="dark:bg-"]), html.dark [class*="bg-gray-100"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-sky-100"]:not([class*="dark:bg-"]), html.dark [class*="bg-cyan-100"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-emerald-100"]:not([class*="dark:bg-"]), html.dark [class*="bg-amber-100"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-indigo-100"]:not([class*="dark:bg-"]), html.dark [class*="bg-pink-100"]:not([class*="dark:bg-"]) { background-color: #233329 !important; }
+        html.dark [class*="bg-slate-200"]:not([class*="dark:bg-"]), html.dark [class*="bg-slate-300"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-gray-200"]:not([class*="dark:bg-"]) { background-color: #2B3D31 !important; }
+        html.dark [class*="border-slate-"]:not([class*="dark:border-"]), html.dark [class*="border-gray-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-teal-"]:not([class*="dark:border-"]), html.dark [class*="border-cyan-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-sky-"]:not([class*="dark:border-"]), html.dark [class*="border-blue-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-emerald-"]:not([class*="dark:border-"]), html.dark [class*="border-rose-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-pink-"]:not([class*="dark:border-"]), html.dark [class*="border-amber-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-orange-"]:not([class*="dark:border-"]), html.dark [class*="border-yellow-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-indigo-"]:not([class*="dark:border-"]), html.dark [class*="border-violet-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-purple-"]:not([class*="dark:border-"]) { border-color: #35483B !important; }
+        html.dark [class*="text-slate-900"]:not([class*="dark:text-"]), html.dark [class*="text-gray-900"]:not([class*="dark:text-"]),
+        html.dark [class*="text-slate-800"]:not([class*="dark:text-"]), html.dark [class*="text-gray-800"]:not([class*="dark:text-"]) { color: #F4F7F3 !important; }
+        html.dark [class*="text-slate-700"]:not([class*="dark:text-"]), html.dark [class*="text-slate-600"]:not([class*="dark:text-"]),
+        html.dark [class*="text-slate-500"]:not([class*="dark:text-"]), html.dark [class*="text-slate-400"]:not([class*="dark:text-"]),
+        html.dark [class*="text-gray-700"]:not([class*="dark:text-"]), html.dark [class*="text-gray-600"]:not([class*="dark:text-"]),
+        html.dark [class*="text-gray-500"]:not([class*="dark:text-"]) { color: #A6B5A8 !important; }
+        html.dark [class*="text-sky-"]:not([class*="dark:text-"]), html.dark [class*="text-cyan-"]:not([class*="dark:text-"]),
+        html.dark [class*="text-teal-"]:not([class*="dark:text-"]), html.dark [class*="text-blue-"]:not([class*="dark:text-"]),
+        html.dark [class*="text-indigo-"]:not([class*="dark:text-"]), html.dark [class*="text-violet-"]:not([class*="dark:text-"]),
+        html.dark [class*="text-purple-"]:not([class*="dark:text-"]) { color: #65A982 !important; }
+        html.dark [class*="text-emerald-"]:not([class*="dark:text-"]), html.dark [class*="text-pink-"]:not([class*="dark:text-"]) { color: #34D399 !important; }
+        html.dark [class*="text-amber-"]:not([class*="dark:text-"]), html.dark [class*="text-yellow-"]:not([class*="dark:text-"]) { color: #E8B85C !important; }
+        html.dark [class*="text-rose-"]:not([class*="dark:text-"]), html.dark [class*="text-red-"]:not([class*="dark:text-"]) { color: #F07878 !important; }
+        html.dark [class*="from-teal-50"][class*="to-cyan-50"]:not([class*="dark:from-"]) { background-image: linear-gradient(110deg, #19251D, #233329 55%, #2B3D31) !important; }
+        html.dark [class*="from-rose-500"][class*="to-pink-500"]:not([class*="dark:from-"]) { background-image: linear-gradient(110deg, #34D399, #65A982) !important; color: #101713 !important; }
+        html.dark [class*="bg-sky-500"][class~="text-white"], html.dark [class*="bg-sky-600"][class~="text-white"],
+        html.dark [class*="bg-emerald-500"][class~="text-white"], html.dark [class*="bg-emerald-600"][class~="text-white"],
+        html.dark [class*="bg-rose-500"][class~="text-white"], html.dark [class*="bg-pink-500"][class~="text-white"] { color: #101713 !important; }
+        html.dark .glass-panel { background: rgba(35, 51, 41, 0.94); border-color: #35483B; }
+        html.dark .scanline-pulse { background-color: #FFFFFF !important; border-color: #35483B !important; }
+        html.dark #qrcode-canvas-container, html.dark #modal-qrcode-canvas, html.dark #digital-pass-card .relative.bg-white,
+        html.dark .scanline-pulse [id*="qrcode"] { background-color: #FFFFFF !important; }
+        html.dark [class*="bg-pink-100"][class*="text-rose-"]:not([class*="dark:text-"]) { color: #34D399 !important; }
+</style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script id="tailwind-config">
         tailwind.config = {
@@ -330,7 +577,16 @@
                         "error": "var(--color-error)",
                         "on-error": "var(--color-on-error)",
                         "error-container": "var(--color-error-container)",
-                        "on-error-container": "var(--color-on-error-container)"
+                        "on-error-container": "var(--color-on-error-container)",
+                        /* Reference sky-blue palette */
+                        "sky-blue": "#7FB8D0",
+                        "sky-blue-light": "#E4EAF0",
+                        "periwinkle": "#9AA5D8",
+                        "lavender": "#E8E1F8",
+                        "soft-yellow": "#F5E88A",
+                        "deep-blue-grey": "#29394A",
+                        "muted-grey": "#8996A5",
+                        "soft-border": "#D9E7F0"
                     },
                     fontFamily: {
                         "headline-sm": ["Space Grotesk", "sans-serif"],
@@ -343,7 +599,7 @@
     </script>
     <!-- Lightweight QR Code generation library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    <!-- AeroPass Pastel Theme Initialization (Prevents FOUC) -->
+    <!-- AeroPass Navy Theme Initialization (Prevents FOUC) -->
     <script>
         (function() {
             const theme = localStorage.getItem('aeropass_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -449,7 +705,7 @@
         <!-- Drawer Top Header -->
         <div class="p-5 border-b border-surface-container-high flex items-center justify-between bg-surface-container-low/70">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-primary text-white flex items-center justify-center shadow-sm">
+                <div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-sm">
                     <span class="material-symbols-outlined text-2xl">manage_accounts</span>
                 </div>
                 <div>
@@ -745,7 +1001,7 @@
         <!-- Notification Filter Chips -->
         <div class="px-6 py-3 border-b border-surface-container-high flex items-center gap-1.5 overflow-x-auto text-[11px] font-label-mono-sm no-scrollbar">
             <span class="text-outline uppercase text-[10px] font-bold shrink-0">FILTER:</span>
-            <button onclick="renderNotificationList('all')" class="px-2 py-0.5 rounded-full bg-primary text-white font-bold shrink-0 notif-filter-btn" id="notif-filter-all">All</button>
+            <button onclick="renderNotificationList('all')" class="px-2 py-0.5 rounded-full bg-primary text-on-primary font-bold shrink-0 notif-filter-btn" id="notif-filter-all">All</button>
             <button onclick="renderNotificationList('document')" class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant font-medium shrink-0 notif-filter-btn" id="notif-filter-doc">Documents</button>
             <button onclick="renderNotificationList('pass')" class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant font-medium shrink-0 notif-filter-btn" id="notif-filter-pass">Pass</button>
             <button onclick="renderNotificationList('baggage')" class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant font-medium shrink-0 notif-filter-btn" id="notif-filter-bag">Baggage</button>
@@ -767,50 +1023,50 @@
     <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
 
         <!-- WELCOME HERO BANNER (PASTEL YELLOW & PINK SUNSET COMBO) -->
-        <div class="pastel-hero-banner relative overflow-hidden rounded-3xl p-6 sm:p-8 shadow-md border-2 border-pink-200 dark:border-pink-900">
+        <div class="pastel-hero-banner relative overflow-hidden rounded-3xl p-6 sm:p-8 shadow-md border-2 border-pink-200 dark:border-[#35483B]">
             <!-- Background Watermark -->
-            <div class="absolute -right-8 -bottom-10 text-pink-500/10 dark:text-pink-300/5 pointer-events-none select-none">
+            <div class="absolute -right-8 -bottom-10 text-pink-500/10 dark:text-[#34D399]/5 pointer-events-none select-none">
                 <span class="material-symbols-outlined text-[240px]">shield_person</span>
             </div>
 
             <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div class="space-y-2.5 max-w-2xl">
                     <div class="flex flex-wrap items-center gap-2">
-                        <span class="px-2.5 py-0.5 rounded-full bg-white/90 dark:bg-yellow-950/80 text-[#854d0e] dark:text-[#fef08a] border border-[#fde047] dark:border-[#ca8a04] text-xs font-label-mono-sm font-bold flex items-center gap-1 shadow-2xs">
+                        <span class="px-2.5 py-0.5 rounded-full bg-white/90 dark:bg-[#19251D] text-[#854d0e] dark:text-[#D6B46A] border border-[#fde047] dark:border-[#35483B] text-xs font-label-mono-sm font-bold flex items-center gap-1 shadow-2xs">
                             <span class="material-symbols-outlined text-[14px]">verified</span>
                             ICAO Doc 9303 Verified
                         </span>
-                        <span class="px-2.5 py-0.5 rounded-full bg-white/90 dark:bg-pink-950/80 text-[#9d174d] dark:text-[#fbcfe8] border border-[#f472b6] dark:border-[#db2777] text-xs font-label-mono-sm font-semibold shadow-2xs">
+                        <span class="px-2.5 py-0.5 rounded-full bg-white/90 dark:bg-[#233329] text-[#9d174d] dark:text-[#F4F7F3] border border-[#f472b6] dark:border-[#35483B] text-xs font-label-mono-sm font-semibold shadow-2xs">
                             TSA PreCheck Approved
                         </span>
-                        <span class="px-2.5 py-0.5 rounded-full bg-white/90 dark:bg-amber-950/80 text-[#9a3412] dark:text-[#fed7aa] border border-[#fb923c] dark:border-[#ea580c] text-xs font-label-mono-sm font-bold shadow-2xs">
+                        <span class="px-2.5 py-0.5 rounded-full bg-white/90 dark:bg-[#19251D] text-[#9a3412] dark:text-[#E8B85C] border border-[#fb923c] dark:border-[#35483B] text-xs font-label-mono-sm font-bold shadow-2xs">
                             Turnstile Gate Pass Active
                         </span>
                     </div>
-                    <h1 class="font-headline-sm text-2xl sm:text-3xl font-bold tracking-tight text-[#4a1532] dark:text-[#fdf2f8]">
+                    <h1 class="font-headline-sm text-2xl sm:text-3xl font-bold tracking-tight text-[#4a1532] dark:text-[#F4F7F3]">
                         Welcome, <span id="hero-welcome-name">Elena Rostova</span>
                     </h1>
-                    <p class="text-[#70244d] dark:text-[#fbcfe8] text-sm leading-relaxed font-medium">
+                    <p class="text-[#70244d] dark:text-[#F4F7F3] text-sm leading-relaxed font-medium">
                         Your passenger identity is authenticated. You can view your credentials, update your personal name or phone number, change your security password, and present your cryptographic turnstile QR pass for officer verification.
                     </p>
                 </div>
 
                 <!-- Quick Actions Banner -->
                 <div class="shrink-0 flex flex-col items-start md:items-end gap-2.5">
-                    <div class="bg-white/85 dark:bg-black/40 backdrop-blur-md rounded-2xl p-4 border border-pink-200 dark:border-pink-900/60 text-left min-w-[210px] shadow-sm">
-                        <span class="text-[10px] font-label-mono-sm text-[#9d174d] dark:text-[#fbcfe8] uppercase font-bold tracking-wider">DEPARTURE STATUS</span>
-                        <div class="font-headline-sm text-base font-bold text-[#4a1532] dark:text-[#fdf2f8] mt-0.5">Flight SK-492 • Gate A1</div>
-                        <div class="text-xs text-[#065f46] dark:text-[#86efac] font-bold mt-1 flex items-center gap-1">
+                    <div class="bg-white/85 dark:bg-[#19251D] backdrop-blur-md rounded-2xl p-4 border border-pink-200 dark:border-[#35483B] text-left min-w-[210px] shadow-sm">
+                        <span class="text-[10px] font-label-mono-sm text-[#9d174d] dark:text-[#F4F7F3] uppercase font-bold tracking-wider">DEPARTURE STATUS</span>
+                        <div class="font-headline-sm text-base font-bold text-[#4a1532] dark:text-[#F4F7F3] mt-0.5">Flight SK-492 • Gate A1</div>
+                        <div class="text-xs text-[#065f46] dark:text-[#34D399] font-bold mt-1 flex items-center gap-1">
                             <span class="material-symbols-outlined text-[14px]">check_circle</span>
                             Security Clearance Granted
                         </div>
                     </div>
                     <div class="flex items-center gap-2">
-                        <button onclick="openSandwichDrawer('profile')" class="px-3.5 py-2.5 rounded-xl bg-white/90 hover:bg-white dark:bg-pink-950/60 dark:hover:bg-pink-900/80 text-[#831843] dark:text-[#fdf2f8] font-headline-sm text-xs font-bold flex items-center gap-1.5 border border-pink-200 dark:border-pink-800 transition-all shadow-xs">
+                        <button onclick="openSandwichDrawer('profile')" class="px-3.5 py-2.5 rounded-xl bg-white/90 hover:bg-white dark:bg-[#233329] dark:hover:bg-[#35483B] text-[#831843] dark:text-[#F4F7F3] font-headline-sm text-xs font-bold flex items-center gap-1.5 border border-pink-200 dark:border-[#35483B] transition-all shadow-xs">
                             <span class="material-symbols-outlined text-base">tune</span>
                             <span>Settings Menu</span>
                         </button>
-                        <button onclick="scrollToPass()" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#f472b6] to-[#fb923c] hover:from-[#ec4899] hover:to-[#f97316] text-white font-headline-sm text-xs font-bold flex items-center gap-2 shadow-md transition-all transform active:scale-95">
+                        <button onclick="scrollToPass()" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#7fb8d0] to-[#9aa5d8] hover:from-[#34D399] hover:to-[#4285f4] text-[#000000] font-headline-sm text-xs font-bold flex items-center gap-2 shadow-md transition-all transform active:scale-95 border border-[#7fb8d0]/40">
                             <span class="material-symbols-outlined text-base">qr_code_2</span>
                             <span>Show QR Pass</span>
                         </button>
@@ -824,7 +1080,7 @@
         <!-- ============================================================== -->
         <nav class="flex items-center gap-2 overflow-x-auto pb-1 mb-2 border-b border-surface-container-high no-scrollbar">
             <button onclick="switchMainTab('pass')" id="main-tab-btn-pass"
-                class="main-tab-nav-btn px-4 py-2.5 rounded-xl font-headline-sm font-bold text-xs flex items-center gap-2 transition-all whitespace-nowrap bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#451a03] dark:to-[#500724] text-[#831843] dark:text-[#fbcfe8] border border-[#f472b6] shadow-sm">
+class="main-tab-nav-btn px-4 py-2.5 rounded-xl font-headline-sm font-bold text-xs flex items-center gap-2 transition-all whitespace-nowrap bg-gradient-to-r from-[#f0f9ff] to-[#e4eaf0] dark:from-[#19251D] dark:to-[#233329] text-[#29394A] dark:text-[#F4F7F3] border border-[#7fb8d0] shadow-sm">
                 <span class="material-symbols-outlined text-[18px]">badge</span>
                 <span>Pass &amp; Overview</span>
             </button>
@@ -864,7 +1120,20 @@
 
         <!-- PANE 1: DIGITAL PASS & OVERVIEW (DEFAULT) -->
         <div id="main-pane-pass" class="main-tab-pane">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                        <section class="pass-trip-overview rounded-2xl p-4 sm:p-5 shadow-sm" aria-label="Current trip overview">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="min-w-0">
+                        <p class="text-[11px] font-bold uppercase tracking-wider">SkyWings International <span class="pass-active-badge ml-2 rounded-full px-2 py-1">Active pass</span></p>
+                        <h2 class="mt-1 text-lg sm:text-xl font-bold">Flight SK-492 <span class="opacity-70">-</span> Gate A1</h2>
+                        <p class="mt-1 text-xs sm:text-sm">Your verified travel identity and digital boarding pass are ready for departure.</p>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-5 shrink-0 text-left sm:text-right">
+                        <div><span class="block text-[10px] font-semibold uppercase tracking-wide opacity-75">Route</span><strong class="text-sm">JFK to LHR</strong></div>
+                        <div><span class="block text-[10px] font-semibold uppercase tracking-wide opacity-75">Terminal</span><strong class="text-sm">T1 · Gate A1</strong></div>
+                        <div class="col-span-2 sm:col-span-1"><span class="block text-[10px] font-semibold uppercase tracking-wide opacity-75">Gate status</span><strong class="text-sm">Boarding in 25 min</strong></div>
+                    </div>
+                </div>
+            </section><div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
             <!-- LEFT 7 COLUMNS: IDENTITY DETAILS & EDIT FORMS -->
             <div class="lg:col-span-7 space-y-6">
@@ -1051,12 +1320,12 @@
                     <div class="pastel-pass-header p-5 rounded-t-2xl">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center gap-2.5">
-                                <div class="w-8 h-8 rounded-lg bg-white/80 dark:bg-white/10 flex items-center justify-center shadow-xs">
-                                    <span class="material-symbols-outlined text-xl text-[#db2777] dark:text-[#f472b6]">airplane_ticket</span>
+                                <div class="w-8 h-8 rounded-lg bg-white/80 dark:bg-[#2B3D31] flex items-center justify-center shadow-xs">
+                                    <span class="material-symbols-outlined text-xl text-[#db2777] dark:text-[#34D399]">airplane_ticket</span>
                                 </div>
                                 <div>
-                                    <span class="font-headline-sm text-sm font-bold tracking-tight block text-[#4a1532] dark:text-[#fdf2f8]">SkyWings AeroPass</span>
-                                    <span class="text-[10px] text-[#831843] dark:text-[#fbcfe8] font-label-mono-sm font-semibold">INTERNATIONAL FAST-TRACK</span>
+                                    <span class="font-headline-sm text-sm font-bold tracking-tight block text-[#4a1532] dark:text-[#F4F7F3]">SkyWings AeroPass</span>
+                                    <span class="text-[10px] text-[#831843] dark:text-[#F4F7F3] font-label-mono-sm font-semibold">INTERNATIONAL FAST-TRACK</span>
                                 </div>
                             </div>
                             <span class="font-label-mono-sm text-xs bg-gradient-to-r from-[#f472b6] to-[#fb923c] text-white px-3 py-1 rounded-full font-bold flex items-center gap-1 shadow-sm">
@@ -1066,25 +1335,25 @@
                         </div>
 
                         <!-- Flight Route Details Banner -->
-                        <div class="mt-4 pt-3 border-t border-pink-200/80 dark:border-pink-900/60 flex items-center justify-between text-[#4a1532] dark:text-[#fdf2f8]">
+                        <div class="mt-4 pt-3 border-t border-pink-200/80 dark:border-[#35483B] flex items-center justify-between text-[#4a1532] dark:text-[#F4F7F3]">
                             <div>
-                                <span class="text-[10px] font-label-mono-sm text-[#831843] dark:text-[#fbcfe8]">FROM</span>
+                                <span class="text-[10px] font-label-mono-sm text-[#831843] dark:text-[#F4F7F3]">FROM</span>
                                 <div class="text-xl font-bold font-headline-sm">JFK</div>
-                                <span class="text-[10px] text-[#70244d] dark:text-[#fbcfe8]/80 font-medium">New York, US</span>
+                                <span class="text-[10px] text-[#70244d] dark:text-[#F4F7F3]/80 font-medium">New York, US</span>
                             </div>
                             <div class="flex flex-col items-center px-3">
-                                <span class="text-[10px] font-label-mono-sm text-[#be185d] dark:text-[#f472b6] font-bold">SK-492 NONSTOP</span>
+                                <span class="text-[10px] font-label-mono-sm text-[#be185d] dark:text-[#34D399] font-bold">SK-492 NONSTOP</span>
                                 <div class="flex items-center gap-1 my-0.5 text-pink-400">
-                                    <span class="w-8 h-[1px] bg-pink-300 dark:bg-pink-700"></span>
-                                    <span class="material-symbols-outlined text-sm rotate-90 text-[#db2777] dark:text-[#f472b6]">flight</span>
-                                    <span class="w-8 h-[1px] bg-pink-300 dark:bg-pink-700"></span>
+                                    <span class="w-8 h-[1px] bg-pink-300 dark:bg-[#34D399]"></span>
+                                    <span class="material-symbols-outlined text-sm rotate-90 text-[#db2777] dark:text-[#34D399]">flight</span>
+                                    <span class="w-8 h-[1px] bg-pink-300 dark:bg-[#34D399]"></span>
                                 </div>
-                                <span class="text-[10px] text-[#831843] dark:text-[#fbcfe8]/80">7h 45m</span>
+                                <span class="text-[10px] text-[#831843] dark:text-[#F4F7F3]/80">7h 45m</span>
                             </div>
                             <div class="text-right">
-                                <span class="text-[10px] font-label-mono-sm text-[#831843] dark:text-[#fbcfe8]">DESTINATION</span>
+                                <span class="text-[10px] font-label-mono-sm text-[#831843] dark:text-[#F4F7F3]">DESTINATION</span>
                                 <div class="text-xl font-bold font-headline-sm">LHR</div>
-                                <span class="text-[10px] text-[#70244d] dark:text-[#fbcfe8]/80 font-medium">London, UK</span>
+                                <span class="text-[10px] text-[#70244d] dark:text-[#F4F7F3]/80 font-medium">London, UK</span>
                             </div>
                         </div>
                     </div>
@@ -1202,93 +1471,19 @@
         <!-- ============================================================== -->
         <!-- PANE 2: FLIGHT MANAGEMENT (REQUIREMENT 3) -->
         <!-- ============================================================== -->
-        <div id="main-pane-flights" class="main-tab-pane hidden space-y-6 animate-[fadeIn_0.3s_ease]">
-            <!-- Header Banner -->
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-surface-container-high">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                        <span class="material-symbols-outlined text-2xl">flight_takeoff</span>
-                    </div>
-                    <div>
-                        <h2 class="font-headline-sm text-xl font-bold text-on-surface">Flight Management &amp; Itineraries</h2>
-                        <p class="text-xs text-on-surface-variant">View your active flight booking, gate assignments, departure times, and add new itineraries</p>
-                    </div>
-                </div>
-                <button onclick="openAddFlightModal()" class="px-4 py-2.5 bg-primary hover:bg-primary-container hover:text-on-primary-container text-on-primary font-headline-sm font-bold text-xs rounded-xl transition-all shadow-sm flex items-center gap-2 shrink-0">
-                    <span class="material-symbols-outlined text-base">add_circle</span>
-                    <span>Add New Flight</span>
-                </button>
-            </div>
+        <div id="main-pane-flights" class="main-tab-pane hidden space-y-4 animate-[fadeIn_0.3s_ease]">
 
-            <!-- Active Flight Spotlight Card -->
-            <div class="pastel-flight-header rounded-3xl p-6 relative overflow-hidden border-2 border-pink-200 dark:border-pink-900 shadow-md">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="flex items-center gap-2">
-                        <span class="material-symbols-outlined text-tertiary-fixed text-xl">airlines</span>
-                        <span class="font-headline-sm font-bold text-sm tracking-wide" id="active-flight-airline">SkyWings International</span>
-                        <span class="text-xs font-label-mono-sm bg-white/20 px-2 py-0.5 rounded font-semibold" id="active-flight-number">SK-492</span>
-                    </div>
-                    <span class="px-2.5 py-1 rounded-full bg-tertiary text-on-tertiary font-bold text-xs font-label-mono-sm flex items-center gap-1 pulse-glow-emerald" id="active-flight-status-badge">
-                        <span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-ping"></span>
-                        BOARDING AT 10:45 AM
-                    </span>
-                </div>
 
-                <!-- Route Big Display -->
-                <div class="grid grid-cols-3 gap-2 text-center py-4 border-y border-white/15 my-2">
-                    <div class="text-left">
-                        <span class="text-[11px] font-label-mono-sm text-white/70 block">ORIGIN</span>
-                        <div class="font-headline-sm text-3xl font-bold mt-0.5" id="active-flight-origin">JFK</div>
-                        <span class="text-xs text-white/80" id="active-flight-origin-city">New York Kennedy</span>
-                    </div>
-                    <div class="flex flex-col items-center justify-center">
-                        <span class="text-[10px] font-label-mono-sm text-tertiary-fixed font-bold uppercase">7H 45M • DIRECT</span>
-                        <div class="flex items-center gap-2 w-full max-w-[120px] my-1 text-white/40">
-                            <span class="flex-1 h-[1px] bg-white/40"></span>
-                            <span class="material-symbols-outlined text-white text-base rotate-90">flight</span>
-                            <span class="flex-1 h-[1px] bg-white/40"></span>
-                        </div>
-                        <span class="text-[11px] text-white/70">Terminal 1 Concourse</span>
-                    </div>
-                    <div class="text-right">
-                        <span class="text-[11px] font-label-mono-sm text-white/70 block">DESTINATION</span>
-                        <div class="font-headline-sm text-3xl font-bold mt-0.5" id="active-flight-dest">LHR</div>
-                        <span class="text-xs text-white/80" id="active-flight-dest-city">London Heathrow</span>
-                    </div>
-                </div>
-
-                <!-- Flight Details Grid -->
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 text-xs font-label-mono-sm">
-                    <div class="bg-white/10 p-2.5 rounded-xl border border-white/10">
-                        <span class="text-[10px] text-white/60 block">DEPARTURE</span>
-                        <strong class="text-sm font-bold text-white block mt-0.5" id="active-flight-departure">11:30 AM EST</strong>
-                    </div>
-                    <div class="bg-white/10 p-2.5 rounded-xl border border-white/10">
-                        <span class="text-[10px] text-white/60 block">TERMINAL / GATE</span>
-                        <strong class="text-sm font-bold text-tertiary-fixed block mt-0.5" id="active-flight-gate">T1 / Gate A1</strong>
-                    </div>
-                    <div class="bg-white/10 p-2.5 rounded-xl border border-white/10">
-                        <span class="text-[10px] text-white/60 block">SEAT / CABIN</span>
-                        <strong class="text-sm font-bold text-white block mt-0.5" id="active-flight-seat">02A (Business)</strong>
-                    </div>
-                    <div class="bg-white/10 p-2.5 rounded-xl border border-white/10">
-                        <span class="text-[10px] text-white/60 block">BOOKING REF</span>
-                        <strong class="text-sm font-bold text-white block mt-0.5" id="active-flight-pnr">SKW-984210</strong>
-                    </div>
-                </div>
-            </div>
-
-            <!-- All Passenger Flights List -->
-            <div class="bg-surface-container-lowest rounded-2xl border border-surface-container-high p-6 shadow-xs">
-                <div class="flex items-center justify-between pb-4 border-b border-surface-container-high mb-4">
-                    <h3 class="font-headline-sm text-base font-bold text-on-surface">Your Registered Flight Itineraries</h3>
-                    <span class="text-xs text-outline font-label-mono-sm font-semibold" id="total-flights-indicator">3 Flights Linked</span>
-                </div>
-                <div class="space-y-3" id="passenger-flights-list">
-                    <!-- Dynamic Flight Rows Render Here -->
-                </div>
-            </div>
-        </div>
+<section class="rounded-2xl border border-surface-container-high bg-surface-container-lowest p-4 sm:p-5 shadow-sm" aria-label="Journey progress"><div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-5"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">route</span><div><h3 id="active-flight-trip-title" class="text-sm font-bold text-on-surface">SKYWINGS SK-492 &middot; JFK &rarr; LHR DEPARTURE PROGRESSION</h3><p class="text-xs text-on-surface-variant">Your verified journey from check-in to arrival</p></div></div><div class="flex flex-wrap items-center gap-2 shrink-0"><span id="active-flight-status-badge" class="rounded-full bg-amber-100 dark:bg-[#19251D] px-3 py-1.5 text-xs font-bold text-amber-900 dark:text-[#E8B85C]">BOARDING AT 10:45 AM</span><button onclick="openAddFlightModal()" class="min-h-9 rounded-lg bg-primary px-3 py-1.5 text-xs font-bold text-on-primary hover:bg-primary-container inline-flex items-center gap-1.5"><span class="material-symbols-outlined text-sm">add</span>Add New Flight</button></div></div><div class="grid grid-cols-5 gap-1 relative"><div class="absolute left-[10%] right-[10%] top-3 h-0.5 bg-surface-container-high"></div><div class="absolute left-[10%] top-3 h-0.5 w-[20%] bg-emerald-500"></div>
+<div class="relative z-10 flex flex-col items-center text-center gap-1.5"><span class="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs">OK</span><strong class="text-xs text-on-surface">1. Online Check-in</strong><span class="hidden sm:block text-xs text-on-surface-variant">Boarding pass issued</span></div><div class="relative z-10 flex flex-col items-center text-center gap-1.5"><span class="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs">OK</span><strong class="text-xs text-on-surface">2. Baggage Drop</strong><span class="hidden sm:block text-xs text-on-surface-variant">2 bags registered</span></div><div class="relative z-10 flex flex-col items-center text-center gap-1.5"><span class="w-6 h-6 rounded-full bg-primary text-on-primary ring-4 ring-primary/15 flex items-center justify-center text-xs">3</span><strong id="active-flight-progress-gate" class="text-xs text-on-surface">3. Terminal Gate A1</strong><span class="hidden sm:block text-xs text-on-surface-variant">Fast-track active</span></div><div class="relative z-10 flex flex-col items-center text-center gap-1.5"><span class="w-6 h-6 rounded-full bg-amber-300 text-amber-950 flex items-center justify-center text-xs">4</span><strong class="text-xs text-on-surface">4. Boarding</strong><span class="hidden sm:block text-xs text-on-surface-variant">Estimated 10:45 AM</span></div><div class="relative z-10 flex flex-col items-center text-center gap-1.5"><span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-xs">5</span><strong class="text-xs text-on-surface">5. Takeoff</strong><span class="hidden sm:block text-xs text-on-surface-variant">11:30 AM EST</span></div></div></section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch">
+<section class="lg:col-span-4 rounded-2xl border border-surface-container-high bg-surface-container-lowest p-4 sm:p-5 shadow-sm"><div class="flex items-center justify-between gap-2"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">flight</span><span id="active-flight-airline" class="text-xs font-bold text-on-surface">SkyWings International</span></div><span id="active-flight-number" class="rounded-md bg-surface-container-low px-2 py-1 text-xs font-bold text-on-surface">SK-492</span></div><div class="grid grid-cols-2 items-center gap-2 py-5"><div><span id="active-flight-origin" class="block text-3xl sm:text-4xl font-bold text-on-surface">JFK</span><span id="active-flight-origin-city" class="block text-xs text-on-surface-variant mt-1">New York Kennedy</span><span id="active-flight-departure" class="block text-xs font-semibold text-primary mt-1">11:30 AM EST</span></div><div class="text-right"><span id="active-flight-dest" class="block text-3xl sm:text-4xl font-bold text-on-surface">LHR</span><span id="active-flight-dest-city" class="block text-xs text-on-surface-variant mt-1">London Heathrow</span><span id="active-flight-arrival" class="block text-xs font-semibold text-primary mt-1">11:15 PM GMT</span></div><div class="col-span-2 flex items-center gap-2 text-xs text-on-surface-variant"><span class="h-px flex-1 bg-surface-container-high"></span><span>7h 45m &middot; Direct</span><span class="h-px flex-1 bg-surface-container-high"></span></div></div><div class="grid grid-cols-2 gap-2 text-xs"><div class="rounded-lg bg-surface-container-low p-2.5"><span class="block text-on-surface-variant">Booking reference</span><strong id="active-flight-pnr" class="block text-on-surface mt-1">SKW-984210</strong></div><div class="rounded-lg bg-surface-container-low p-2.5"><span class="block text-on-surface-variant">Flight status</span><strong class="block text-emerald-700 dark:text-[#34D399] mt-1">Confirmed</strong></div></div></section>
+<section class="lg:col-span-4 rounded-2xl border border-surface-container-high bg-surface-container-lowest p-4 sm:p-5 shadow-sm"><div class="flex items-center justify-between gap-2 mb-3"><div><span class="block text-xs font-bold text-amber-800 dark:text-[#E8B85C] uppercase">Assigned Terminal &amp; Gate</span><span class="text-xs text-on-surface-variant">Priority boarding lane</span></div><span class="rounded-lg bg-amber-300 px-2.5 py-1.5 text-sm font-bold text-amber-950" id="active-flight-gate-badge">A1</span></div><div class="rounded-xl bg-amber-50 dark:bg-[#19251D] border border-amber-200 dark:border-[#35483B] p-3 mb-3"><div class="text-lg font-bold text-on-surface">Terminal <span id="active-flight-terminal">1</span> &middot; Gate <span id="active-flight-gate">A1</span></div><span class="text-xs text-amber-900 dark:text-[#E8B85C]">Priority Terminal Fast-Track Ready</span></div><div class="rounded-lg bg-emerald-50 dark:bg-[#19251D] border border-emerald-200 dark:border-[#35483B] p-2.5 text-xs text-emerald-900 dark:text-[#34D399]"><strong class="block">Security Clearance Granted</strong><span>Biometric turnstile pass is active.</span></div><button type="button" onclick="switchMainTab('map')" class="mt-3 min-h-10 w-full rounded-lg bg-primary px-3 py-2 text-sm font-bold text-on-primary hover:bg-primary-container inline-flex items-center justify-center gap-2"><span class="material-symbols-outlined text-base">map</span>View Terminal Map</button></section>
+<section class="lg:col-span-4 rounded-2xl border border-surface-container-high bg-surface-container-lowest p-4 sm:p-5 shadow-sm"><div class="flex items-center justify-between gap-2 mb-3"><div><span class="block text-xs font-bold text-primary uppercase">In-Flight &amp; Passenger Preferences</span><span class="text-xs text-on-surface-variant">Seat and cabin information</span></div><span class="rounded-full bg-violet-50 dark:bg-[#19251D] px-2 py-1 text-xs font-bold text-violet-800 dark:text-[#65A982]">BUSINESS CLASS</span></div><div class="rounded-xl bg-surface-container-low p-3"><span class="block text-xs text-on-surface-variant">Assigned seat</span><strong id="active-flight-seat" class="block text-base font-bold text-on-surface mt-1">02A (Business)</strong><span class="block text-xs text-on-surface-variant mt-1">Window &middot; Priority boarding</span></div><div class="mt-3 rounded-xl border border-primary/20 bg-primary/5 p-3 text-xs text-on-surface"><strong class="block">Passenger profile synchronized</strong><span>Traveler details match your verified booking.</span></div><button type="button" onclick="scrollToPass()" class="mt-3 min-h-10 w-full rounded-lg border border-surface-container-high bg-surface-container-low px-3 py-2 text-sm font-bold text-on-surface hover:bg-surface-container-high inline-flex items-center justify-center gap-2"><span class="material-symbols-outlined text-base">qr_code_2</span>View Boarding Pass</button></section>
+</div>
+<section class="rounded-2xl border border-surface-container-high bg-surface-container-lowest p-4 sm:p-5 shadow-sm"><div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-surface-container-high pb-3 mb-3"><div><div class="flex flex-wrap items-center gap-2"><h3 class="text-base font-bold text-on-surface">All Registered Flight Itineraries</h3><span id="total-flights-indicator" class="rounded-full bg-surface-container-low px-2.5 py-1 text-xs font-semibold text-on-surface-variant">3 Flights Linked</span></div><p class="text-xs text-on-surface-variant mt-1">Manage your linked flight bookings and active gate changes.</p></div><div class="flex flex-wrap gap-1.5" role="group" aria-label="Filter flight list"><button type="button" data-flight-filter="all" onclick="filterFlights('all')" class="flight-filter-btn min-h-9 rounded-lg border border-primary bg-primary/15 px-3 py-1.5 text-xs font-bold text-on-surface">All 3</button><button type="button" data-flight-filter="upcoming" onclick="filterFlights('upcoming')" class="flight-filter-btn min-h-9 rounded-lg border border-surface-container-high px-3 py-1.5 text-xs font-semibold text-on-surface">Upcoming</button><button type="button" data-flight-filter="past" onclick="filterFlights('past')" class="flight-filter-btn min-h-9 rounded-lg border border-surface-container-high px-3 py-1.5 text-xs font-semibold text-on-surface">Past</button><button type="button" data-flight-filter="updates" onclick="filterFlights('updates')" class="flight-filter-btn min-h-9 rounded-lg border border-surface-container-high px-3 py-1.5 text-xs font-semibold text-on-surface">Flight Updates</button></div></div><div id="flight-filter-empty" class="hidden rounded-lg bg-surface-container-low p-4 text-center text-sm text-on-surface-variant">No flights match this filter.</div><div class="space-y-2" id="passenger-flights-list"><!-- Dynamic Flight Rows Render Here --></div></section>
+<div class="rounded-xl border border-surface-container-high bg-surface-container-low px-4 py-3 text-xs text-on-surface-variant flex items-start gap-2"><span class="material-symbols-outlined text-primary text-base">sync</span><span>Flight schedule updates and gate changes are synchronized in real time with airline systems. Times shown use airport local time.</span></div>
+</div>
         <!-- END PANE 2: FLIGHT MANAGEMENT -->
 
         <!-- ============================================================== -->
@@ -1498,160 +1693,66 @@
         <!-- ============================================================== -->
         <!-- PANE 4: BAGGAGE MANAGEMENT & ALLOWANCE CHECKING (REQUIREMENTS 9, 10, 11) -->
         <!-- ============================================================== -->
-        <div id="main-pane-baggage" class="main-tab-pane hidden space-y-6 animate-[fadeIn_0.3s_ease]">
-            <!-- Header Banner -->
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-surface-container-high">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                        <span class="material-symbols-outlined text-2xl">luggage</span>
+        <div id="main-pane-baggage" class="main-tab-pane hidden space-y-4 animate-[fadeIn_0.3s_ease]">
+            <section class="baggage-flight-banner rounded-2xl px-5 py-4 text-white shadow-lg">
+                <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                    <div class="min-w-0">
+                        <div class="flex flex-wrap items-center gap-2 mb-2 text-xs font-bold"><span class="rounded-full bg-amber-300/20 text-amber-100 px-2.5 py-1">✦ SKYPRIORITY PASSENGER</span><span class="rounded-full bg-emerald-300/15 text-emerald-100 px-2.5 py-1">DOCUMENTS VERIFIED</span><span class="rounded-full bg-white/10 text-white px-2.5 py-1">FLIGHT SK-492</span></div>
+                        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">Baggage Allowance &amp; Smart Scale</h2>
+                        <p class="text-sm text-slate-200 mt-1">Elena Rostova <span class="mx-1 text-slate-400">•</span> Flight SK-492 to London Heathrow <span class="mx-1 text-slate-400">•</span> Terminal 1 · Gate A1 <span class="mx-1 text-slate-400">•</span> Boarding in 42m</p>
                     </div>
-                    <div>
-                        <h2 class="font-headline-sm text-xl font-bold text-on-surface">Baggage Management &amp; Allowance Checking</h2>
-                        <p class="text-xs text-on-surface-variant">Enter baggage quantity and weight. The system automatically compares weight against your 20 kg ticket allowance</p>
-                    </div>
+                    <div class="flex items-center gap-3 shrink-0"><div class="hidden sm:block text-right px-4 py-2 rounded-xl bg-white/10 border border-white/10"><span class="block text-xs text-slate-200 uppercase tracking-wider">Baggage allowance</span><strong class="text-lg">20.0 kg free</strong></div><span class="material-symbols-outlined text-4xl text-sky-200">luggage</span></div>
                 </div>
-                <div class="flex items-center gap-2">
-                    <span class="text-xs font-label-mono-sm px-3 py-1.5 rounded-xl bg-surface-container-low border border-surface-container-high text-primary font-bold">
-                        FREE ALLOWANCE: 20 KG
-                    </span>
+            </section>
+            <section class="bg-surface-container-lowest rounded-2xl border border-surface-container-high p-4 sm:p-5 shadow-sm" aria-labelledby="baggage-intelligence-title">
+                <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                    <div class="flex items-center gap-2.5"><span class="w-9 h-9 rounded-lg bg-primary/15 text-primary flex items-center justify-center"><span class="material-symbols-outlined text-xl">analytics</span></span><div><h3 id="baggage-intelligence-title" class="text-sm sm:text-base font-bold text-on-surface">Real-Time Baggage &amp; Tariff Intelligence</h3><p class="text-xs text-on-surface-variant">Automated scale comparison against your ticket allowance</p></div></div>
+                    <span id="allowance-status-pill" class="px-3 py-1.5 rounded-full font-bold text-xs bg-error-container text-on-error-container">EXCESS WEIGHT DETECTED (+6 kg)</span>
                 </div>
-            </div>
-
-            <!-- Baggage Form & Live Allowance Gauge Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                <!-- Left 5 Cols: Entry Form (Requirement 9) -->
-                <div class="lg:col-span-5 bg-surface-container-lowest rounded-2xl border border-surface-container-high p-6 shadow-xs flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center gap-2 pb-3 border-b border-surface-container-high mb-4">
-                            <span class="material-symbols-outlined text-primary text-xl">scale</span>
-                            <h3 class="font-headline-sm text-base font-bold text-on-surface">Checked Baggage Details</h3>
-                        </div>
-
-                        <form onsubmit="handleBaggageSubmit(event)" id="baggage-entry-form" class="space-y-4">
-                            <!-- Baggage Quantity (Pieces) -->
-                            <div class="space-y-1.5">
-                                <label class="font-body-sm text-xs font-semibold text-on-surface flex items-center justify-between">
-                                    <span>Baggage Quantity (Pieces / Bags)</span>
-                                    <span class="text-[10px] font-label-mono-sm text-outline uppercase">MAX 4 CHECKED</span>
-                                </label>
-                                <div class="flex items-center gap-3">
-                                    <button type="button" onclick="adjustBaggageQty(-1)" class="w-10 h-10 rounded-xl bg-surface-container-low hover:bg-surface-container-high border border-surface-container-high flex items-center justify-center text-on-surface font-bold text-base transition-colors">
-                                        −
-                                    </button>
-                                    <input id="baggage-quantity-input" type="number" min="1" max="4" value="2" oninput="handleBaggageValueChange()"
-                                        class="flex-1 bg-surface-container-low border border-surface-container-high py-2.5 rounded-xl text-center text-sm font-label-mono-lg font-bold text-on-surface focus:outline-none focus:border-primary" />
-                                    <button type="button" onclick="adjustBaggageQty(1)" class="w-10 h-10 rounded-xl bg-surface-container-low hover:bg-surface-container-high border border-surface-container-high flex items-center justify-center text-on-surface font-bold text-base transition-colors">
-                                        +
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Baggage Weight (kg) -->
-                            <div class="space-y-1.5">
-                                <div class="flex items-center justify-between">
-                                    <label for="baggage-weight-input" class="font-body-sm text-xs font-semibold text-on-surface">Total Checked Weight (kg)</label>
-                                    <span class="text-xs font-label-mono-sm text-primary font-bold" id="baggage-weight-display">26.0 kg</span>
-                                </div>
-                                <input id="baggage-weight-input" type="number" step="0.5" min="5" max="50" value="26.0" oninput="handleBaggageValueChange()"
-                                    class="w-full bg-surface-container-low border border-surface-container-high px-3 py-2.5 rounded-xl text-sm font-label-mono-lg font-bold text-on-surface focus:outline-none focus:border-primary" />
-                                <input id="baggage-weight-slider" type="range" min="5" max="45" step="0.5" value="26" oninput="syncBaggageSlider(this.value)"
-                                    class="w-full accent-primary cursor-pointer" />
-                            </div>
-
-                            <!-- Flight Identifier -->
-                            <div class="space-y-1">
-                                <label class="font-body-sm text-xs font-semibold text-on-surface">Assigned Flight</label>
-                                <div class="p-2.5 rounded-xl bg-surface-container-low border border-surface-container-high flex items-center justify-between text-xs font-label-mono-sm">
-                                    <span class="font-bold text-primary">Flight SK-492 • London Heathrow</span>
-                                    <span class="text-outline">Terminal 1</span>
-                                </div>
-                            </div>
-
-                            <button type="submit" id="btn-save-baggage" class="w-full py-3 bg-primary hover:bg-primary-container hover:text-on-primary-container text-on-primary font-headline-sm font-bold text-xs rounded-xl transition-all shadow-sm flex items-center justify-center gap-2">
-                                <span class="material-symbols-outlined text-base">save</span>
-                                <span>Save Baggage Entry</span>
-                            </button>
-                        </form>
-                    </div>
-
-                    <div class="mt-4 p-3 rounded-xl bg-surface-container-low border border-surface-container-high text-[11px] text-on-surface-variant flex items-center gap-2">
-                        <span class="material-symbols-outlined text-primary text-base">info</span>
-                        <span>Excess rate: ₹650 INR per kilogram over standard 20 kg allowance.</span>
-                    </div>
+                <div class="grid grid-cols-2 xl:grid-cols-4 gap-3">
+                    <div class="bg-surface-container-low p-3 rounded-xl border border-surface-container-high"><span class="text-xs font-semibold text-on-surface-variant block">FREE ALLOWANCE</span><strong class="text-lg font-bold text-on-surface block mt-1">20.0 kg</strong><span class="text-xs text-on-surface-variant">Included with ticket</span></div>
+                    <div class="bg-surface-container-low p-3 rounded-xl border border-surface-container-high"><span class="text-xs font-semibold text-on-surface-variant block">YOUR TOTAL WEIGHT</span><strong id="stat-current-weight" class="text-lg font-bold text-primary block mt-1">26.0 kg</strong><span class="text-xs text-on-surface-variant">Checked baggage</span></div>
+                    <div class="bg-rose-50 p-3 rounded-xl border border-rose-200 dark:bg-[#19251D] dark:border-[#35483B]"><span class="text-xs font-semibold text-rose-800 dark:text-[#F07878] block">EXCESS WEIGHT</span><strong id="stat-excess-weight" class="text-lg font-bold text-rose-700 dark:text-[#F07878] block mt-1">+6.0 kg</strong><span class="text-xs text-rose-700 dark:text-[#F07878]">Over free allowance</span></div>
+                    <div class="bg-amber-50 p-3 rounded-xl border border-amber-200 dark:bg-[#19251D] dark:border-[#35483B]"><span class="text-xs font-semibold text-amber-900 dark:text-[#E8B85C] block">TARIFF DUE</span><strong id="stat-excess-fee" class="text-lg font-bold text-amber-900 dark:text-[#E8B85C] block mt-1">₹3,900 INR</strong><span class="text-xs text-amber-900 dark:text-[#E8B85C]">₹650 per excess kg</span></div>
                 </div>
-
-                <!-- Right 7 Cols: Allowance Checking Visual Gauge (Requirement 10 & 11) -->
-                <div class="lg:col-span-7 bg-surface-container-lowest rounded-2xl border border-surface-container-high p-6 shadow-xs flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between pb-3 border-b border-surface-container-high mb-5">
-                            <div class="flex items-center gap-2">
-                                <span class="material-symbols-outlined text-primary text-2xl">analytics</span>
-                                <div>
-                                    <h3 class="font-headline-sm text-base font-bold text-on-surface">Allowance Comparison Gauge</h3>
-                                    <p class="text-[11px] text-outline font-label-mono-sm">Real-Time Baggage Limit Verification</p>
-                                </div>
-                            </div>
-                            <span class="px-3 py-1 rounded-full font-bold text-xs font-label-mono-sm bg-error-container text-on-error-container flex items-center gap-1" id="allowance-status-pill">
-                                EXCESS WEIGHT DETECTED (+6 kg)
-                            </span>
-                        </div>
-
-                        <!-- Stat Numbers Grid -->
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
-                            <div class="bg-surface-container-low p-3 rounded-xl border border-surface-container-high">
-                                <span class="text-[10px] font-label-mono-sm text-outline block">FREE ALLOWANCE</span>
-                                <strong class="text-base font-bold font-headline-sm text-tertiary block mt-0.5">20.0 kg</strong>
-                            </div>
-                            <div class="bg-surface-container-low p-3 rounded-xl border border-surface-container-high">
-                                <span class="text-[10px] font-label-mono-sm text-outline block">YOUR WEIGHT</span>
-                                <strong class="text-base font-bold font-headline-sm text-on-surface block mt-0.5" id="stat-current-weight">26.0 kg</strong>
-                            </div>
-                            <div class="bg-surface-container-low p-3 rounded-xl border border-surface-container-high">
-                                <span class="text-[10px] font-label-mono-sm text-outline block">EXCESS WEIGHT</span>
-                                <strong class="text-base font-bold font-headline-sm text-error block mt-0.5" id="stat-excess-weight">+6.0 kg</strong>
-                            </div>
-                            <div class="bg-surface-container-low p-3 rounded-xl border border-surface-container-high">
-                                <span class="text-[10px] font-label-mono-sm text-outline block">FEE DUE</span>
-                                <strong class="text-base font-bold font-headline-sm text-error block mt-0.5" id="stat-excess-fee">₹3,900 INR</strong>
-                            </div>
-                        </div>
-
-                        <!-- Graphical Allowance Meter -->
-                        <div class="space-y-2 mb-6">
-                            <div class="flex items-center justify-between text-xs font-label-mono-sm">
-                                <span>0 kg</span>
-                                <span class="text-tertiary font-bold">20 kg Limit Threshold</span>
-                                <span>40 kg</span>
-                            </div>
-                            <div class="relative w-full h-4 bg-surface-container-high rounded-full overflow-hidden">
-                                <div id="allowance-progress-bar" class="h-full bg-error rounded-full transition-all duration-300" style="width: 65%;"></div>
-                                <!-- Vertical 20kg Marker -->
-                                <div class="absolute top-0 bottom-0 left-1/2 w-0.5 bg-black/60"></div>
-                            </div>
-                        </div>
-
-                        <!-- Dynamic Status Alert Box -->
-                        <div id="allowance-alert-banner" class="p-4 rounded-xl bg-error-container text-on-error-container border border-error text-xs flex items-start gap-3">
-                            <span class="material-symbols-outlined text-error text-xl shrink-0 mt-0.5">warning</span>
-                            <div class="flex-1">
-                                <strong class="font-bold block" id="allowance-alert-title">Excess Baggage Surcharge Required</strong>
-                                <span class="text-[11px] leading-relaxed block mt-0.5" id="allowance-alert-desc">
-                                    Your total checked weight exceeds your ticket's 20 kg allowance by 6.0 kg. Under aviation tariffs, an excess baggage fee of ₹3,900 (₹650/kg) must be cleared prior to boarding gate clearance.
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Action Button: Proceed to Payment Portal (Requirement 11) -->
-                    <div class="mt-6 pt-4 border-t border-surface-container-high">
-                        <button onclick="openExcessPaymentModal()" id="btn-proceed-payment"
-                            class="w-full py-3.5 bg-tertiary hover:bg-tertiary-container text-on-tertiary font-headline-sm font-bold text-sm rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2">
-                            <span class="material-symbols-outlined text-lg">credit_card</span>
-                            <span id="btn-proceed-payment-text">Proceed to Excess Baggage Payment Portal (₹3,900)</span>
-                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                        </button>
-                    </div>
+                <div class="mt-4 rounded-xl bg-surface-container-low border border-surface-container-high p-3 sm:p-4">
+                    <div class="flex items-center justify-between gap-2 text-xs font-semibold text-on-surface-variant mb-2"><span>0 kg</span><span class="text-center text-on-surface">20 kg Limit Threshold</span><span>40 kg</span></div>
+                    <div class="relative h-3.5 rounded-full bg-surface-container-high overflow-hidden"><div id="allowance-progress-bar" class="h-full bg-error rounded-full transition-all duration-300" style="width:65%"></div><span class="absolute top-0 bottom-0 left-1/2 w-0.5 bg-slate-900" aria-hidden="true"></span></div>
+                    <div class="flex flex-wrap items-center justify-between gap-2 text-xs text-on-surface-variant mt-2"><span><span class="inline-block w-2 h-2 rounded-full bg-emerald-500 mr-1"></span>Free allowance zone</span><span>Current checked weight: <strong id="baggage-weight-display" class="text-on-surface">26.0 kg</strong></span></div>
                 </div>
+            </section>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch">
+                <section class="lg:col-span-4 bg-surface-container-lowest rounded-2xl border border-surface-container-high p-4 sm:p-5 shadow-sm">
+                    <div class="flex items-center justify-between gap-2 mb-4"><h3 class="font-bold text-sm text-on-surface flex items-center gap-2"><span class="material-symbols-outlined text-primary">scale</span>Baggage Quantity &amp; Scale</h3><span class="text-xs font-semibold text-on-surface-variant">MAX 4 PIECES</span></div>
+                    <form onsubmit="handleBaggageSubmit(event)" id="baggage-entry-form" class="space-y-4">
+                        <div><div class="flex justify-between items-center gap-2 mb-2"><label class="text-xs font-bold text-on-surface">PIECE COUNT</label><span class="text-xs text-on-surface-variant">Select checked bags</span></div><div class="grid grid-cols-4 gap-2">
+                            <button type="button" data-baggage-qty="1" onclick="setBaggageQty(1)" class="baggage-qty-option rounded-xl border border-surface-container-high bg-surface-container-low px-2 py-2 text-on-surface"><span class="block font-bold text-xs">1 Bag</span><span class="text-xs">piece</span></button>
+                            <button type="button" data-baggage-qty="2" onclick="setBaggageQty(2)" class="baggage-qty-option rounded-xl border border-primary bg-primary/15 px-2 py-2 text-on-surface"><span class="block font-bold text-xs">2 Bags</span><span class="text-xs">pieces</span></button>
+                            <button type="button" data-baggage-qty="3" onclick="setBaggageQty(3)" class="baggage-qty-option rounded-xl border border-surface-container-high bg-surface-container-low px-2 py-2 text-on-surface"><span class="block font-bold text-xs">3 Bags</span><span class="text-xs">pieces</span></button>
+                            <button type="button" data-baggage-qty="4" onclick="setBaggageQty(4)" class="baggage-qty-option rounded-xl border border-surface-container-high bg-surface-container-low px-2 py-2 text-on-surface"><span class="block font-bold text-xs">4 Bags</span><span class="text-xs">pieces</span></button>
+                        </div><input id="baggage-quantity-input" type="number" min="1" max="4" value="2" class="sr-only" aria-label="Number of checked bags" /></div>
+                        <div class="border-t border-surface-container-high pt-4"><div class="flex items-center justify-between gap-2 mb-2"><label for="baggage-weight-input" class="text-xs font-bold text-on-surface">SCALE CALIBRATION</label><span class="rounded-md bg-primary/15 px-2 py-1 text-xs font-bold text-on-surface"><span id="baggage-scale-readout">26.0</span> kg</span></div>
+                            <div class="flex items-center gap-2"><input id="baggage-weight-input" type="number" step="0.5" min="5" max="50" value="26.0" oninput="handleBaggageValueChange()" class="w-full min-w-0 rounded-lg border border-surface-container-high bg-surface-container-low px-3 py-2 text-sm font-bold text-on-surface" /><span class="text-xs text-on-surface-variant">kg</span></div>
+                            <input id="baggage-weight-slider" type="range" min="5" max="45" step="0.5" value="26" oninput="syncBaggageSlider(this.value)" class="w-full accent-primary cursor-pointer mt-3" aria-label="Adjust total baggage weight" /><div class="flex justify-between text-xs text-on-surface-variant mt-1"><span>5 kg</span><span>45 kg max</span></div>
+                        </div>
+                        <button type="submit" id="btn-save-baggage" class="w-full py-2.5 bg-primary hover:bg-primary-container text-on-primary font-bold text-sm rounded-xl transition-all shadow-sm flex items-center justify-center gap-2"><span class="material-symbols-outlined text-base">save</span>Save Baggage Manifest</button>
+                    </form>
+                </section>
+                <section class="lg:col-span-4 bg-surface-container-lowest rounded-2xl border border-surface-container-high p-4 sm:p-5 shadow-sm" aria-labelledby="baggage-pieces-heading">
+                    <div class="flex items-center justify-between gap-2 mb-4"><h3 id="baggage-pieces-heading" class="font-bold text-sm text-on-surface flex items-center gap-2"><span class="material-symbols-outlined text-primary">luggage</span>Checked Luggage Pieces</h3><span id="baggage-pieces-count" class="rounded-full bg-surface-container-low px-2.5 py-1 text-xs font-semibold text-on-surface-variant">2 pieces</span></div>
+                    <div id="baggage-pieces-list" class="space-y-2" aria-live="polite"></div>
+                    <div class="mt-3 pt-3 border-t border-dashed border-surface-container-high flex justify-between gap-2 text-xs text-on-surface-variant"><span>Free limit: 20 kg</span><span>Rate: ₹650 / kg</span></div>
+                </section>
+                <section class="lg:col-span-4 bg-surface-container-lowest rounded-2xl border border-surface-container-high p-4 sm:p-5 shadow-sm flex flex-col">
+                    <div class="flex items-start justify-between gap-2 mb-3"><h3 class="font-bold text-sm text-on-surface flex items-center gap-2"><span class="material-symbols-outlined text-rose-600">warning</span>Excess Surcharge Required</h3><span id="baggage-payment-label" class="text-xs font-bold uppercase text-rose-700 dark:text-[#F07878]">PAYMENT DUE</span></div>
+                    <div id="allowance-alert-banner" class="rounded-xl bg-rose-50 dark:bg-[#19251D] border border-rose-200 dark:border-[#35483B] p-3 text-rose-950 dark:text-[#F07878] flex-1">
+                        <strong id="allowance-alert-title" class="block text-sm font-bold">Excess Baggage Surcharge Required</strong>
+                        <span id="allowance-alert-desc" class="block text-xs leading-relaxed mt-1">Your total checked weight exceeds your ticket's 20 kg allowance by 6.0 kg. An excess baggage fee of ₹3,900 (₹650/kg) is due before baggage drop.</span>
+                        <div class="grid grid-cols-2 gap-2 mt-3 text-xs"><div class="rounded-lg bg-white/70 dark:bg-[#19251D] p-2"><span class="block text-rose-800 dark:text-[#F07878]">Excess weight</span><strong id="baggage-excess-breakdown" class="text-rose-900 dark:text-[#F07878]">6.0 kg</strong></div><div class="rounded-lg bg-white/70 dark:bg-[#19251D] p-2"><span class="block text-rose-800 dark:text-[#F07878]">Payable total</span><strong id="baggage-payable-breakdown" class="text-rose-900 dark:text-[#F07878]">₹3,900 INR</strong></div></div>
+                    </div>
+                    <button onclick="openExcessPaymentModal()" id="btn-proceed-payment" class="w-full mt-3 py-3 bg-tertiary hover:bg-tertiary-container text-on-tertiary font-bold text-sm rounded-xl transition-all shadow-sm flex items-center justify-center gap-2"><span class="material-symbols-outlined text-base">lock</span><span id="btn-proceed-payment-text">Proceed to Baggage Payment (₹3,900)</span><span class="material-symbols-outlined text-base">arrow_forward</span></button>
+                    <div class="flex flex-wrap gap-x-3 gap-y-1 mt-2 text-xs text-on-surface-variant"><span>✓ Encrypted payment</span><span>✓ Instant receipt</span></div>
+                </section>
             </div>
         </div>
         <!-- END PANE 4: BAGGAGE MANAGEMENT -->
@@ -1659,49 +1760,49 @@
         <!-- ============================================================== -->
         <!-- PANE 5: PAYMENT MANAGEMENT & RECEIPTS (REQUIREMENTS 11, 12) -->
         <!-- ============================================================== -->
-        <div id="main-pane-payments" class="main-tab-pane hidden space-y-6 animate-[fadeIn_0.3s_ease]">
-            <!-- Header Banner -->
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-surface-container-high">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                        <span class="material-symbols-outlined text-2xl">receipt_long</span>
+        <div id="main-pane-payments" class="main-tab-pane hidden space-y-4 animate-[fadeIn_0.3s_ease]">
+            <section class="bg-surface-container-lowest rounded-2xl border border-surface-container-high p-4 sm:p-5 shadow-sm">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="flex items-start gap-3 min-w-0">
+                        <span class="w-10 h-10 rounded-xl bg-primary/15 text-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-2xl">receipt_long</span></span>
+                        <div class="min-w-0"><h2 class="text-lg sm:text-xl font-bold text-on-surface">Payment Management &amp; Receipts</h2><p class="text-sm text-on-surface-variant mt-1">The system securely records transactions, issues digital receipts, and updates baggage clearance status.</p></div>
                     </div>
-                    <div>
-                        <h2 class="font-headline-sm text-xl font-bold text-on-surface">Payment Management &amp; Receipts</h2>
-                        <p class="text-xs text-on-surface-variant">The system securely records transactions, issues digital receipts, and updates baggage clearance status</p>
+                    <button onclick="openExcessPaymentModal()" class="min-h-11 px-4 py-2.5 bg-primary hover:bg-primary-container text-on-primary font-bold text-sm rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 shrink-0"><span class="material-symbols-outlined text-base">payments</span><span>Make Payment</span></button>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3" aria-label="Payment summary">
+                <article class="bg-surface-container-lowest rounded-xl border border-surface-container-high p-4 shadow-sm"><div class="flex justify-between items-start gap-2"><div><span class="block text-xs font-semibold text-on-surface-variant">TOTAL DISBURSED</span><strong id="payment-total-disbursed" class="block text-lg font-bold text-on-surface mt-1">&#8377;23,650.00</strong><span id="payment-summary-subtitle" class="text-xs text-emerald-700 dark:text-[#34D399]">3 settled transactions</span></div><span class="w-8 h-8 rounded-lg bg-emerald-50 dark:bg-[#19251D] text-emerald-700 dark:text-[#34D399] flex items-center justify-center">&#8377;</span></div></article>
+                <article class="bg-surface-container-lowest rounded-xl border border-surface-container-high p-4 shadow-sm"><div class="flex justify-between items-start gap-2"><div><span class="block text-xs font-semibold text-on-surface-variant">SETTLED INVOICES</span><strong id="payment-settled-count" class="block text-lg font-bold text-on-surface mt-1">3 Invoices</strong><span class="text-xs text-on-surface-variant">All records verified</span></div><span class="w-8 h-8 rounded-lg bg-sky-50 dark:bg-[#19251D] text-sky-700 dark:text-[#65A982] flex items-center justify-center"><span class="material-symbols-outlined text-base">receipt</span></span></div></article>
+                <article class="bg-surface-container-lowest rounded-xl border border-surface-container-high p-4 shadow-sm"><div class="flex justify-between items-start gap-2"><div><span class="block text-xs font-semibold text-on-surface-variant">LAST SURCHARGE</span><strong id="payment-last-surcharge" class="block text-lg font-bold text-amber-800 dark:text-[#E8B85C] mt-1">&#8377;3,900.00</strong><span class="text-xs text-amber-800 dark:text-[#E8B85C]">Baggage excess fee</span></div><span class="w-8 h-8 rounded-lg bg-amber-50 dark:bg-[#19251D] text-amber-800 dark:text-[#E8B85C] flex items-center justify-center"><span class="material-symbols-outlined text-base">payments</span></span></div></article>
+                <article class="bg-surface-container-lowest rounded-xl border border-surface-container-high p-4 shadow-sm"><div class="flex justify-between items-start gap-2"><div><span class="block text-xs font-semibold text-on-surface-variant">PRIMARY METHOD</span><strong id="payment-primary-method" class="block text-base font-bold text-on-surface mt-1">Corporate card •••• 4052</strong><span class="text-xs text-on-surface-variant">Secure payment profile</span></div><span class="w-8 h-8 rounded-lg bg-surface-container-low text-on-surface-variant flex items-center justify-center"><span class="material-symbols-outlined text-base">lock</span></span></div></article>
+            </section>
+
+            <section class="bg-surface-container-lowest rounded-2xl border border-surface-container-high shadow-sm overflow-hidden">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3 p-4 sm:p-5 border-b border-surface-container-high">
+                    <div><div class="flex flex-wrap items-center gap-2"><h3 class="font-bold text-base text-on-surface">Payment History &amp; Electronic Receipts</h3><span id="payment-count-indicator" class="rounded-full bg-emerald-50 dark:bg-[#19251D] px-2.5 py-1 text-xs font-semibold text-emerald-800 dark:text-[#34D399]">3 Settled Transactions</span></div><p class="text-xs text-on-surface-variant mt-1">Review transactions and download official receipts.</p></div>
+                    <div class="flex flex-col sm:flex-row gap-2 w-full lg:w-auto">
+                        <label class="relative flex-1 lg:w-56"><span class="sr-only">Search transactions</span><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-sm text-on-surface-variant">search</span><input id="payment-search-input" type="search" oninput="filterPaymentRows()" placeholder="Search ID or item..." class="w-full min-h-10 rounded-lg border border-surface-container-high bg-surface-container-low py-2 pl-9 pr-3 text-sm text-on-surface placeholder:text-on-surface-variant" /></label>
+                        <label><span class="sr-only">Filter payment date</span><select id="payment-date-filter" onchange="filterPaymentRows()" class="w-full min-h-10 rounded-lg border border-surface-container-high bg-surface-container-low px-3 py-2 text-sm text-on-surface"><option value="all">All dates</option><option value="today">Today</option><option value="week">This week</option><option value="older">Older</option></select></label>
+                        <button type="button" onclick="exportPaymentsCSV()" class="min-h-10 rounded-lg border border-surface-container-high bg-surface-container-low px-3 py-2 text-sm font-semibold text-on-surface hover:bg-surface-container-high inline-flex items-center justify-center gap-1.5"><span class="material-symbols-outlined text-base">download</span><span>Export CSV</span></button>
                     </div>
                 </div>
-                <button onclick="openExcessPaymentModal()" class="px-4 py-2.5 bg-primary hover:bg-primary-container text-on-primary font-headline-sm font-bold text-xs rounded-xl transition-all shadow-sm flex items-center gap-2">
-                    <span class="material-symbols-outlined text-base">payments</span>
-                    <span>Make Payment</span>
-                </button>
-            </div>
-
-            <!-- Transactions Table Card -->
-            <div class="bg-surface-container-lowest rounded-2xl border border-surface-container-high p-6 shadow-xs">
-                <div class="flex items-center justify-between pb-4 border-b border-surface-container-high mb-4">
-                    <h3 class="font-headline-sm text-base font-bold text-on-surface">Payment History &amp; Electronic Receipts</h3>
-                    <span class="text-xs text-outline font-label-mono-sm font-semibold" id="payment-count-indicator">1 Settled Transaction</span>
-                </div>
-
                 <div class="overflow-x-auto">
-                    <table class="w-full text-left text-xs">
-                        <thead class="bg-surface-container-low text-outline font-label-mono-sm uppercase border-b border-surface-container-high">
-                            <tr>
-                                <th class="py-3 px-4">Transaction ID</th>
-                                <th class="py-3 px-4">Description</th>
-                                <th class="py-3 px-4">Date &amp; Time</th>
-                                <th class="py-3 px-4">Amount</th>
-                                <th class="py-3 px-4">Status</th>
-                                <th class="py-3 px-4 text-right">Official Receipt</th>
-                            </tr>
+                    <table class="w-full min-w-[820px] text-left text-sm">
+                        <thead class="bg-surface-container-low text-xs text-on-surface-variant uppercase border-b border-surface-container-high">
+                            <tr><th class="py-3 px-4 font-semibold">Transaction ID</th><th class="py-3 px-4 font-semibold">Description</th><th class="py-3 px-4 font-semibold">Date &amp; Time</th><th class="py-3 px-4 font-semibold">Amount</th><th class="py-3 px-4 font-semibold">Status</th><th class="py-3 px-4 text-right font-semibold">Official Receipt</th></tr>
                         </thead>
-                        <tbody id="payment-ledger-tbody" class="divide-y divide-surface-container-high">
-                            <!-- Dynamic Payment Rows Render Here -->
-                        </tbody>
+                        <tbody id="payment-ledger-tbody" class="divide-y divide-surface-container-high"><!-- Dynamic Payment Rows Render Here --></tbody>
                     </table>
                 </div>
-            </div>
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-t border-surface-container-high px-4 py-3 text-xs text-on-surface-variant"><span>Transactions are cryptographically signed by ICAD Public Key Directory (PKD).</span><span id="payment-visible-count">Showing all transactions</span></div>
+            </section>
+
+            <section class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-xl border border-sky-200 dark:border-[#35483B] bg-sky-50 dark:bg-[#19251D] p-4">
+                <div class="flex items-start gap-2.5"><span class="material-symbols-outlined text-sky-700 dark:text-[#65A982] text-lg">info</span><div><strong class="block text-sm text-on-surface">Need an Official Tax Invoice (GST / VAT)?</strong><p class="text-xs text-on-surface-variant mt-0.5">Official tax invoices and corporate registration details are managed in your traveler settings.</p></div></div>
+                <button type="button" onclick="toggleSandwichDrawer()" class="min-h-10 rounded-lg border border-surface-container-high bg-surface-container-low px-3 py-2 text-sm font-semibold text-on-surface hover:bg-surface-container-high shrink-0">Update Billing Profile</button>
+            </section>
+            <div class="flex flex-wrap justify-between gap-2 px-1 text-xs text-on-surface-variant"><span>AeroPass Global Identity Infrastructure • Flight SK-492</span><span>Security Policy&nbsp;&nbsp; ICAD PKD Compliance&nbsp;&nbsp; Ground Support Hotline</span></div>
         </div>
         <!-- END PANE 5: PAYMENT MANAGEMENT -->
 
@@ -1728,8 +1829,32 @@
                 </div>
             </div>
 
+            <!-- Route Stats Info Bar -->
+            <div id="airport-route-stats" class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-3">
+                <div class="bg-surface-container-lowest p-3.5 rounded-xl border border-surface-container-high shadow-xs">
+                    <span class="text-[10px] font-label-mono-sm text-outline block uppercase tracking-wider">CURRENT CHECKPOINT</span>
+                    <strong class="text-sm font-bold text-primary block mt-0.5">Security Checkpoint A</strong>
+                </div>
+                <div class="bg-surface-container-lowest p-3.5 rounded-xl border border-surface-container-high shadow-xs">
+                    <span class="text-[10px] font-label-mono-sm text-outline block uppercase tracking-wider">TARGET DESTINATION</span>
+                    <strong class="text-sm font-bold text-tertiary block mt-0.5 truncate" id="nav-destination-stat">Gate A1 (SkyPriority)</strong>
+                </div>
+                <div class="bg-surface-container-lowest p-3.5 rounded-xl border border-surface-container-high shadow-xs">
+                    <span class="text-[10px] font-label-mono-sm text-outline block uppercase tracking-wider">WALKING DISTANCE</span>
+                    <strong class="text-sm font-bold text-on-surface block mt-0.5" id="nav-distance-stat">320 meters</strong>
+                </div>
+                <div class="bg-surface-container-lowest p-3.5 rounded-xl border border-surface-container-high shadow-xs">
+                    <span class="text-[10px] font-label-mono-sm text-outline block uppercase tracking-wider">ESTIMATED WALK TIME</span>
+                    <strong class="text-sm font-bold text-tertiary block mt-0.5" id="nav-time-stat">4 minutes</strong>
+                </div>
+                <div class="bg-surface-container-lowest p-3.5 rounded-xl border border-surface-container-high shadow-xs">
+                    <span class="text-[10px] font-label-mono-sm text-outline block uppercase tracking-wider">SECURITY STATUS</span>
+                    <strong class="text-sm font-bold text-emerald-700 block mt-0.5">Cleared</strong>
+                </div>
+            </div>
+
             <!-- Interactive Wayfinding Quick Destination Selector -->
-            <div class="bg-surface-container-lowest p-4 rounded-2xl border border-surface-container-high shadow-xs space-y-3">
+            <div id="airport-destination-controls" class="space-y-3">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                     <div class="flex items-center gap-2">
                         <span class="material-symbols-outlined text-primary text-lg">route</span>
@@ -1743,9 +1868,9 @@
                 </div>
 
                 <!-- Navigation Target Buttons -->
-                <div class="flex items-center gap-2 overflow-x-auto pb-1" id="nav-target-pills">
+                <div class="flex flex-wrap items-center gap-2 pb-1" id="nav-target-pills">
                     <button onclick="navigateRouteToGate('A1')" id="nav-pill-A1"
-                        class="nav-dest-pill px-3.5 py-2 rounded-xl text-xs font-bold font-headline-sm transition-all whitespace-nowrap bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#451a03] dark:to-[#500724] text-[#831843] dark:text-[#fbcfe8] border border-[#f472b6] shadow-xs flex items-center gap-1.5">
+                        class="nav-dest-pill px-3.5 py-2 rounded-xl text-xs font-bold font-headline-sm transition-all whitespace-nowrap bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#19251D] dark:to-[#233329] text-[#831843] dark:text-[#F4F7F3] border border-[#f472b6] shadow-xs flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-[16px]">flight_takeoff</span>
                         <span>Gate A1 (SK-492 • Boarding)</span>
                     </button>
@@ -1782,28 +1907,8 @@
                 </div>
             </div>
 
-            <!-- Route Stats Info Bar -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                <div class="bg-surface-container-lowest p-3.5 rounded-xl border border-surface-container-high shadow-xs">
-                    <span class="text-[10px] font-label-mono-sm text-outline block uppercase tracking-wider">CURRENT CHECKPOINT</span>
-                    <strong class="text-sm font-bold text-primary block mt-0.5">Security Checkpoint A</strong>
-                </div>
-                <div class="bg-surface-container-lowest p-3.5 rounded-xl border border-surface-container-high shadow-xs">
-                    <span class="text-[10px] font-label-mono-sm text-outline block uppercase tracking-wider">TARGET DESTINATION</span>
-                    <strong class="text-sm font-bold text-tertiary block mt-0.5 truncate" id="nav-destination-stat">Gate A1 (SkyPriority)</strong>
-                </div>
-                <div class="bg-surface-container-lowest p-3.5 rounded-xl border border-surface-container-high shadow-xs">
-                    <span class="text-[10px] font-label-mono-sm text-outline block uppercase tracking-wider">WALKING DISTANCE</span>
-                    <strong class="text-sm font-bold text-on-surface block mt-0.5" id="nav-distance-stat">320 meters</strong>
-                </div>
-                <div class="bg-surface-container-lowest p-3.5 rounded-xl border border-surface-container-high shadow-xs">
-                    <span class="text-[10px] font-label-mono-sm text-outline block uppercase tracking-wider">ESTIMATED WALK TIME</span>
-                    <strong class="text-sm font-bold text-tertiary block mt-0.5" id="nav-time-stat">4 minutes</strong>
-                </div>
-            </div>
-
             <!-- Interactive Terminal 1 SVG Map (Spacious & Architectural) -->
-            <div class="bg-surface-container-lowest rounded-2xl border border-surface-container-high p-6 shadow-xs flex flex-col items-center">
+            <div id="terminal-map-panel" class="rounded-2xl border p-4 sm:p-5 shadow-xs flex flex-col items-center">
                 <!-- Map Legend & Bar -->
                 <div class="w-full flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b border-surface-container-high text-xs">
                     <div class="flex items-center gap-2">
@@ -1821,26 +1926,26 @@
                 </div>
 
                 <!-- SVG Container with Uncluttered, High-Resolution Architectural Canvas -->
-                <div class="w-full max-w-5xl bg-surface-container-low rounded-2xl border border-surface-container-high p-5 overflow-hidden relative shadow-inner">
+                <div id="terminal-map-canvas" class="w-full rounded-xl border overflow-hidden relative shadow-inner">
                     <svg viewBox="0 0 1100 560" class="w-full h-auto select-none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <!-- Grid Pattern for Airport Floor Plan -->
                             <pattern id="arch-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e2e8f0" stroke-width="0.8" opacity="0.6"/>
+                                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2A4260" stroke-width="0.8" opacity="0.6"/>
                             </pattern>
                             <!-- Linear Gradients for Zones -->
                             <linearGradient id="grad-active-gate" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#fef08a" />
-                                <stop offset="100%" stop-color="#fbcfe8" />
+                                <stop offset="0%" stop-color="#172A45" />
+                                <stop offset="100%" stop-color="#25C6DA" />
                             </linearGradient>
                             <linearGradient id="grad-security" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#f0f7ff" />
-                                <stop offset="100%" stop-color="#e0effe" />
+                                <stop offset="0%" stop-color="#101B2D" />
+                                <stop offset="100%" stop-color="#172A45" />
                             </linearGradient>
                             <linearGradient id="grad-boulevard" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#f8fafc" />
-                                <stop offset="50%" stop-color="#ffffff" />
-                                <stop offset="100%" stop-color="#f8fafc" />
+                                <stop offset="0%" stop-color="#101B2D" />
+                                <stop offset="50%" stop-color="#172A45" />
+                                <stop offset="100%" stop-color="#101B2D" />
                             </linearGradient>
                             <!-- Filter for Soft Drop Shadow -->
                             <filter id="shadow-soft" x="-10%" y="-10%" width="125%" height="125%">
@@ -1849,42 +1954,42 @@
                         </defs>
 
                         <!-- Base Apron / Tarmac Background -->
-                        <rect x="0" y="0" width="1100" height="560" class="map-apron-bg" fill="#f1f5f9" />
+                        <rect x="0" y="0" width="1100" height="560" class="map-apron-bg" fill="#101B2D" />
 
                         <!-- Terminal 1 Building Envelope (Architectural Outline) -->
-                        <rect x="25" y="20" width="1050" height="520" rx="24" class="map-terminal-envelope" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" />
+                        <rect x="25" y="20" width="1050" height="520" rx="24" class="map-terminal-envelope" fill="#203550" stroke="#2A4260" stroke-width="2" />
                         <rect x="25" y="20" width="1050" height="520" rx="24" fill="url(#arch-grid)" />
 
                         <!-- Compass Rose (North Indicator) -->
                         <g transform="translate(65, 55)">
-                            <circle cx="0" cy="0" r="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
-                            <polygon points="0,-14 4,-2 0,0 -4,-2" fill="#006194" />
-                            <polygon points="0,14 4,2 0,0 -4,2" fill="#94a3b8" />
-                            <text x="0" y="-18" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="bold" fill="#006194" text-anchor="middle">N</text>
-                            <text x="0" y="4" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748b" text-anchor="middle">T1</text>
+                            <circle cx="0" cy="0" r="18" fill="#101B2D" stroke="#2A4260" stroke-width="1.5" />
+                            <polygon points="0,-14 4,-2 0,0 -4,-2" fill="#25C6DA" />
+                            <polygon points="0,14 4,2 0,0 -4,2" fill="#AAB7C8" />
+                            <text x="0" y="-18" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="bold" fill="#25C6DA" text-anchor="middle">N</text>
+                            <text x="0" y="4" font-family="'JetBrains Mono', monospace" font-size="8" fill="#AAB7C8" text-anchor="middle">T1</text>
                         </g>
 
                         <!-- Broad Central Concourse Boulevard (Completely Open, Zero Clutter) -->
-                        <rect x="230" y="165" width="490" height="230" rx="18" class="map-boulevard-bg" fill="url(#grad-boulevard)" stroke="#e2e8f0" stroke-width="1.5" />
+                        <rect x="230" y="165" width="490" height="230" rx="18" class="map-boulevard-bg" fill="url(#grad-boulevard)" stroke="#2A4260" stroke-width="1.5" />
                         
                         <!-- Travelator / Moving Walkway Graphic in Center -->
                         <g opacity="0.85">
-                            <rect x="270" y="265" width="410" height="30" rx="8" class="map-walkway-bg" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5" />
+                            <rect x="270" y="265" width="410" height="30" rx="8" class="map-walkway-bg" fill="#1A3048" stroke="#2A4260" stroke-width="1.5" />
                             <!-- Center Moving Tread Line -->
-                            <line x1="280" y1="280" x2="670" y2="280" stroke="#94a3b8" stroke-width="2" stroke-dasharray="12 8" />
-                            <text x="475" y="260" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" fill="#64748b" letter-spacing="1">CENTRAL CONCOURSE BOULEVARD • MOVING TRAVELATOR</text>
+                            <line x1="280" y1="280" x2="670" y2="280" stroke="#3D5A80" stroke-width="2" stroke-dasharray="12 8" />
+                            <text x="475" y="260" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" fill="#AAB7C8" letter-spacing="1">CENTRAL CONCOURSE BOULEVARD • MOVING TRAVELATOR</text>
                         </g>
 
                         <!-- ========================================== -->
                         <!-- ZONE 1: SECURITY CHECKPOINT A (LEFT) -->
                         <!-- ========================================== -->
                         <g class="cursor-pointer" onclick="navigateRouteToGate('A1')">
-                            <rect x="45" y="165" width="170" height="230" rx="16" fill="url(#grad-security)" stroke="#006194" stroke-width="2" filter="url(#shadow-soft)" />
-                            <rect x="45" y="165" width="170" height="34" rx="16" fill="#006194" />
+                            <rect x="45" y="165" width="170" height="230" rx="16" fill="url(#grad-security)" stroke="#25C6DA" stroke-width="2" filter="url(#shadow-soft)" />
+                            <rect x="45" y="165" width="170" height="34" rx="16" fill="#25C6DA" />
                             <text x="130" y="188" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="12" fill="#ffffff" letter-spacing="1">SECURITY CHECKPOINT A</text>
 
                             <!-- Optical Biometrics E-Gates Status -->
-                            <text x="130" y="222" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="13" fill="#006194">Biometric E-Gates</text>
+                            <text x="130" y="222" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="13" fill="#25C6DA">Biometric E-Gates</text>
                             <text x="130" y="238" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#51606f">TSA PreCheck / Level 4</text>
 
                             <!-- 4 Turnstile Lane Indicators with Green LEDs -->
@@ -1985,14 +2090,14 @@
                         <!-- ZONE 4: PIER A DEPARTURE GATES (RIGHT WING) -->
                         <!-- ========================================== -->
                         <rect x="730" y="25" width="330" height="505" rx="20" class="map-pier-bg" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
-                        <text x="895" y="42" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" fill="#64748b" letter-spacing="1.5">PIER A INTERNATIONAL CONCOURSE</text>
+                        <text x="895" y="42" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" fill="#AAB7C8" letter-spacing="1.5">PIER A INTERNATIONAL CONCOURSE</text>
 
                         <!-- GATE A1 (ACTIVE PASSENGER BOARDING GATE) -->
                         <g class="cursor-pointer" onclick="navigateRouteToGate('A1')">
                             <!-- Jet Bridge Visual to Aircraft -->
                             <rect x="1035" y="85" width="25" height="35" rx="4" fill="#f472b6" stroke="#fbcfe8" stroke-width="1" />
 
-                            <rect x="745" y="48" width="295" height="130" rx="16" fill="url(#grad-active-gate)" stroke="#f472b6" stroke-width="2.5" filter="url(#shadow-soft)" />
+                            <rect x="745" y="48" width="295" height="130" rx="16" fill="url(#grad-active-gate)" stroke="#25C6DA" stroke-width="2.5" filter="url(#shadow-soft)" />
                             
                             <!-- Header with Pulsing Radar Circle -->
                             <text x="765" y="80" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="18" fill="#831843">GATE A1</text>
@@ -2005,14 +2110,14 @@
                             </circle>
 
                             <!-- Live Flight Information -->
-                            <rect x="765" y="92" width="130" height="22" rx="6" fill="#ffffff" stroke="#f472b6" stroke-width="1" />
+                            <rect x="765" y="92" width="130" height="22" rx="6" fill="#ffffff" stroke="#25C6DA" stroke-width="1" />
                             <text x="830" y="107" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="bold" fill="#831843">SK-492 • LONDON LHR</text>
 
                             <!-- Boarding Status Pill -->
                             <rect x="905" y="92" width="120" height="22" rx="6" fill="#ec4899" />
                             <text x="965" y="107" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff">BOARDING NOW</text>
 
-                            <line x1="765" y1="126" x2="1025" y2="126" stroke="#f472b6" stroke-width="1" />
+                            <line x1="765" y1="126" x2="1025" y2="126" stroke="#25C6DA" stroke-width="1" />
                             <text x="765" y="146" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#831843">Departs: 10:45 AM • Zone 1</text>
                             <text x="1025" y="146" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="bold" fill="#db2777">SkyPriority Lane</text>
                             <text x="895" y="166" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9d174d">Your Assigned Flight Gate • 320m Walk</text>
@@ -2031,7 +2136,7 @@
                             <text x="970" y="226" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="bold" fill="#1d4ed8">ON SCHEDULE</text>
 
                             <text x="765" y="254" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="12" fill="#0f172a">Flight DL-108 • Tokyo Haneda (HND)</text>
-                            <text x="765" y="272" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#64748b">Departs: 12:30 PM • International Departure</text>
+                            <text x="765" y="272" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#AAB7C8">Departs: 12:30 PM • International Departure</text>
 
                             <line x1="765" y1="284" x2="1025" y2="284" stroke="#f1f5f9" stroke-width="1" />
                             <text x="765" y="302" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0284c7">Distance: 410 meters (5 mins walk)</text>
@@ -2051,7 +2156,7 @@
                             <text x="970" y="371" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="bold" fill="#1d4ed8">GATE OPEN</text>
 
                             <text x="765" y="399" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="12" fill="#0f172a">Flight AA-772 • Frankfurt (FRA)</text>
-                            <text x="765" y="417" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#64748b">Departs: 02:15 PM • Terminal 1 International</text>
+                            <text x="765" y="417" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#AAB7C8">Departs: 02:15 PM • Terminal 1 International</text>
 
                             <line x1="765" y1="429" x2="1025" y2="429" stroke="#f1f5f9" stroke-width="1" />
                             <text x="765" y="447" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0284c7">Distance: 500 meters (6 mins walk)</text>
@@ -2065,13 +2170,32 @@
                             style="animation: navDash 1.2s linear infinite;" />
 
                         <!-- Start Beacon at Checkpoint A -->
-                        <circle cx="215" cy="280" r="6" fill="#006194" stroke="#ffffff" stroke-width="2" />
+                        <circle cx="215" cy="280" r="6" fill="#25C6DA" stroke="#ffffff" stroke-width="2" />
 
                         <!-- End Target Beacon on Gate A1 -->
                         <circle id="svg-nav-target-dot" cx="745" cy="115" r="7" fill="#fbcfe8" stroke="#db2777" stroke-width="2.5" />
                     </svg>
                 </div>
             </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="airport-map-details">
+                <section class="rounded-2xl border border-surface-container-high bg-surface-container-lowest p-4 shadow-xs">
+                    <div class="flex items-center gap-2 mb-3"><span class="material-symbols-outlined text-primary">map</span><h3 class="font-bold text-on-surface">Terminal Zone Breakdown</h3></div>
+                    <p class="text-xs leading-5 text-on-surface-variant">Terminal 1 departures connect Security Checkpoint A with Gates A1, A2, and A3. Follow the marked concourse route to your selected gate.</p>
+                    <div class="mt-3 flex flex-wrap gap-2 text-xs font-semibold"><span class="rounded-full bg-sky-50 px-2.5 py-1 text-sky-800">Security A</span><span class="rounded-full bg-emerald-50 px-2.5 py-1 text-emerald-800">Gate A1</span><span class="rounded-full bg-indigo-50 px-2.5 py-1 text-indigo-800">Gates A2-A3</span></div>
+                </section>
+                <section class="rounded-2xl border border-surface-container-high bg-surface-container-lowest p-4 shadow-xs">
+                    <div class="flex items-center gap-2 mb-3"><span class="material-symbols-outlined text-tertiary">flight_takeoff</span><h3 class="font-bold text-on-surface">Gate A1 Boarding Status</h3></div>
+                    <p class="text-sm font-bold text-on-surface">SK-492 to London Heathrow</p>
+                    <p class="mt-1 text-xs leading-5 text-on-surface-variant">Terminal 1, Gate A1. Boarding is in progress; allow about 4 minutes to walk from Security Checkpoint A.</p>
+                    <div class="mt-3 inline-flex rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-800">Security clearance granted</div>
+                </section>
+                <section class="rounded-2xl border border-surface-container-high bg-surface-container-lowest p-4 shadow-xs">
+                    <div class="flex items-center gap-2 mb-3"><span class="material-symbols-outlined text-purple-700">storefront</span><h3 class="font-bold text-on-surface">Concourse Amenities</h3></div>
+                    <p class="text-xs leading-5 text-on-surface-variant">Find the Skyline Cafe, Duty Free Emporium, VIP Club Lounge, ATMs, and restrooms along the departures concourse.</p>
+                    <p class="mt-3 text-xs font-semibold text-on-surface">Select an amenity above or on the map to view its route.</p>
+                </section>
+            </div>
+
         </div>
         <!-- END PANE 6: AIRPORT LAYOUT -->
 
@@ -2102,7 +2226,7 @@
 
                 <!-- Category Filter Pills -->
                 <div class="flex items-center gap-2 overflow-x-auto pb-1 text-xs font-label-mono-sm no-scrollbar" id="directory-filter-pills">
-                    <button onclick="filterFacilities('all')" class="dir-filter-pill px-3 py-1.5 rounded-full bg-primary text-white font-bold shrink-0">All Facilities</button>
+                    <button onclick="filterFacilities('all')" class="dir-filter-pill px-3 py-1.5 rounded-full bg-primary text-on-primary font-bold shrink-0">All Facilities</button>
                     <button onclick="filterFacilities('restaurant')" class="dir-filter-pill px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high shrink-0 font-medium">Food &amp; Dining</button>
                     <button onclick="filterFacilities('shop')" class="dir-filter-pill px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high shrink-0 font-medium">Duty Free &amp; Shops</button>
                     <button onclick="filterFacilities('lounge')" class="dir-filter-pill px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high shrink-0 font-medium">VIP Lounges</button>
@@ -2317,7 +2441,7 @@
                 <!-- Method Selection Tabs -->
                 <div class="grid grid-cols-4 gap-1.5 p-1 bg-surface-container-low rounded-2xl border border-surface-container-high text-xs">
                     <button type="button" onclick="switchBaggagePayMethod('upi')" id="pay-tab-btn-upi"
-                        class="pay-method-tab py-2.5 px-1.5 rounded-xl font-headline-sm font-bold flex flex-col items-center gap-1 transition-all bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#451a03] dark:to-[#500724] text-[#831843] dark:text-[#fbcfe8] border border-[#f472b6] shadow-xs">
+                        class="pay-method-tab py-2.5 px-1.5 rounded-xl font-headline-sm font-bold flex flex-col items-center gap-1 transition-all bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#19251D] dark:to-[#233329] text-[#831843] dark:text-[#F4F7F3] border border-[#f472b6] shadow-xs">
                         <span class="material-symbols-outlined text-lg">qr_code_2</span>
                         <span class="text-[11px]">UPI</span>
                     </button>
@@ -2344,7 +2468,7 @@
                     <!-- OPTION 1: UPI SUB-PANEL -->
                     <div id="pay-panel-upi" class="pay-subpanel space-y-3">
                         <div class="flex items-center justify-between bg-surface-container-low p-1 rounded-xl border border-surface-container-high">
-                            <button type="button" onclick="switchUpiSubmode('id')" id="upi-submode-btn-id" class="flex-1 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-black/40 text-on-surface shadow-2xs">Enter UPI ID (VPA)</button>
+                            <button type="button" onclick="switchUpiSubmode('id')" id="upi-submode-btn-id" class="flex-1 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-[#19251D] text-on-surface shadow-2xs">Enter UPI ID (VPA)</button>
                             <button type="button" onclick="switchUpiSubmode('qr')" id="upi-submode-btn-qr" class="flex-1 py-1.5 rounded-lg text-xs font-semibold text-on-surface-variant hover:text-on-surface">Scan UPI QR Code</button>
                         </div>
 
@@ -2355,7 +2479,7 @@
                                 <span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">alternate_email</span>
                                 <input id="pay-upi-id" type="text" placeholder="e.g. elena@okhdfcbank" value="elena@okhdfcbank"
                                     class="w-full bg-surface-container-low border border-surface-container-high pl-9 pr-24 py-2.5 rounded-xl text-xs font-label-mono-sm text-on-surface focus:outline-none focus:border-primary" />
-                                <span class="absolute right-2 px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 text-[10px] font-bold font-label-mono-sm flex items-center gap-1">
+                                <span class="absolute right-2 px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 dark:bg-[#19251D] dark:text-[#34D399] text-[10px] font-bold font-label-mono-sm flex items-center gap-1">
                                     <span class="material-symbols-outlined text-[12px]">verified</span>
                                     VERIFIED
                                 </span>
@@ -2387,17 +2511,17 @@
 
                     <!-- OPTION 2: CASH SUB-PANEL -->
                     <div id="pay-panel-cash" class="pay-subpanel hidden space-y-3">
-                        <div class="p-3.5 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/60 space-y-2">
-                            <div class="flex items-center gap-2 text-amber-900 dark:text-amber-200 font-bold text-xs">
+                        <div class="p-3.5 rounded-2xl bg-amber-50 dark:bg-[#19251D] border border-amber-200 dark:border-[#35483B]/60 space-y-2">
+                            <div class="flex items-center gap-2 text-amber-900 dark:text-[#E8B85C] font-bold text-xs">
                                 <span class="material-symbols-outlined text-base">storefront</span>
                                 <span>Airport Baggage Cash Settlement Desk</span>
                             </div>
-                            <p class="text-[11px] text-amber-800 dark:text-amber-300 leading-relaxed font-medium">
-                                Settle in cash directly at <strong class="text-amber-950 dark:text-amber-100">Baggage Drop Counter 12 (Terminal 1, Row C)</strong>. Present your digital passenger clearance token to the airport check-in officer.
+                            <p class="text-[11px] text-amber-800 dark:text-[#E8B85C] leading-relaxed font-medium">
+                                Settle in cash directly at <strong class="text-amber-950 dark:text-[#E8B85C]">Baggage Drop Counter 12 (Terminal 1, Row C)</strong>. Present your digital passenger clearance token to the airport check-in officer.
                             </p>
-                            <div class="p-2.5 rounded-xl bg-white/80 dark:bg-black/40 border border-amber-300 dark:border-amber-800/60 flex items-center justify-between text-xs">
+                            <div class="p-2.5 rounded-xl bg-white/80 dark:bg-[#19251D] border border-amber-300 dark:border-[#35483B] flex items-center justify-between text-xs">
                                 <span class="font-label-mono-sm text-[10px] text-outline uppercase font-semibold">CASH TOKEN ID:</span>
-                                <strong class="font-label-mono-sm text-sm font-bold text-amber-900 dark:text-amber-200" id="cash-token-val">CSH-T1-884210</strong>
+                                <strong class="font-label-mono-sm text-sm font-bold text-amber-900 dark:text-[#E8B85C]" id="cash-token-val">CSH-T1-884210</strong>
                             </div>
                         </div>
 
@@ -3278,7 +3402,11 @@
         }
 
         function scrollToPass() {
-            document.getElementById('digital-pass-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            switchMainTab('pass');
+            window.setTimeout(() => {
+                const passCard = document.getElementById('digital-pass-card');
+                if (passCard) passCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 60);
         }
 
         // --- RECENT ACTIVITY TIMELINE ---
@@ -3330,7 +3458,7 @@
                 selectedPane.style.display = 'block';
             }
             if (selectedBtn) {
-                selectedBtn.className = 'main-tab-nav-btn px-4 py-2.5 rounded-xl font-headline-sm font-bold text-xs flex items-center gap-2 transition-all whitespace-nowrap bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#451a03] dark:to-[#500724] text-[#831843] dark:text-[#fbcfe8] border border-[#f472b6] shadow-sm';
+                selectedBtn.className = 'main-tab-nav-btn px-4 py-2.5 rounded-xl font-headline-sm font-bold text-xs flex items-center gap-2 transition-all whitespace-nowrap bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#19251D] dark:to-[#233329] text-[#831843] dark:text-[#F4F7F3] border border-[#f472b6] shadow-sm';
             }
 
             if (tab === 'flights') renderFlightsPane();
@@ -3411,7 +3539,7 @@
                 b.className = 'px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant font-medium shrink-0 notif-filter-btn';
             });
             const activeChip = document.getElementById(`notif-filter-${filter === 'all' ? 'all' : filter === 'document' ? 'doc' : filter === 'pass' ? 'pass' : filter === 'baggage' ? 'bag' : 'flt'}`);
-            if (activeChip) activeChip.className = 'px-2 py-0.5 rounded-full bg-primary text-white font-bold shrink-0 notif-filter-btn';
+            if (activeChip) activeChip.className = 'px-2 py-0.5 rounded-full bg-primary text-on-primary font-bold shrink-0 notif-filter-btn';
 
             const filtered = filter === 'all' ? notificationsList : notificationsList.filter(n => n.category === filter);
             if (filtered.length === 0) {
@@ -3543,7 +3671,13 @@
             const elDest = document.getElementById('active-flight-dest');
             const elDestCity = document.getElementById('active-flight-dest-city');
             const elDept = document.getElementById('active-flight-departure');
+            const elArrival = document.getElementById('active-flight-arrival');
             const elGate = document.getElementById('active-flight-gate');
+            const elTerminal = document.getElementById('active-flight-terminal');
+            const elGateBadge = document.getElementById('active-flight-gate-badge');
+            const elProgressGate = document.getElementById('active-flight-progress-gate');
+            const elStatusBadge = document.getElementById('active-flight-status-badge');
+            const elTripTitle = document.getElementById('active-flight-trip-title');
             const elSeat = document.getElementById('active-flight-seat');
             const elPnr = document.getElementById('active-flight-pnr');
 
@@ -3554,7 +3688,13 @@
             if (elDest) elDest.textContent = flight.dest;
             if (elDestCity) elDestCity.textContent = flight.destCity || flight.dest;
             if (elDept) elDept.textContent = flight.departureTime;
-            if (elGate) elGate.textContent = `${flight.terminal} / Gate ${flight.gate}`;
+            if (elArrival) elArrival.textContent = flight.arrivalTime || 'Arrival time unavailable';
+            if (elGate) elGate.textContent = flight.gate;
+            if (elTerminal) elTerminal.textContent = String(flight.terminal || '').replace(/^T/i, '');
+            if (elGateBadge) elGateBadge.textContent = flight.gate;
+            if (elProgressGate) elProgressGate.textContent = `3. Terminal Gate ${flight.gate}`;
+            if (elStatusBadge) elStatusBadge.textContent = flight.status === 'boarding' ? 'BOARDING AT 10:45 AM' : String(flight.status || 'scheduled').toUpperCase();
+            if (elTripTitle) elTripTitle.textContent = `${flight.airline} ${flight.flightNumber} | ${flight.origin} to ${flight.dest} DEPARTURE PROGRESSION`;
             if (elSeat) elSeat.textContent = `${flight.seat} (Confirmed)`;
             if (elPnr) elPnr.textContent = flight.pnr;
 
@@ -3562,8 +3702,23 @@
             if (passGate) passGate.textContent = flight.gate;
 
             renderDashboard();
+            renderFlightsPane();
             syncPassToSharedTurnstileStorage();
             showToast(`Active flight updated to ${flight.flightNumber} (Gate ${flight.gate})`, 'info');
+        }
+
+        let activeFlightFilter = 'all';
+
+        function filterFlights(filter) {
+            activeFlightFilter = ['all', 'upcoming', 'past', 'updates'].includes(filter) ? filter : 'all';
+            document.querySelectorAll('.flight-filter-btn').forEach((button) => {
+                const active = button.dataset.flightFilter === activeFlightFilter;
+                button.setAttribute('aria-pressed', String(active));
+                button.classList.toggle('border-primary', active);
+                button.classList.toggle('bg-primary/15', active);
+                button.classList.toggle('font-bold', active);
+            });
+            renderFlightsPane();
         }
 
         function renderFlightsPane() {
@@ -3572,8 +3727,31 @@
             container.innerHTML = '';
             const ind = document.getElementById('total-flights-indicator');
             if (ind) ind.textContent = `${flightsList.length} Flights Linked`;
+            const upcomingCount = flightsList.filter(flight => !['completed', 'departed', 'arrived'].includes(String(flight.status).toLowerCase())).length;
+            const pastCount = flightsList.length - upcomingCount;
+            const filterCounts = { all: flightsList.length, upcoming: upcomingCount, past: pastCount };
+            document.querySelectorAll('.flight-filter-btn').forEach(button => {
+                const filter = button.dataset.flightFilter;
+                if (filterCounts[filter] !== undefined) {
+                    const label = filter.charAt(0).toUpperCase() + filter.slice(1);
+                    button.textContent = `${label} ${filterCounts[filter]}`;
+                }
+                button.setAttribute('aria-pressed', String(filter === activeFlightFilter));
+                button.classList.toggle('border-primary', filter === activeFlightFilter);
+                button.classList.toggle('bg-primary/15', filter === activeFlightFilter);
+                button.classList.toggle('font-bold', filter === activeFlightFilter);
+            });
+            const visibleFlights = flightsList.filter(flight => {
+                const status = String(flight.status || '').toLowerCase();
+                if (activeFlightFilter === 'upcoming') return !['completed', 'departed', 'arrived'].includes(status);
+                if (activeFlightFilter === 'past') return ['completed', 'departed', 'arrived'].includes(status);
+                if (activeFlightFilter === 'updates') return status !== 'scheduled';
+                return true;
+            });
+            const emptyState = document.getElementById('flight-filter-empty');
+            if (emptyState) emptyState.classList.toggle('hidden', visibleFlights.length > 0);
 
-            flightsList.forEach(flight => {
+            visibleFlights.forEach(flight => {
                 const isActive = currentPassenger.flightNumber === flight.flightNumber;
                 const row = document.createElement('div');
                 row.className = `p-4 rounded-xl border flex flex-col sm:flex-row sm:items-center justify-between gap-3 transition-colors ${
@@ -3582,18 +3760,16 @@
 
                 row.innerHTML = `
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl ${isActive ? 'bg-primary text-white' : 'bg-surface-container-high text-primary'} flex items-center justify-center font-bold text-sm shrink-0">
+                        <div class="w-10 h-10 rounded-xl ${isActive ? 'bg-primary text-on-primary' : 'bg-surface-container-high text-primary'} flex items-center justify-center font-bold text-sm shrink-0">
                             <span class="material-symbols-outlined text-xl">flight</span>
                         </div>
                         <div>
                             <div class="flex items-center gap-2">
                                 <strong class="text-sm font-bold text-on-surface">${flight.flightNumber}</strong>
-                                <span class="text-xs text-on-surface-variant font-medium">• ${flight.airline}</span>
-                                ${isActive ? '<span class="px-2 py-0.5 rounded-full bg-primary text-white text-[10px] font-bold font-label-mono-sm">ACTIVE</span>' : ''}
+                                <span class="text-xs text-on-surface-variant font-medium">Airline: ${flight.airline}</span>
+                                ${isActive ? '<span class="px-2 py-0.5 rounded-full bg-primary text-on-primary text-[10px] font-bold font-label-mono-sm">ACTIVE</span>' : ''}
                             </div>
-                            <span class="text-xs font-label-mono-sm text-outline mt-0.5 block">
-                                ${flight.origin} → ${flight.dest} • Departs ${flight.departureTime} • Terminal ${flight.terminal}, Gate ${flight.gate} • Seat ${flight.seat}
-                            </span>
+                            <span class="text-xs font-label-mono-sm text-on-surface-variant mt-1 block">${flight.origin} to ${flight.dest} | Departs ${flight.departureTime} | Terminal ${flight.terminal}, Gate ${flight.gate} | Seat ${flight.seat}</span>
                         </div>
                     </div>
                     <div class="flex items-center gap-2 self-end sm:self-center">
@@ -3745,8 +3921,18 @@
             let val = parseInt(input.value || '1', 10) + delta;
             if (val < 1) val = 1;
             if (val > 4) val = 4;
-            input.value = val;
+            setBaggageQty(val);
+        }
+
+        function setBaggageQty(quantity) {
+            const input = document.getElementById('baggage-quantity-input');
+            const val = Math.max(1, Math.min(4, parseInt(quantity || '1', 10)));
+            if (input) input.value = val;
             baggageRecord.quantity = val;
+            document.querySelectorAll('.baggage-qty-option').forEach((button) => {
+                button.setAttribute('aria-pressed', String(Number(button.dataset.baggageQty) === val));
+            });
+            handleBaggageValueChange();
         }
 
         function syncBaggageSlider(val) {
@@ -3759,6 +3945,9 @@
             if (!weightInput) return;
             const weight = Math.max(0, parseFloat(weightInput.value || '0'));
             baggageRecord.weightKg = weight;
+            const quantityInput = document.getElementById('baggage-quantity-input');
+            const quantity = Math.max(1, Math.min(4, parseInt(quantityInput?.value || baggageRecord.quantity || '1', 10)));
+            baggageRecord.quantity = quantity;
 
             const freeAllowance = 20.0;
             const excessRatePerKg = 650.0;
@@ -3781,23 +3970,50 @@
             const alertDesc = document.getElementById('allowance-alert-desc');
             const proceedBtn = document.getElementById('btn-proceed-payment');
             const proceedBtnText = document.getElementById('btn-proceed-payment-text');
+            const scaleReadout = document.getElementById('baggage-scale-readout');
+            const excessBreakdown = document.getElementById('baggage-excess-breakdown');
+            const payableBreakdown = document.getElementById('baggage-payable-breakdown');
+            const paymentLabel = document.getElementById('baggage-payment-label');
+            const piecesList = document.getElementById('baggage-pieces-list');
+            const piecesCount = document.getElementById('baggage-pieces-count');
+            const currencyMark = String.fromCharCode(8377);
+            const weightSlider = document.getElementById('baggage-weight-slider');
 
             if (disp) disp.textContent = `${weight.toFixed(1)} kg`;
+            if (scaleReadout) scaleReadout.textContent = weight.toFixed(1);
             if (statWeight) statWeight.textContent = `${weight.toFixed(1)} kg`;
             if (statExcess) statExcess.textContent = excessKg > 0 ? `+${excessKg.toFixed(1)} kg` : '0.0 kg';
+            if (excessBreakdown) excessBreakdown.textContent = `${excessKg.toFixed(1)} kg`;
+            if (payableBreakdown) payableBreakdown.textContent = `₹${excessFee.toLocaleString('en-IN')} INR`;
+            if (piecesCount) piecesCount.textContent = `${quantity} ${quantity === 1 ? 'piece' : 'pieces'}`;
+            if (weightSlider) weightSlider.value = Math.max(Number(weightSlider.min), Math.min(Number(weightSlider.max), weight));
+            if (piecesList) {
+                const pieceWeight = quantity ? weight / quantity : 0;
+                piecesList.innerHTML = Array.from({ length: quantity }, (_, index) => `
+                    <div class="flex items-center justify-between gap-3 rounded-xl border border-surface-container-high bg-surface-container-low p-3">
+                        <div class="flex min-w-0 items-center gap-3">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/15 text-primary"><span class="material-symbols-outlined">luggage</span></span>
+                            <div class="min-w-0"><strong class="block text-sm text-on-surface">Checked Bag ${index + 1}</strong><span class="block text-xs text-on-surface-variant">Standard checked luggage</span></div>
+                        </div>
+                        <strong class="shrink-0 text-sm font-bold text-on-surface">${pieceWeight.toFixed(1)} kg</strong>
+                    </div>`).join('');
+            }
             if (statFee) statFee.textContent = excessFee > 0 ? `₹${excessFee.toLocaleString('en-IN')} INR` : '₹0.00 INR';
 
+            if (statFee) statFee.textContent = excessFee > 0 ? `${currencyMark}${excessFee.toLocaleString('en-IN')} INR` : `${currencyMark}0.00 INR`;
+            if (payableBreakdown) payableBreakdown.textContent = `${currencyMark}${excessFee.toLocaleString('en-IN')} INR`;
             const percent = Math.min(100, (weight / 40) * 100);
             if (bar) bar.style.width = `${percent}%`;
 
             if (excessKg > 0) {
+                if (paymentLabel) paymentLabel.textContent = baggageRecord.paymentStatus === 'paid' ? 'PAID & CLEARED' : 'PAYMENT DUE';
                 if (baggageRecord.paymentStatus === 'paid') {
                     if (bar) bar.className = 'h-full bg-emerald-500 rounded-full transition-all duration-300';
                     if (pill) {
-                        pill.className = 'px-3 py-1 rounded-full font-bold text-xs font-label-mono-sm bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 flex items-center gap-1';
+                        pill.className = 'px-3 py-1 rounded-full font-bold text-xs font-label-mono-sm bg-emerald-100 text-emerald-800 dark:bg-[#19251D] dark:text-[#34D399] flex items-center gap-1';
                         pill.innerHTML = '<span class="material-symbols-outlined text-[14px]">check_circle</span> EXCESS SURCHARGE PAID &amp; CLEARED';
                     }
-                    if (alertBanner) alertBanner.className = 'p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-800 text-xs flex items-start gap-3';
+                    if (alertBanner) alertBanner.className = 'rounded-xl bg-emerald-50 dark:bg-[#19251D] border border-emerald-300 dark:border-[#35483B] p-3 text-emerald-900 dark:text-[#34D399] flex-1';
                     if (alertTitle) alertTitle.textContent = 'Excess Baggage Surcharge Settled & Cleared';
                     if (alertDesc) alertDesc.textContent = `Your excess baggage fee of ₹${excessFee.toLocaleString('en-IN')} has been officially settled. Baggage tags validated for Flight ${currentPassenger.flightNumber}. Cleared for Rapid Drop Counter 12.`;
                     if (proceedBtn) {
@@ -3811,7 +4027,7 @@
                         pill.className = 'px-3 py-1 rounded-full font-bold text-xs font-label-mono-sm bg-error-container text-on-error-container flex items-center gap-1';
                         pill.textContent = `EXCESS WEIGHT DETECTED (+${excessKg.toFixed(1)} kg)`;
                     }
-                    if (alertBanner) alertBanner.className = 'p-4 rounded-xl bg-error-container text-on-error-container border border-error text-xs flex items-start gap-3';
+                    if (alertBanner) alertBanner.className = 'rounded-xl bg-rose-50 dark:bg-[#19251D] border border-rose-200 dark:border-[#35483B] p-3 text-rose-950 dark:text-[#F07878] flex-1';
                     if (alertTitle) alertTitle.textContent = 'Excess Baggage Surcharge Required';
                     if (alertDesc) alertDesc.textContent = `Your total checked weight exceeds your ticket's 20.0 kg allowance by ${excessKg.toFixed(1)} kg. Under aviation tariffs, an excess fee of ₹${excessFee.toLocaleString('en-IN')} (₹${excessRatePerKg}/kg) is required before baggage drop.`;
                     if (proceedBtn) {
@@ -3821,15 +4037,22 @@
                     if (proceedBtnText) proceedBtnText.textContent = `Proceed to Baggage Payment Portal (₹${excessFee.toLocaleString('en-IN')})`;
                 }
             } else {
+                if (paymentLabel) paymentLabel.textContent = 'NO PAYMENT';
                 if (bar) bar.className = 'h-full bg-tertiary rounded-full transition-all duration-300';
                 if (pill) {
                     pill.className = 'px-3 py-1 rounded-full font-bold text-xs font-label-mono-sm bg-tertiary-fixed text-on-tertiary-fixed flex items-center gap-1';
                     pill.textContent = 'WITHIN FREE ALLOWANCE (20.0 KG)';
                 }
-                if (alertBanner) alertBanner.className = 'p-4 rounded-xl bg-surface-container-low text-on-surface border border-tertiary/40 text-xs flex items-start gap-3';
+                if (alertBanner) alertBanner.className = 'rounded-xl bg-surface-container-low border border-surface-container-high p-3 text-on-surface flex-1';
                 if (alertTitle) alertTitle.textContent = 'Baggage Within Permitted Allowance';
                 if (alertDesc) alertDesc.textContent = `Your total checked weight (${weight.toFixed(1)} kg) is within your ticket's 20.0 kg free allowance. No excess charges apply. You are cleared to proceed directly to Rapid Baggage Drop Counter 04.`;
                 if (proceedBtn) proceedBtn.classList.add('hidden');
+            }
+            if (excessKg > 0 && baggageRecord.paymentStatus === 'paid') {
+                if (alertDesc) alertDesc.textContent = `Your excess baggage fee of ${currencyMark}${excessFee.toLocaleString('en-IN')} has been settled. Baggage tags are validated for Flight ${currentPassenger.flightNumber}.`;
+            } else if (excessKg > 0) {
+                if (alertDesc) alertDesc.textContent = `Your total checked weight exceeds the 20.0 kg allowance by ${excessKg.toFixed(1)} kg. The excess fee is ${currencyMark}${excessFee.toLocaleString('en-IN')} (${currencyMark}${excessRatePerKg}/kg), due before baggage drop.`;
+                if (proceedBtnText) proceedBtnText.textContent = `Proceed to Baggage Payment (${currencyMark}${excessFee.toLocaleString('en-IN')})`;
             }
         }
 
@@ -3868,6 +4091,11 @@
         }
 
         function renderBaggagePane() {
+            const quantityInput = document.getElementById('baggage-quantity-input');
+            const quantity = Number(quantityInput?.value || baggageRecord.quantity || 2);
+            document.querySelectorAll('.baggage-qty-option').forEach((button) => {
+                button.setAttribute('aria-pressed', String(Number(button.dataset.baggageQty) === quantity));
+            });
             handleBaggageValueChange();
         }
 
@@ -3888,7 +4116,7 @@
 
             const activeBtn = document.getElementById(`pay-tab-btn-${method}`);
             if (activeBtn) {
-                activeBtn.className = 'pay-method-tab py-2.5 px-1.5 rounded-xl font-headline-sm font-bold flex flex-col items-center gap-1 transition-all bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#451a03] dark:to-[#500724] text-[#831843] dark:text-[#fbcfe8] border border-[#f472b6] shadow-xs';
+                activeBtn.className = 'pay-method-tab py-2.5 px-1.5 rounded-xl font-headline-sm font-bold flex flex-col items-center gap-1 transition-all bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#19251D] dark:to-[#233329] text-[#831843] dark:text-[#F4F7F3] border border-[#f472b6] shadow-xs';
             }
 
             const panel = document.getElementById(`pay-panel-${method}`);
@@ -3912,12 +4140,12 @@
             const modeQr = document.getElementById('upi-mode-qr');
 
             if (mode === 'id') {
-                if (btnId) btnId.className = 'flex-1 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-black/40 text-on-surface shadow-2xs';
+                if (btnId) btnId.className = 'flex-1 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-[#19251D] text-on-surface shadow-2xs';
                 if (btnQr) btnQr.className = 'flex-1 py-1.5 rounded-lg text-xs font-semibold text-on-surface-variant hover:text-on-surface';
                 if (modeId) modeId.classList.remove('hidden');
                 if (modeQr) modeQr.classList.add('hidden');
             } else {
-                if (btnQr) btnQr.className = 'flex-1 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-black/40 text-on-surface shadow-2xs';
+                if (btnQr) btnQr.className = 'flex-1 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-[#19251D] text-on-surface shadow-2xs';
                 if (btnId) btnId.className = 'flex-1 py-1.5 rounded-lg text-xs font-semibold text-on-surface-variant hover:text-on-surface';
                 if (modeQr) modeQr.classList.remove('hidden');
                 if (modeId) modeId.classList.add('hidden');
@@ -4095,15 +4323,72 @@
             document.getElementById('receipt-modal').classList.add('hidden');
         }
 
+        function updatePaymentSummary() {
+            const total = paymentsList.reduce((sum, payment) => sum + Number(payment.amount || 0), 0);
+            const totalEl = document.getElementById('payment-total-disbursed');
+            const countEl = document.getElementById('payment-settled-count');
+            const surchargeEl = document.getElementById('payment-last-surcharge');
+            const subtitleEl = document.getElementById('payment-summary-subtitle');
+            const currencyMark = String.fromCharCode(8377);
+            if (totalEl) totalEl.textContent = `₹${total.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+            if (countEl) countEl.textContent = `${paymentsList.length} ${paymentsList.length === 1 ? 'Invoice' : 'Invoices'}`;
+            if (subtitleEl) subtitleEl.textContent = `${paymentsList.length} settled transactions`;
+            const surcharge = paymentsList.find(payment => /baggage|surcharge/i.test(payment.purpose));
+            if (surchargeEl) surchargeEl.textContent = surcharge ? `₹${Number(surcharge.amount).toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}` : '₹0.00';
+            if (totalEl) totalEl.textContent = `${currencyMark}${total.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+            if (surchargeEl) surchargeEl.textContent = surcharge ? `${currencyMark}${Number(surcharge.amount).toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}` : `${currencyMark}0.00`;
+        }
+
+        function getFilteredPayments() {
+            const query = (document.getElementById('payment-search-input')?.value || '').trim().toLowerCase();
+            const dateFilter = document.getElementById('payment-date-filter')?.value || 'all';
+            return paymentsList.filter(payment => {
+                const haystack = `${payment.id} ${payment.receiptId || ''} ${payment.purpose} ${payment.method || ''}`.toLowerCase();
+                const dateText = String(payment.date || '').toLowerCase();
+                const parsedDate = Date.parse(String(payment.date || '').split(/[•â]/)[0].trim());
+                const dateStamp = String(payment.date || '').match(/\d{1,2}\s+[A-Za-z]{3}\s+\d{4}/);
+                const safeParsedDate = dateStamp ? Date.parse(dateStamp[0]) : Number.NaN;
+                const withinSevenDays = Number.isFinite(safeParsedDate) && Date.now() - safeParsedDate <= 7 * 24 * 60 * 60 * 1000;
+                const dateMatch = dateFilter === 'all' ||
+                    (dateFilter === 'today' && dateText.includes('today')) ||
+                    (dateFilter === 'week' && (dateText.includes('today') || dateText.includes('yesterday') || withinSevenDays)) ||
+                    (dateFilter === 'older' && !dateText.includes('today') && !dateText.includes('yesterday') && !withinSevenDays);
+                return (!query || haystack.includes(query)) && dateMatch;
+            });
+        }
+
+        function filterPaymentRows() {
+            const visibleIds = new Set(getFilteredPayments().map(payment => payment.id));
+            document.querySelectorAll('#payment-ledger-tbody tr').forEach(row => {
+                row.classList.toggle('hidden', !visibleIds.has(row.dataset.paymentId));
+            });
+            const countEl = document.getElementById('payment-visible-count');
+            if (countEl) countEl.textContent = `Showing ${visibleIds.size} of ${paymentsList.length} transactions`;
+        }
+
+        function exportPaymentsCSV() {
+            const rows = [['Transaction ID', 'Receipt ID', 'Description', 'Date & Time', 'Amount INR', 'Status', 'Payment Method'],
+                ...getFilteredPayments().map(payment => [payment.id, payment.receiptId || '', payment.purpose, payment.date, Number(payment.amount || 0).toFixed(2), payment.status, payment.method || ''])];
+            const csv = rows.map(row => row.map(value => `"${String(value).replace(/"/g, '""')}"`).join(',')).join('\r\n');
+            const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'aeropass-payment-receipts.csv';
+            link.click();
+            setTimeout(() => URL.revokeObjectURL(url), 1000);
+        }
+
         function renderPaymentsPane() {
             const tbody = document.getElementById('payment-ledger-tbody');
             if (!tbody) return;
             tbody.innerHTML = '';
             const ind = document.getElementById('payment-count-indicator');
             if (ind) ind.textContent = `${paymentsList.length} Settled Transactions`;
+            updatePaymentSummary();
 
             paymentsList.forEach(p => {
                 const tr = document.createElement('tr');
+                tr.dataset.paymentId = p.id;
                 tr.className = 'hover:bg-surface-container-low transition-colors';
                 tr.innerHTML = `
                     <td class="py-3.5 px-4 font-label-mono-sm font-bold text-primary">${p.id}</td>
@@ -4124,6 +4409,7 @@
                 `;
                 tbody.appendChild(tr);
             });
+            filterPaymentRows();
         }
 
         // ==============================================================
@@ -4235,7 +4521,7 @@
             });
             const activeBtn = document.getElementById(`nav-pill-${destKey}`);
             if (activeBtn) {
-                activeBtn.className = 'nav-dest-pill px-3.5 py-2 rounded-xl text-xs font-bold font-headline-sm transition-all whitespace-nowrap bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#451a03] dark:to-[#500724] text-[#831843] dark:text-[#fbcfe8] border border-[#f472b6] shadow-xs flex items-center gap-1.5';
+                activeBtn.className = 'nav-dest-pill px-3.5 py-2 rounded-xl text-xs font-bold font-headline-sm transition-all whitespace-nowrap bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#19251D] dark:to-[#233329] text-[#831843] dark:text-[#F4F7F3] border border-[#f472b6] shadow-xs flex items-center gap-1.5';
             }
 
             playChime('success');
@@ -4389,3 +4675,12 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+

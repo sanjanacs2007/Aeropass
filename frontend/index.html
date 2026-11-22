@@ -1,113 +1,1093 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- AeroPass Pastel Theme Initialization (Prevents FOUC) -->
-    <script>
-        (function() {
-            const theme = localStorage.getItem('aeropass_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            if (theme === 'dark') {
-                document.documentElement.classList.add('dark');
-                document.documentElement.setAttribute('data-theme', 'dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-                document.documentElement.setAttribute('data-theme', 'light');
-            }
-        })();
-    </script>
-
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AeroPass | Airport Security &amp; Passenger Platform</title>
-    <script>
-      const hasPassenger = sessionStorage.getItem('aeropass_user_session') || localStorage.getItem('aeropass_user_session');
-      const hasOfficer = sessionStorage.getItem('aeropass_officer_session');
-      if (hasPassenger) {
-        window.location.replace('/Dashboard.html');
-      } else if (hasOfficer) {
-        window.location.replace('/Officer.html');
-      } else {
-        window.location.replace('/Admin.html');
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>AeroPass | Passenger Security &amp; Identity Clearance</title>
+<!-- Tailwind CSS v3 CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              500: '#10b981',
+              600: '#059669',
+            },
+            aeroblue: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              900: '#0c4a6e',
+            },
+            /* Sky-blue light theme palette */
+            'sky-blue': '#7FB8D0',
+            'sky-blue-light': '#E4EAF0',
+            periwinkle: '#9AA5D8',
+            lavender: '#E8E1F8',
+            'deep-blue-grey': '#29394A',
+            'muted-grey': '#8996A5',
+            'soft-border': '#D9E7F0'
+          }
+        }
       }
-    </script>
-  
-    <style>
-        :root {
-            --color-surface: #fffdfa;
-            --color-card: #ffffff;
-            --color-border: #fce7f3;
-            --color-text: #2d132c;
-            --color-muted: #6b4360;
-            --color-primary: #ec4899;
-            --color-primary-light: #fdf2f8;
-            --color-yellow: #f59e0b;
-            --color-yellow-light: #fef9c3;
-            --page-ambient-gradient: radial-gradient(1300px 850px at 15% 0%, #fdf2f8 0%, #fefce8 50%, #fff7ed 100%), #fffaf8;
-        }
-        html.dark {
-            --color-surface: #120e18;
-            --color-card: #1b1424;
-            --color-border: #3d284e;
-            --color-text: #fdf2f8;
-            --color-muted: #d4b8ca;
-            --color-primary: #f472b6;
-            --color-primary-light: #500724;
-            --color-yellow: #fde047;
-            --color-yellow-light: #451a03;
-            --page-ambient-gradient: radial-gradient(1300px 850px at 15% 0%, #291227 0%, #1d172e 50%, #261c10 100%), #120e18;
-            color-scheme: dark;
-        }
-        body {
-            background: var(--page-ambient-gradient) !important;
-            background-attachment: fixed !important;
-            transition: background 0.25s ease, color 0.25s ease;
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    }
+  </script>
+<!-- BEGIN: Custom Styles -->
+<style data-purpose="custom-layout">
+    :root {
+        --color-surface: #E8E1F8;
+        --color-surface-container-lowest: #F8FBFF;
+        --color-surface-container-low: #F0F9FF;
+        --color-surface-container-high: #D9E7F0;
+        --color-on-surface: #000000;
+        --color-on-surface-variant: #374151;
+        --color-outline: #D9E7F0;
+        --color-primary: #7FB8D0;
+        --color-secondary: #9AA5D8;
+        --color-tertiary: #F5E88A;
+        --color-error: #EF5350;
+        --page-ambient-gradient: radial-gradient(circle at 10% 10%, rgba(224, 242, 254, 0.6) 0%, rgba(240, 249, 255, 0.4) 30%, rgba(248, 250, 252, 1) 100%);
+        color-scheme: light;
+    }
+    html.dark {
+        --color-surface: #101713;
+        --color-surface-container-lowest: #233329;
+        --color-surface-container-low: #19251D;
+        --color-surface-container-high: #2B3D31;
+        --color-on-surface: #F4F7F3;
+        --color-on-surface-variant: #A6B5A8;
+        --color-outline: #35483B;
+        --color-primary: #34D399;
+        --color-secondary: #65A982;
+        --color-tertiary: #D6B46A;
+        --color-error: #F07878;
+        --page-ambient-gradient: radial-gradient(1300px 850px at 15% 0%, #19251D 0%, #101713 50%, #101713 100%), #101713;
+        color-scheme: dark;
+    }
+    body {
+      background: var(--page-ambient-gradient) !important;
+      min-height: 100vh;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+    .scanline-pulse {
+      position: relative;
+      overflow: hidden;
+    }
+    .scanline-pulse::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #ec4899, #06b6d4, transparent);
+      box-shadow: 0 0 10px #ec4899;
+      animation: scanAnim 3s ease-in-out infinite;
+    }
+    html.dark .scanline-pulse::after {
+      background: linear-gradient(90deg, transparent, #34D399, #65A982, transparent);
+      box-shadow: 0 0 10px #34D399;
+    }    @keyframes scanAnim {
+      0% { top: 6%; opacity: 0; }
+      15% { opacity: 1; }
+      85% { opacity: 1; }
+      100% { top: 92%; opacity: 0; }
+    }
+    .animate-scan-laser {
+        animation: scanLaser 2s ease-in-out infinite;
+    }
+    @keyframes scanLaser {
+        0% { top: 4%; opacity: 0.8; }
+        50% { top: 92%; opacity: 1; }
+        100% { top: 4%; opacity: 0.8; }
+    }
+        /* Dark-only utility palette for surfaces that use fixed light utilities. */
+        html.dark [class~="bg-white"]:not([class*="dark:bg-"]):not([class*="scanline-pulse"]):not([class*="relative p-4 bg-white"]):not([class*="w-28 h-28 bg-white"]) { background-color: #233329 !important; }
+        html.dark [class*="bg-white/"]:not([class*="dark:bg-"]):not([class*="scanline-pulse"]) { background-color: #233329 !important; }
+        html.dark [class*="bg-slate-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-gray-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-teal-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-cyan-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-sky-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-blue-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-emerald-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-rose-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-pink-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-amber-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-orange-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-yellow-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-indigo-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-violet-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-purple-50"]:not([class*="dark:bg-"]) { background-color: #19251D !important; }
+        html.dark [class*="bg-slate-100"]:not([class*="dark:bg-"]), html.dark [class*="bg-gray-100"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-sky-100"]:not([class*="dark:bg-"]), html.dark [class*="bg-cyan-100"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-emerald-100"]:not([class*="dark:bg-"]), html.dark [class*="bg-amber-100"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-indigo-100"]:not([class*="dark:bg-"]), html.dark [class*="bg-pink-100"]:not([class*="dark:bg-"]) { background-color: #233329 !important; }
+        html.dark [class*="bg-slate-200"]:not([class*="dark:bg-"]), html.dark [class*="bg-slate-300"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-gray-200"]:not([class*="dark:bg-"]) { background-color: #2B3D31 !important; }
+        html.dark [class*="border-slate-"]:not([class*="dark:border-"]), html.dark [class*="border-gray-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-teal-"]:not([class*="dark:border-"]), html.dark [class*="border-cyan-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-sky-"]:not([class*="dark:border-"]), html.dark [class*="border-blue-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-emerald-"]:not([class*="dark:border-"]), html.dark [class*="border-rose-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-pink-"]:not([class*="dark:border-"]), html.dark [class*="border-amber-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-orange-"]:not([class*="dark:border-"]), html.dark [class*="border-yellow-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-indigo-"]:not([class*="dark:border-"]), html.dark [class*="border-violet-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-purple-"]:not([class*="dark:border-"]) { border-color: #35483B !important; }
+        html.dark [class*="text-slate-900"]:not([class*="dark:text-"]), html.dark [class*="text-gray-900"]:not([class*="dark:text-"]),
+        html.dark [class*="text-slate-800"]:not([class*="dark:text-"]), html.dark [class*="text-gray-800"]:not([class*="dark:text-"]) { color: #F4F7F3 !important; }
+        html.dark [class*="text-slate-700"]:not([class*="dark:text-"]), html.dark [class*="text-slate-600"]:not([class*="dark:text-"]),
+        html.dark [class*="text-slate-500"]:not([class*="dark:text-"]), html.dark [class*="text-slate-400"]:not([class*="dark:text-"]),
+        html.dark [class*="text-gray-700"]:not([class*="dark:text-"]), html.dark [class*="text-gray-600"]:not([class*="dark:text-"]),
+        html.dark [class*="text-gray-500"]:not([class*="dark:text-"]) { color: #A6B5A8 !important; }
+        html.dark [class*="text-sky-"]:not([class*="dark:text-"]), html.dark [class*="text-cyan-"]:not([class*="dark:text-"]),
+        html.dark [class*="text-teal-"]:not([class*="dark:text-"]), html.dark [class*="text-blue-"]:not([class*="dark:text-"]),
+        html.dark [class*="text-indigo-"]:not([class*="dark:text-"]), html.dark [class*="text-violet-"]:not([class*="dark:text-"]),
+        html.dark [class*="text-purple-"]:not([class*="dark:text-"]) { color: #65A982 !important; }
+        html.dark [class*="text-emerald-"]:not([class*="dark:text-"]), html.dark [class*="text-pink-"]:not([class*="dark:text-"]) { color: #34D399 !important; }
+        html.dark [class*="text-amber-"]:not([class*="dark:text-"]), html.dark [class*="text-yellow-"]:not([class*="dark:text-"]) { color: #E8B85C !important; }
+        html.dark [class*="text-rose-"]:not([class*="dark:text-"]), html.dark [class*="text-red-"]:not([class*="dark:text-"]) { color: #F07878 !important; }
+        html.dark [class*="from-teal-50"][class*="to-cyan-50"]:not([class*="dark:from-"]) { background-image: linear-gradient(110deg, #19251D, #233329 55%, #2B3D31) !important; }
+        html.dark [class*="from-rose-500"][class*="to-pink-500"]:not([class*="dark:from-"]) { background-image: linear-gradient(110deg, #34D399, #65A982) !important; color: #101713 !important; }
+        html.dark [class*="bg-sky-500"][class~="text-white"], html.dark [class*="bg-sky-600"][class~="text-white"],
+        html.dark [class*="bg-emerald-500"][class~="text-white"], html.dark [class*="bg-emerald-600"][class~="text-white"],
+        html.dark [class*="bg-rose-500"][class~="text-white"], html.dark [class*="bg-pink-500"][class~="text-white"] { color: #101713 !important; }
+        html.dark .glass-panel { background: rgba(35, 51, 41, 0.94); border-color: #35483B; }
+        html.dark .scanline-pulse { background-color: #FFFFFF !important; border-color: #35483B !important; }
+        html.dark #qrcode-canvas-container, html.dark #modal-qrcode-canvas, html.dark #digital-pass-card .relative.bg-white,
+        html.dark .scanline-pulse [id*="qrcode"] { background-color: #FFFFFF !important; }
+        html.dark [class*="bg-pink-100"][class*="text-rose-"]:not([class*="dark:text-"]) { color: #34D399 !important; }
+</style>
+<!-- END: Custom Styles -->
 </head>
-  <body style="font-family: system-ui, -apple-system, sans-serif; background: var(--color-surface); color: var(--color-text); display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0;">
-    <div style="text-align: center; padding: 2.5rem; max-width: 520px; background: var(--color-card); border-radius: 1.25rem; border: 1px solid var(--color-border); box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
-      <div style="display: flex; justify-content: flex-end; margin-bottom: 0.5rem;">
-        <button onclick="toggleTheme()" class="theme-toggle-btn" style="background: none; border: 1px solid var(--color-border); color: var(--color-text); border-radius: 0.75rem; padding: 0.4rem 0.6rem; cursor: pointer; display: flex; align-items: center; gap: 0.3rem; font-size: 0.8rem;">
-            <span class="theme-toggle-icon material-symbols-outlined" style="font-size: 1.1rem;">dark_mode</span>
-            <span>Theme</span>
+<body class="font-sans text-slate-800 antialiased selection:bg-cyan-100 selection:text-cyan-900 pb-16">
+<!-- AUTH REDIRECT (logged-in users go to their portal) -->
+<script>
+    (function() {
+        const theme = localStorage.getItem('aeropass_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    })();
+    const hasPassenger = sessionStorage.getItem('aeropass_user_session') || localStorage.getItem('aeropass_user_session');
+    const hasOfficer = sessionStorage.getItem('aeropass_officer_session');
+    if (hasPassenger) {
+        window.location.replace('/Dashboard.html');
+    } else if (hasOfficer) {
+        window.location.replace('/Officer.html');
+    } else {
+        window.location.replace('/Admin.html');
+    }
+</script>
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 px-4 lg:px-8 py-3 transition-all shadow-[0_1px_3px_rgba(0,0,0,0.03)]" data-purpose="top-navigation-bar">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between gap-4">
+<!-- Left side: Hamburger, Logo & Flight Status Pill -->
+<div class="flex items-center gap-3 lg:gap-5">
+<!-- Sandwich menu button -->
+<button onclick="toggleSandwichDrawer()" aria-label="Toggle Navigation Menu" class="p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition" type="button">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Logo -->
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-emerald-100/90 text-emerald-800 flex items-center justify-center font-black shadow-inner border border-emerald-300">
+<svg class="w-5 h-5 -rotate-45" fill="currentColor" viewBox="0 0 24 24">
+<path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-xl font-bold tracking-tight text-slate-900">AeroPass</span>
+<span class="px-2 py-0.5 text-[10px] font-bold tracking-wider uppercase bg-indigo-50 text-indigo-700 border border-indigo-200/80 rounded-full">TRAVELER PORTAL</span>
+</div>
+<span class="text-[10.5px] text-slate-400 font-mono tracking-wide hidden sm:block">Global Identity &amp; Gate Clearance</span>
+</div>
+</div>
+<!-- Live Gate Badge -->
+<div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-xs font-medium text-slate-700">
+<span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+<span class="font-bold text-slate-900 tracking-wide">FLIGHT SK-492</span>
+<span class="text-slate-300">•</span>
+<span class="font-bold text-slate-900">GATE A1</span>
+<span class="text-slate-500 font-normal ml-0.5">Boarding in 42m</span>
+</div>
+</div>
+<!-- Right side: Tools, Status & User Identity -->
+<div class="flex items-center gap-3">
+<!-- Dark Mode Toggle Icon -->
+<button onclick="toggleTheme()" class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition" title="Dark mode toggle" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Notification Bell with '5' Badge -->
+<div class="relative">
+<button onclick="toggleNotificationCenter()" class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition" title="Notifications" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<span id="notification-badge-count" class="absolute -top-1 -right-1 px-1.5 min-w-[18px] h-[18px] text-[10px] font-bold bg-rose-500 text-white rounded-full flex items-center justify-center border-2 border-white shadow-sm">5</span>
+</div>
+<!-- Quick Settings Menu Button -->
+<button onclick="toggleSandwichDrawer()" class="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-sky-800 bg-sky-50 border border-sky-200 rounded-xl hover:bg-sky-100 transition" type="button">
+<svg class="w-3.5 h-3.5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+          Settings Menu
         </button>
+<!-- API Connected Status Pill -->
+<div class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium text-emerald-800 bg-emerald-50/90 border border-emerald-200 rounded-full">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>API Connected</span>
+</div>
+<div class="h-6 w-px bg-slate-200 mx-1 hidden sm:block"></div>
+<!-- User Profile Avatar & Name -->
+<div class="flex items-center gap-2.5 pl-1">
+<div class="w-9 h-9 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-xs border border-indigo-200" id="nav-avatar-initials">
+            ER
+          </div>
+<div class="hidden md:flex flex-col text-left">
+<span class="text-xs font-bold text-slate-900 leading-tight" id="nav-user-name">ELENA ROSTOVA</span>
+<span class="text-[10px] font-semibold text-amber-600 leading-tight">SkyPriority Elite</span>
+</div>
+<button onclick="handleSignOut()" class="text-slate-400 hover:text-slate-600 p-1" title="Sign out / Exit" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+
+<!-- SANDWICH DRAWER (Settings) -->
+<div id="sandwich-drawer-backdrop" onclick="closeSandwichDrawer()" class="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+<aside id="sandwich-drawer" class="fixed inset-y-0 left-0 z-50 w-full sm:max-w-md transform -translate-x-full transition-transform duration-300 bg-white shadow-2xl border-r border-slate-200 flex flex-col">
+    <div class="p-5 border-b border-slate-100 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold">
+                <span class="material-symbols-outlined">manage_accounts</span>
+            </div>
+            <div>
+                <h3 class="text-base font-bold text-slate-900">Traveler Settings</h3>
+                <p class="text-xs text-slate-500">Update profile &amp; password</p>
+            </div>
+        </div>
+        <button onclick="closeSandwichDrawer()" class="p-2 rounded-lg text-slate-500 hover:text-slate-700 hover:bg-slate-50 transition">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+    <div class="p-5 space-y-4 flex-1 overflow-y-auto">
+        <form onsubmit="handleProfileUpdate(event)" class="space-y-3">
+            <label class="text-[10px] font-bold text-slate-400 tracking-wider uppercase block mb-1">Full Name</label>
+            <input id="input-edit-name" type="text" value="Elena Rostova" class="w-full bg-slate-50 border border-slate-200 pl-3 pr-4 py-2 rounded-xl text-slate-900 focus:outline-none focus:border-sky-500 font-mono transition-colors" />
+            <label class="text-[10px] font-bold text-slate-400 tracking-wider uppercase block mb-1">Phone Number</label>
+            <input id="input-edit-phone" type="tel" value="+1 555-019-2834" class="w-full bg-slate-50 border border-slate-200 pl-3 pr-4 py-2 rounded-xl text-slate-900 focus:outline-none focus:border-sky-500 font-mono transition-colors" />
+            <div class="flex items-center gap-2">
+                <button type="submit" class="flex-1 bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all">
+                    <span class="material-symbols-outlined">save</span> Save Changes
+                </button>
+                <button type="button" onclick="resetProfileForm()" class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-sm transition">
+                    Reset
+                </button>
+            </div>
+        </form>
+    </div>
+</aside>
+
+<!-- NOTIFICATION CENTER (drawer) -->
+<div id="notification-drawer-backdrop" onclick="closeNotificationCenter()" class="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+<div id="notification-drawer" class="fixed inset-y-0 right-0 z-50 w-full sm:max-w-md transform translate-x-full transition-transform duration-300 bg-white shadow-2xl border-l border-slate-200 flex flex-col">
+    <div class="p-5 border-b border-slate-100 flex items-center justify-between">
+        <h3 class="text-base font-bold text-slate-900">Notifications</h3>
+        <button onclick="closeNotificationCenter()" class="p-2 rounded-lg text-slate-500 hover:text-slate-700 hover:bg-slate-50 transition">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+    <div class="p-5 space-y-3 flex-1 overflow-y-auto" id="notification-list">
+        <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-2">
+            <span class="material-symbols-outlined text-tertiary shrink-0 mt-0.5">info</span>
+            <div class="text-xs text-slate-700">Welcome to AeroPass — your digital pass is ready.</div>
+        </div>
+    </div>
+    <div class="p-4 border-t border-slate-100">
+        <button onclick="closeNotificationCenter(); markAllRead()" class="w-full py-2 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs flex items-center justify-center gap-1 transition">
+            Mark All as Read
+        </button>
+    </div>
+</div>
+
+<!-- BEGIN: MainContent -->
+<main class="max-w-[1440px] mx-auto px-4 lg:px-8 mt-6 space-y-6">
+<!-- BEGIN: HeroWelcomeBanner -->
+<section class="rounded-3xl p-6 lg:p-8 bg-gradient-to-r from-teal-50/70 via-sky-50/60 to-cyan-50/40 border border-teal-200/60 shadow-sm relative overflow-hidden" data-purpose="hero-welcome-banner">
+<!-- Ambient background decoration -->
+<div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-teal-200/20 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
+<!-- Left Hero Column -->
+<div class="space-y-3.5 max-w-3xl">
+<!-- Security Badges Row -->
+<div class="flex flex-wrap items-center gap-2 text-xs font-semibold">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-300">
+<svg class="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+<path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path>
+</svg>
+              ICAO Doc 9303 Verified
+            </span>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-rose-50 text-rose-800 border border-rose-200">
+              TSA PreCheck Approved
+            </span>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-orange-50 text-orange-800 border border-orange-200">
+              Turnstile Gate Pass Active
+            </span>
+</div>
+<!-- Welcome Heading -->
+<h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Welcome, <span id="hero-welcome-name">ELENA ROSTOVA</span>
+          </h1>
+<!-- Verbatim Description -->
+<p class="text-sm sm:text-[15px] leading-relaxed text-slate-600 max-w-2xl font-normal">
+            Your passenger identity is authenticated. You can view your credentials, update your personal name or phone number, change your security password, and present your cryptographic turnstile QR pass for officer verification.
+          </p>
+</div>
+<!-- Right Hero Departure Status Card -->
+<div class="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0">
+<div class="bg-white/95 rounded-2xl p-4 border border-teal-200/80 shadow-sm min-w-[280px]">
+<div class="text-[11px] font-bold text-rose-700 tracking-wider uppercase">DEPARTURE STATUS</div>
+<div class="text-base font-extrabold text-slate-900 mt-1">Flight SK-492 • Gate A1</div>
+<div class="flex items-center gap-1.5 mt-2 text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200 w-fit">
+<svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path>
+</svg>
+              Security Clearance Granted
+            </div>
+</div>
+<!-- Hero Action Buttons -->
+<div class="flex items-center gap-2">
+<button onclick="toggleSandwichDrawer()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 text-xs font-bold text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 rounded-xl shadow-sm transition" type="button">
+<svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+              Settings Menu
+            </button>
+<button onclick="scrollToPass()" class="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 text-xs font-bold text-white bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 rounded-xl shadow-sm transition" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 001 1v2a1 1 0 001 1z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+              Show QR Pass
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroWelcomeBanner -->
+<!-- BEGIN: DashboardTabsNavigation -->
+<nav aria-label="Portal tabs" class="flex items-center gap-2 overflow-x-auto pb-1 text-sm font-semibold scrollbar-none" data-purpose="portal-tabs">
+<button onclick="switchMainTab('pass')" id="main-tab-btn-pass" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-pink-100/80 text-rose-900 border border-pink-300 font-bold whitespace-nowrap shadow-sm" type="button">
+<svg class="w-4 h-4 text-rose-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+        Pass &amp; Overview
+      </button>
+<button onclick="switchMainTab('flights')" id="main-tab-btn-flights" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 text-slate-600 border border-slate-200 whitespace-nowrap transition" type="button">
+<svg class="w-4 h-4 text-slate-400 -rotate-45" fill="currentColor" viewBox="0 0 24 24">
+<path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"></path>
+</svg>
+        My Flights
+        <span class="px-1.5 py-0.2 text-[11px] bg-slate-100 text-slate-600 rounded-md font-mono">3</span>
+</button>
+<button onclick="switchMainTab('documents')" id="main-tab-btn-documents" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 text-slate-600 border border-slate-200 whitespace-nowrap transition" type="button">
+<svg class="w-4 h-4 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+        Document AI Verification
+        <span class="px-2 py-0.5 text-[10px] bg-amber-100 text-amber-800 rounded-full font-bold">3 Verified</span>
+</button>
+<button onclick="switchMainTab('baggage')" id="main-tab-btn-baggage" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 text-slate-600 border border-slate-200 whitespace-nowrap transition" type="button">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+        Baggage &amp; Allowance
+      </button>
+<button onclick="switchMainTab('payments')" id="main-tab-btn-payments" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 text-slate-600 border border-slate-200 whitespace-nowrap transition" type="button">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2zM10 8.5a.5.5 0 11-1 0 .5.5 0 011 0zm5 5a.5.5 0 11-1 0 .5.5 0 011 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+        Payments &amp; Receipts
+      </button>
+<button onclick="switchMainTab('map')" id="main-tab-btn-map" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 text-slate-600 border border-slate-200 whitespace-nowrap transition" type="button">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+        Airport Layout Map
+      </button>
+<button onclick="switchMainTab('search')" id="main-tab-btn-search" class="inline-flex items-center gap-1 px-3 py-2.5 text-slate-400 hover:text-slate-600 text-xs" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+        Air...
+      </button>
+</nav>
+<!-- END: DashboardTabsNavigation -->
+<!-- BEGIN: TwoColumnDashboardGrid -->
+<div class="space-y-6">
+  <!-- Upper/Middle Section: Credentials & Security Info side-by-side on large screens -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+    <!-- Account Credentials (left 7 cols) -->
+    <div class="lg:col-span-7">
+      <article class="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 h-full" data-purpose="account-credentials-card">
+        <div class="flex items-center justify-between pb-5 border-b border-slate-100">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-base sm:text-lg font-bold text-slate-900 leading-tight">Account Credentials &amp; Login Details</h2>
+              <p class="text-xs text-slate-500">The verified information used to authenticate your session</p>
+            </div>
+          </div>
+          <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-sky-50 text-sky-700 text-xs font-semibold border border-sky-200">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+            Level 4 Secure
+          </span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+          <!-- Full Legal Passport Name -->
+          <div class="p-4 rounded-2xl bg-slate-50/70 border border-slate-200/70 relative">
+            <div class="text-[10px] font-bold text-slate-400 tracking-wider uppercase mb-1">FULL LEGAL PASSPORT NAME</div>
+            <div class="text-sm sm:text-base font-extrabold text-slate-900">ELENA ROSTOVA</div>
+            <div class="text-[11px] text-slate-500 flex items-center gap-1 mt-1.5 font-medium">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Matched to ICAO MRZ Record
+            </div>
+            <span class="absolute top-4 right-4 text-amber-500" title="Verified MRZ">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" stroke-width="2"></circle>
+                <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </span>
+          </div>
+          <!-- Login Email Address -->
+          <div class="p-4 rounded-2xl bg-slate-50/70 border border-slate-200/70 relative">
+            <div class="text-[10px] font-bold text-slate-400 tracking-wider uppercase mb-1">LOGIN EMAIL ADDRESS</div>
+            <div class="text-sm sm:text-base font-bold text-slate-900 break-all font-mono">elena.rostova@skywings.aero</div>
+            <div class="text-[11px] text-slate-500 mt-1.5 font-medium">Primary Authentication ID</div>
+            <span class="absolute top-4 right-4 text-amber-500" title="Primary Verified">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" stroke-width="2"></circle>
+                <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </span>
+          </div>
+          <!-- Verified Phone Number -->
+          <div class="p-4 rounded-2xl bg-slate-50/70 border border-slate-200/70 relative">
+            <div class="text-[10px] font-bold text-slate-400 tracking-wider uppercase mb-1">VERIFIED PHONE NUMBER</div>
+            <div class="text-sm sm:text-base font-extrabold text-slate-900 font-mono">+1 555-019-2834</div>
+            <div class="text-[11px] text-slate-500 mt-1.5 font-medium">SMS 2FA Token Recipient</div>
+            <span class="absolute top-4 right-4 text-amber-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </span>
+          </div>
+          <!-- Known Traveler Number (KTN) -->
+          <div class="p-4 rounded-2xl bg-slate-50/70 border border-slate-200/70 relative">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[10px] font-bold text-slate-400 tracking-wider uppercase">KNOWN TRAVELER NUMBER (KTN)</span>
+              <span class="px-1.5 py-0.2 text-[9px] font-extrabold bg-amber-100 text-amber-900 rounded font-mono">PRECHECK</span>
+            </div>
+            <div class="text-sm sm:text-base font-extrabold text-slate-900 font-mono tracking-wider">USA982344109</div>
+            <div class="text-[11px] text-slate-500 mt-1.5 font-medium">Global Entry &amp; TSA Expedited</div>
+          </div>
+          <!-- Clearance Classification -->
+          <div class="p-4 rounded-2xl bg-slate-50/70 border border-slate-200/70 relative">
+            <div class="text-[10px] font-bold text-slate-400 tracking-wider uppercase mb-1">CLEARANCE CLASSIFICATION</div>
+            <div class="text-sm sm:text-base font-extrabold text-sky-600">SkyPriority Elite</div>
+            <div class="text-[11px] text-slate-500 mt-1.5 font-medium">Priority Lane 01 Turnstile</div>
+            <span class="absolute top-4 right-4 text-sky-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </span>
+          </div>
+          <!-- Active Session Security -->
+          <div class="p-4 rounded-2xl bg-slate-50/70 border border-slate-200/70 relative">
+            <div class="text-[10px] font-bold text-slate-400 tracking-wider uppercase mb-1">ACTIVE SESSION SECURITY</div>
+            <div class="text-sm sm:text-base font-bold text-amber-500 font-mono">TLS 1.3 Workstation</div>
+            <div class="text-[11px] text-slate-500 mt-1.5 font-medium">Session Verified Today • 12:03 PM</div>
+            <span class="absolute top-4 right-4 w-2 h-2 rounded-full bg-amber-400"></span>
+          </div>
+        </div>
+        <!-- Bottom Action Helper Banner -->
+        <div class="mt-6 pt-5 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-2 text-xs text-slate-500">
+            <svg class="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+            <span>Need to update details? Use the top-left sandwich menu or quick edit:</span>
+          </div>
+          <div class="flex items-center gap-2 w-full sm:w-auto">
+            <button class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition" type="button">
+              <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+              Edit Name &amp; Phone
+            </button>
+            <button class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition" type="button">
+              <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+              Change Password
+            </button>
+          </div>
+        </div>
+      </article>
+    </div>
+    <!-- Security Activity & Biometric Integrity (right 5 cols) -->
+    <div class="lg:col-span-5 space-y-6">
+      <!-- Recent Security Activity -->
+      <article class="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6" data-purpose="recent-security-activity-card">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-600 flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-base sm:text-lg font-bold text-slate-900 leading-tight">Recent Security Activity</h2>
+              <p class="text-xs text-slate-400 font-mono">Cryptographic Audit Trail</p>
+            </div>
+          </div>
+          <span class="px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider bg-amber-100 text-amber-900 rounded-md font-mono">
+            REAL-TIME LEDGER
+          </span>
+        </div>
+        <div class="mt-4 space-y-3.5">
+          <div class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50/80 transition">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-400 mt-1.5 shrink-0 ring-4 ring-amber-100"></span>
+            <div class="flex-1 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <span class="text-sm font-bold text-slate-800">Digital Security Pass Armed</span>
+              <span class="text-xs text-slate-400 font-mono">Today • 10:18 AM</span>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50/80 transition">
+            <span class="w-2.5 h-2.5 rounded-full bg-cyan-500 mt-1.5 shrink-0 ring-4 ring-cyan-100"></span>
+            <div class="flex-1 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <span class="text-sm font-bold text-slate-800">3D Biometric Liveness Confirmed</span>
+              <span class="text-xs text-slate-400 font-mono">Today • 10:14 AM</span>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50/80 transition">
+            <span class="w-2.5 h-2.5 rounded-full bg-slate-300 mt-1.5 shrink-0 ring-4 ring-slate-100"></span>
+            <div class="flex-1 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <span class="text-sm font-bold text-slate-800">Passenger Session Authenticated</span>
+              <span class="text-xs text-slate-400 font-mono">Today • 10:10 AM</span>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- Biometric Identity Integrity -->
+      <article class="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6" data-purpose="biometric-integrity-card">
+        <div class="flex items-center gap-2.5 mb-2.5">
+          <svg class="w-5 h-5 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+          <h2 class="text-base font-bold text-slate-900">Biometric Identity Integrity &amp; Turnstile Overrides</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+          Your electronic pass is cryptographically anchored to your ICAO Doc 9303 MRZ passport record. Present your QR pass at Airport Checkpoint Gate A1 turnstiles. Station officers can scan this pass via optical readers to unlock turnstile access.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4">
+          <div class="px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-2 text-xs font-semibold text-slate-700">
+            <svg class="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+              <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path>
+            </svg>
+            <span>TSA PreCheck</span>
+          </div>
+          <div class="px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-2 text-xs font-semibold text-slate-700">
+            <svg class="w-4 h-4 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+            <span>256-Bit Signed QR</span>
+          </div>
+          <div class="px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-2 text-xs font-semibold text-slate-700">
+            <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+            <span>Level 4 Enclave</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Bottom Prominent Section: Full-Width Digital Pass & QR Scanner Module -->
+  <article class="bg-white rounded-3xl border border-slate-200/90 shadow-md overflow-hidden" data-purpose="optical-qr-boarding-pass" id="digital-pass-card">
+    <!-- Ticket Header Strip -->
+    <div class="p-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 text-white relative">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-pink-500/20 border border-pink-400/40 flex items-center justify-center text-pink-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-extrabold text-base tracking-tight text-white">SkyWings AeroPass</h3>
+              <span class="px-2 py-0.5 text-[10px] font-bold text-pink-300 font-mono tracking-wider bg-pink-500/20 border border-pink-400/40 rounded-full">INTERNATIONAL FAST-TRACK</span>
+            </div>
+            <p class="text-xs text-slate-300 font-mono mt-0.5">Boarding Pass &amp; Cryptographic Turnstile Credential</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase bg-rose-500 text-white tracking-wider shadow-sm">
+            <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+            ACTIVE PASS
+          </span>
+        </div>
       </div>
-      <h2 style="margin-bottom: 0.5rem; color: var(--color-primary); font-size: 1.4rem; font-weight: 800;">AeroPass Airport Security Platform</h2>
-      <p style="color: var(--color-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">
-        Global biometric passenger identity, turnstile clearance, and officer operations.
-      </p>
-      <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-        <a href="/Dashboard.html" style="padding: 0.75rem 1.25rem; background: linear-gradient(135deg, #fef08a 0%, #fbcfe8 100%); color: #831843; border-radius: 0.75rem; text-decoration: none; font-weight: 700; font-size: 0.9rem; border: 1.5px solid #f472b6; box-shadow: 0 4px 12px rgba(244, 114, 182, 0.2);">
-          Enter Passenger Dashboard
-        </a>
-        <a href="/Admin.html" style="padding: 0.75rem 1.25rem; background: var(--color-surface); color: var(--color-text); border-radius: 0.75rem; text-decoration: none; font-weight: 600; font-size: 0.9rem; border: 1px solid var(--color-border);">
-          Sign In &amp; Enrollment Portal
-        </a>
-        <a href="/Officer.html" style="padding: 0.75rem 1.25rem; background: var(--color-surface); color: var(--color-text); border-radius: 0.75rem; text-decoration: none; font-weight: 600; font-size: 0.9rem; border: 1px solid var(--color-border);">
-          Officer Turnstile Station
-        </a>
+      <!-- Flight Route & Key Flight Metrics -->
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-12 gap-6 items-center border-t border-slate-700/60 pt-6">
+        <!-- Origin -->
+        <div class="md:col-span-4 flex items-center justify-between sm:justify-start gap-6">
+          <div>
+            <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">FROM</div>
+            <div class="text-3xl lg:text-4xl font-black tracking-tight text-white font-mono">JFK</div>
+            <div class="text-xs text-slate-300">New York, US</div>
+          </div>
+          <!-- Flight SK-492 Nonstop indicator -->
+          <div class="flex flex-col items-center">
+            <span class="text-[10px] font-bold text-pink-400 font-mono tracking-wider">SK-492 NONSTOP</span>
+            <div class="flex items-center gap-2 my-1 text-slate-400">
+              <div class="w-8 h-px bg-slate-600"></div>
+              <svg class="w-4 h-4 text-pink-400 rotate-90" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"></path>
+              </svg>
+              <div class="w-8 h-px bg-slate-600"></div>
+            </div>
+            <span class="text-xs text-slate-300 font-mono">7h 45m</span>
+          </div>
+          <div>
+            <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">DESTINATION</div>
+            <div class="text-3xl lg:text-4xl font-black tracking-tight text-white font-mono">LHR</div>
+            <div class="text-xs text-slate-300">London, UK</div>
+          </div>
+        </div>
+        <!-- Gate, Terminal, Seat, Zone Grid (Right 8 cols) -->
+        <div class="md:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center bg-slate-800/60 p-4 rounded-2xl border border-slate-700/80">
+          <div class="p-2 rounded-xl bg-slate-900/60 border border-slate-700/60">
+            <div class="text-[10px] text-slate-400 uppercase font-mono tracking-wider">GATE</div>
+            <div class="text-xl font-black text-cyan-300 font-mono">A1</div>
+          </div>
+          <div class="p-2 rounded-xl bg-slate-900/60 border border-slate-700/60">
+            <div class="text-[10px] text-slate-400 uppercase font-mono tracking-wider">TERMINAL</div>
+            <div class="text-xl font-black text-white font-mono">T1</div>
+          </div>
+          <div class="p-2 rounded-xl bg-slate-900/60 border border-slate-700/60">
+            <div class="text-[10px] text-slate-400 uppercase font-mono tracking-wider">SEAT</div>
+            <div class="text-xl font-black text-white font-mono">02A</div>
+          </div>
+          <div class="p-2 rounded-xl bg-slate-900/60 border border-slate-700/60">
+            <div class="text-[10px] text-slate-400 uppercase font-mono tracking-wider">ZONE</div>
+            <div class="text-xl font-black text-amber-400 font-mono">SKY-1</div>
+          </div>
+        </div>
       </div>
     </div>
-  
-    <script>
-        function toggleTheme() {
-            const isDark = document.documentElement.classList.contains('dark');
-            const newTheme = isDark ? 'light' : 'dark';
-            if (newTheme === 'dark') {
-                document.documentElement.classList.add('dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-            }
-            localStorage.setItem('aeropass_theme', newTheme);
-            const icon = document.querySelector('.theme-toggle-icon');
-            if (icon) icon.textContent = newTheme === 'dark' ? 'light_mode' : 'dark_mode';
+
+    <!-- Perforated Ticket Divider -->
+    <div class="relative flex items-center justify-between px-2 bg-slate-50 py-2 border-y border-dashed border-slate-300">
+      <div class="w-5 h-5 rounded-full bg-slate-100 -ml-5 border border-slate-300"></div>
+      <div class="flex-1 border-t border-dashed border-slate-300 mx-2"></div>
+      <div class="text-[10px] font-mono uppercase tracking-widest text-slate-400">CRYPTOGRAPHIC TURNSTILE GATE PERMIT</div>
+      <div class="flex-1 border-t border-dashed border-slate-300 mx-2"></div>
+      <div class="w-5 h-5 rounded-full bg-slate-100 -mr-5 border border-slate-300"></div>
+    </div>
+
+    <!-- Scanner & Passenger Security Body Grid (Horizontal Balance) -->
+    <div class="p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <!-- Left: QR Viewfinder and Clearance Code (5 cols) -->
+      <div class="lg:col-span-5 flex flex-col items-center justify-center p-6 bg-slate-50 rounded-2xl border border-slate-200/90 relative" data-purpose="qr-code-scanner-container">
+        <div class="relative p-3 bg-white rounded-2xl shadow-sm border border-slate-200 scanline-pulse">
+          <div class="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-cyan-500 rounded-tl"></div>
+          <div class="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-cyan-500 rounded-tr"></div>
+          <div class="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-cyan-500 rounded-bl"></div>
+          <div class="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-cyan-500 rounded-br"></div>
+          <svg class="w-48 h-48 sm:w-56 sm:h-56" fill="currentColor" viewBox="0 0 200 200">
+            <rect fill="#0f172a" height="50" rx="6" width="50" x="10" y="10"></rect>
+            <rect fill="#ffffff" height="30" width="30" x="20" y="20"></rect>
+            <rect fill="#0f172a" height="18" rx="2" width="18" x="26" y="26"></rect>
+            <rect fill="#0f172a" height="50" rx="6" width="50" x="140" y="10"></rect>
+            <rect fill="#ffffff" height="30" width="30" x="150" y="20"></rect>
+            <rect fill="#0f172a" height="18" rx="2" width="18" x="156" y="26"></rect>
+            <rect fill="#0f172a" height="50" rx="6" width="50" x="10" y="140"></rect>
+            <rect fill="#ffffff" height="30" width="30" x="20" y="150"></rect>
+            <rect fill="#0f172a" height="18" rx="2" width="18" x="26" y="156"></rect>
+            <rect fill="#0f172a" height="8" width="8" x="70" y="15"></rect>
+            <rect fill="#0f172a" height="16" width="8" x="85" y="15"></rect>
+            <rect fill="#0f172a" height="8" width="16" x="100" y="20"></rect>
+            <rect fill="#0f172a" height="8" width="8" x="125" y="15"></rect>
+            <rect fill="#0f172a" height="8" width="16" x="70" y="32"></rect>
+            <rect fill="#0f172a" height="8" width="8" x="95" y="32"></rect>
+            <rect fill="#0f172a" height="16" width="16" x="110" y="32"></rect>
+            <rect fill="#0f172a" height="8" width="16" x="15" y="70"></rect>
+            <rect fill="#0f172a" height="16" width="8" x="40" y="70"></rect>
+            <rect fill="#0f172a" height="8" width="16" x="55" y="75"></rect>
+            <rect fill="#0f172a" height="8" width="8" x="80" y="70"></rect>
+            <rect fill="#0f172a" height="18" width="12" x="95" y="65"></rect>
+            <rect fill="#0f172a" height="8" width="16" x="115" y="70"></rect>
+            <rect fill="#0f172a" height="16" width="8" x="140" y="75"></rect>
+            <rect fill="#0f172a" height="8" width="16" x="155" y="70"></rect>
+            <rect fill="#0f172a" height="16" width="8" x="180" y="70"></rect>
+            <rect fill="#0f172a" height="8" width="8" x="20" y="95"></rect>
+            <rect fill="#0f172a" height="8" width="16" x="35" y="95"></rect>
+            <rect fill="#0f172a" height="18" width="8" x="60" y="90"></rect>
+            <rect fill="#0f172a" height="8" width="18" x="75" y="95"></rect>
+            <rect fill="#0f172a" height="8" width="8" x="100" y="95"></rect>
+            <rect fill="#0f172a" height="16" width="16" x="115" y="90"></rect>
+            <rect fill="#0f172a" height="8" width="18" x="140" y="100"></rect>
+            <rect fill="#0f172a" height="16" width="8" x="170" y="95"></rect>
+            <rect fill="#0f172a" height="8" width="16" x="15" y="115"></rect>
+            <rect fill="#0f172a" height="8" width="16" x="40" y="120"></rect>
+            <rect fill="#0f172a" height="8" width="8" x="65" y="115"></rect>
+            <rect fill="#0f172a" height="8" width="24" x="80" y="115"></rect>
+            <rect fill="#0f172a" height="16" width="8" x="110" y="115"></rect>
+            <rect fill="#0f172a" height="8" width="16" x="125" y="120"></rect>
+            <rect fill="#0f172a" height="8" width="8" x="150" y="115"></rect>
+            <rect fill="#0f172a" height="8" width="20" x="165" y="120"></rect>
+            <rect fill="#0f172a" height="8" width="16" x="70" y="145"></rect>
+            <rect fill="#0f172a" height="16" width="8" x="95" y="140"></rect>
+            <rect fill="#0f172a" height="8" width="16" x="110" y="145"></rect>
+            <rect fill="#0f172a" height="16" width="8" x="135" y="140"></rect>
+            <rect fill="#0f172a" height="8" width="20" x="150" y="145"></rect>
+            <rect fill="#0f172a" height="16" width="8" x="180" y="145"></rect>
+            <rect fill="#0f172a" height="16" width="8" x="70" y="165"></rect>
+            <rect fill="#0f172a" height="8" width="16" x="85" y="170"></rect>
+            <rect fill="#0f172a" height="16" width="8" x="110" y="165"></rect>
+            <rect fill="#0f172a" height="8" width="24" x="125" y="170"></rect>
+            <rect fill="#0f172a" height="16" width="8" x="160" y="165"></rect>
+            <rect fill="#0f172a" height="8" width="15" x="175" y="170"></rect>
+          </svg>
+        </div>
+        <div class="mt-4 text-center">
+          <div class="text-[10px] font-bold text-slate-400 tracking-wider uppercase font-mono">OFFICIAL TURNSTILE CLEARANCE CODE</div>
+          <div class="flex items-center justify-center gap-2 mt-1.5">
+            <span class="px-3.5 py-1.5 rounded-xl bg-sky-100/80 text-sky-800 font-mono font-bold text-xs tracking-wider border border-sky-200">
+              SEC-PASS-98214-ER
+            </span>
+            <button class="p-1.5 rounded-lg bg-white border border-slate-200 text-slate-500 hover:text-slate-800 transition" title="Copy code" type="button">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10a2 2 0 00-2 2v3a2 2 0 002 2h10a2 2 0 002-2v-3a2 2 0 00-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="text-xs font-semibold text-amber-500 mt-2">Ready for Airport Security Checkpoints</div>
+        </div>
+      </div>
+
+      <!-- Right: Passenger Legal Info, Actions, Protocol & Print Links (7 cols) -->
+      <div class="lg:col-span-7 space-y-4">
+        <!-- Passenger Metadata Box -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
+          <div class="text-[10px] font-bold text-slate-400 tracking-wider uppercase mb-1">PASSENGER LEGAL NAME</div>
+          <div class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">ELENA ROSTOVA</div>
+          <div class="flex flex-wrap items-center justify-between gap-2 mt-2 pt-2 border-t border-slate-200/60">
+            <span class="text-xs font-bold text-slate-700 font-mono">TSA PRECHECK: USA982344109</span>
+            <span class="text-[11px] font-bold text-amber-600 uppercase font-mono">SKYPRIORITY ELITE</span>
+          </div>
+        </div>
+
+        <!-- Primary Action Button: Present Pass -->
+        <button onclick="openEnlargedQrModal()" class="w-full py-3.5 px-4 rounded-2xl bg-gradient-to-r from-sky-500 to-cyan-600 hover:from-sky-600 hover:to-cyan-700 text-white font-bold text-sm sm:text-base tracking-wide shadow-md shadow-sky-500/20 flex items-center justify-center gap-2 transition active:scale-[0.99]" data-purpose="present-pass-action" type="button">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 001 1v2a1 1 0 001 1z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+          <span>Present Pass for Officer / Optical Scan</span>
+        </button>
+
+        <!-- Checkpoint Security Protocol Callout Box -->
+        <div class="p-4 rounded-2xl bg-amber-50/70 border border-amber-200 flex items-start gap-3">
+          <svg class="w-5 h-5 text-amber-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path>
+          </svg>
+          <div class="text-xs text-slate-700 leading-relaxed font-normal">
+            <span class="font-bold text-slate-900">Checkpoint Security Protocol:</span> Present this official QR code at Airport Security Gate A1 optical readers. Station officers verify biometric credentials to unlock turnstiles.
+          </div>
+        </div>
+
+        <!-- Secondary Actions & Print -->
+        <div class="flex flex-col sm:flex-row items-center gap-3 pt-1">
+          <div class="grid grid-cols-2 gap-3 flex-1 w-full sm:w-auto">
+            <button onclick="openEnlargedQrModal()" class="py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold flex items-center justify-center gap-1.5 transition" type="button">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+              Enlarge QR
+            </button>
+            <button onclick="regeneratePassCode()" class="py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold flex items-center justify-center gap-1.5 transition" type="button">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+              Regenerate QR
+            </button>
+          </div>
+          <a onclick="window.print()" class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-xs font-semibold text-slate-600 transition shrink-0 w-full sm:w-auto" href="#print">
+            <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+            Print Boarding Pass (PDF / Gate Stub)
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+<!-- END: TwoColumnDashboardGrid -->
+</main>
+<!-- END: MainContent -->
+
+<!-- ENLARGED QR SCANNER MODAL -->
+<div id="enlarged-qr-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="bg-white max-w-sm w-full rounded-3xl p-6 flex flex-col items-center text-center shadow-2xl relative animate-[fadeIn_0.2s_ease]">
+        <button onclick="closeEnlargedQrModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition-colors">
+            <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+        <span class="font-label-mono-sm text-[11px] font-bold text-sky-600 uppercase tracking-wider">AeroPass Turnstile Gate Scanner</span>
+        <h3 class="font-headline-sm text-xl font-bold text-slate-900 mt-1" id="modal-qr-passenger-name">ELENA ROSTOVA</h3>
+        <p class="text-xs text-slate-500 mt-0.5 mb-4">Present barcode/QR directly into checkpoint optical sensor</p>
+
+        <!-- Huge QR Container -->
+        <div class="p-4 bg-slate-50 rounded-2xl border-2 border-dashed border-primary/40 relative">
+            <div class="absolute left-2 right-2 h-1 bg-emerald-500 shadow-[0_0_12px_#10b981] animate-scan-laser pointer-events-none"></div>
+            <div id="modal-qrcode-canvas" class="w-64 h-64 flex items-center justify-center"></div>
+        </div>
+
+        <code id="modal-pass-code" class="mt-4 px-3 py-1.5 rounded-lg bg-slate-100 font-label-mono-lg font-bold text-slate-800 text-sm">
+            SEC-PASS-98214-ER
+        </code>
+        <span class="text-[11px] text-emerald-600 font-semibold mt-1">Flight SK-492 • Gate A1 Clearance Ready</span>
+
+        <button onclick="closeEnlargedQrModal()" class="mt-5 w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-headline-sm text-xs font-bold rounded-xl transition-colors">
+            Done / Close Viewfinder
+        </button>
+    </div>
+</div>
+
+<!-- BEGIN: InteractiveScripts -->
+<script data-purpose="qr-interaction-handlers">
+    // ============ THEME TOGGLE ============
+    function toggleTheme() {
+        const isDark = document.documentElement.classList.contains('dark');
+        const newTheme = isDark ? 'light' : 'dark';
+        if (newTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
         }
-        window.addEventListener('DOMContentLoaded', () => {
-            const isDark = document.documentElement.classList.contains('dark');
-            const icon = document.querySelector('.theme-toggle-icon');
-            if (icon) icon.textContent = isDark ? 'light_mode' : 'dark_mode';
+        localStorage.setItem('aeropass_theme', newTheme);
+        updateThemeIcons(newTheme);
+    }
+    function updateThemeIcons(theme) {
+        const isDark = theme === 'dark';
+    }
+
+    // ============ SANDWICH DRAWER ============
+    let isDrawerOpen = false;
+    function toggleSandwichDrawer() {
+        if (isDrawerOpen) closeSandwichDrawer(); else openSandwichDrawer();
+    }
+    function openSandwichDrawer() {
+        document.getElementById('sandwich-drawer').classList.remove('-translate-x-full');
+        document.getElementById('sandwich-drawer-backdrop').classList.remove('opacity-0', 'pointer-events-none');
+        document.getElementById('sandwich-drawer-backdrop').classList.add('opacity-100');
+        isDrawerOpen = true;
+        document.body.classList.add('overflow-hidden');
+    }
+    function closeSandwichDrawer() {
+        document.getElementById('sandwich-drawer').classList.add('-translate-x-full');
+        document.getElementById('sandwich-drawer-backdrop').classList.remove('opacity-100');
+        document.getElementById('sandwich-drawer-backdrop').classList.add('opacity-0', 'pointer-events-none');
+        isDrawerOpen = false;
+        document.body.classList.remove('overflow-hidden');
+    }
+    window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && isDrawerOpen) closeSandwichDrawer(); });
+
+    // ============ NOTIFICATIONS ============
+    function toggleNotificationCenter() {
+        const drawer = document.getElementById('notification-drawer');
+        const backdrop = document.getElementById('notification-drawer-backdrop');
+        const open = !drawer.classList.contains('translate-x-full');
+        if (open) {
+            drawer.classList.remove('translate-x-full');
+            backdrop.classList.remove('opacity-0', 'pointer-events-none');
+            backdrop.classList.add('opacity-100');
+        } else {
+            drawer.classList.add('translate-x-full');
+            backdrop.classList.remove('opacity-100');
+            backdrop.classList.add('opacity-0', 'pointer-events-none');
+        }
+    }
+    function closeNotificationCenter() {
+        const drawer = document.getElementById('notification-drawer');
+        const backdrop = document.getElementById('notification-drawer-backdrop');
+        drawer.classList.add('translate-x-full');
+        backdrop.classList.remove('opacity-100');
+        backdrop.classList.add('opacity-0', 'pointer-events-none');
+    }
+    function markAllRead() {
+        const badge = document.getElementById('notification-badge-count');
+        if (badge) { badge.textContent = '0'; badge.style.display = 'none'; }
+    }
+
+    // ============ TAB SWITCHER ============
+    function switchMainTab(tab) {
+        document.querySelectorAll('.main-tab-pane').forEach(el => {
+            el.classList.add('hidden');
+            el.style.display = 'none';
         });
-    </script>
-</body>
-</html>
+        document.querySelectorAll('.main-tab-nav-btn').forEach(btn => {
+            btn.className = 'inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 text-slate-600 border border-slate-200 whitespace-nowrap transition';
+        });
+        const selectedPane = document.getElementById('main-pane-' + tab);
+        const selectedBtn = document.getElementById('main-tab-btn-' + tab);
+        if (selectedPane) { selectedPane.classList.remove('hidden'); selectedPane.style.display = 'block'; }
+        if (selectedBtn) {
+            selectedBtn.className = 'inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-pink-100/80 text-rose-900 border border-pink-300 font-bold whitespace-nowrap shadow-sm';
+        }
+    }
+
+    // ============ PROFILE ============
+    function handleProfileUpdate(e) {
+        e.preventDefault();
+        const name = document.getElementById('input-edit-name').value;
+        const phone = document.getElementById('input-edit-phone').value;
+        document.getElementById('hero-welcome-name').textContent = name;
+        document.getElementById('nav-user-name').textContent = name;
+        document.getElementById('nav-avatar-initials').textContent = name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0,2) || 'ER';
+        closeSandwichDrawer();
+        showToast('Profile updated!', 'success');
+    }
+    function resetProfileForm() {
+        document.getElementById('input-edit-name').value = 'Elena Rostova';
+        document.getElementById('input-edit-phone').value = '+1 555-019-2834';
+    }
+
+    // ============ SIGN OUT ============
+    function handleSignOut() {
+        sessionStorage.removeItem('aeropass_user_session');
+        localStorage.removeItem('aeropass_user_session');
+        sessionStorage.removeItem('aeropass_officer_session');
+        localStorage.removeItem('aeropass_officer_session');
+        showToast('Signed out.', 'info');
+        setTimeout(() => { window.location.href = 'Admin.html#login'; }, 600);
+    }
+
+    // ============ QR CODE ============
+    let currentPassCode = 'SEC-PASS-98214-ER';
+    function generateTurnstileQRCode() {
+        const qrContainer = document.getElementById('qrcode-canvas-container');
+        const modalQrContainer = document.getElementById('modal-qrcode-canvas');
+        if (!qrContainer) return;
+        qrContainer.innerHTML = '';
+        modalQrContainer.innerHTML = '';
+        const qrPayload = JSON.stringify({
+            passCode: currentPassCode,
+            passenger: 'ELENA ROSTOVA',
+            flight: 'SK-492',
+            gate: 'A1',
+            terminal: 'T1',
+            tier: 'SkyPriority',
+            status: 'active',
+            timestamp: Date.now()
+        });
+        if (typeof QRCode !== 'undefined') {
+            new QRCode(qrContainer, { text: qrPayload, width: 176, height: 176, colorDark: '#0f172a', colorLight: '#ffffff', correctLevel: QRCode.CorrectLevel.H });
+            new QRCode(modalQrContainer, { text: qrPayload, width: 240, height: 240, colorDark: '#0f172a', colorLight: '#ffffff', correctLevel: QRCode.CorrectLevel.H });
+        } else {
+            qrContainer.innerHTML = '<div class="w-full h-full flex items-center justify-center text-slate-400">QR loading...</div>';
+            modalQrContainer.innerHTML = '<div class="w-full h-full flex items-center justify-center text-slate-400">QR loading...</div>';
+        }
+    }
+
+    // ============ QR INTERACTIONS ============
+    function scrollToPass() { document.getElementById('digital-pass-card').scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+    function openEnlargedQrModal() {
+        document.getElementById('enlarged-qr-modal').classList.remove('hidden');
+        generateTurnstileQRCode();
+    }
+    function closeEnlargedQrModal() {
+        document.getElementById('enlarged-qr-modal').classList.add('hidden');
+    }
+    function copyPassCode() {
+        navigator.clipboard.writeText(currentPassCode).then(() => {
+            showToast('Copied to clipboard!', 'success');
+        });
+    }
+    function regeneratePassCode() {
+        const randomCode = Math.floor(10000 + Math.random() * 90000);
+        currentPassCode = 'SEC-PASS-' + randomCode + '-ER';
+        document.getElementById('pass-code-display').textContent = currentPassCode;
+        document.getElementById('modal-pass-code').textContent = currentPassCode;
+        generateTurnstileQRCode();
+        showToast('New pass code generated: ' + currentPassCode, 'success');
+    }
+
+    // ============ TOAST ============
+    function showToast(message, type = 'info') {
+        let container = document.getElementById('toast-container');
+        if (!container) {
+            container = document.createElement('div');
+            container.id = 'toast-container';
+            container.className = 'fixed bottom-4 right-4 z-50 flex flex-col gap-2 max-w-sm pointer-events-none';
+            document.body.appendChild(container);
+        }
+        const toast = document.createElement('div');
+        toast.className = `p-3.5 rounded-xl shadow-lg border text-xs font-semibold flex items-center gap-2.5 transition-all duration-300 ${
+            type === 'success' ? 'bg-emerald-50 text-emerald-900 border-emerald-200' :
+            type === 'error' ? 'bg-rose-50 text-rose-900 border-rose-200' :
+            'bg-slate-100 text-slate-900 border-slate-200'
+        }`;
+        const iconName = type === 'success' ? 'check_circle' : type === 'error' ? 'error' : 'info';
+        toast.innerHTML = `<span class="material-symbols-outlined text-[18px]">${iconName}</span><span class="flex-1">${message}</span>`;
+        container.appendChild(toast);
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateY(10px)';
+            setTimeout(() => toast.remove(), 300);
+        }, 3500);
+    }
+
+    // ============ INIT ============
+    window.addEventListener('DOMContentLoaded', () => {
+        generateTurnstileQRCode();
+    });
+</script>
+<!-- END: InteractiveScripts -->
+
+
+</body></html>

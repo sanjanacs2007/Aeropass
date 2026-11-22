@@ -19,98 +19,99 @@
         <style>
         :root {
             /* ================================================================= */
-            /* AERO PASS: PASTEL YELLOW & PINK COMBO (LIGHT MODE)                */
-            /* Creamy Lemon Chiffon (#fef08a) + Strawberry Milk Pink (#fbcfe8)  */
+            /* AERO PASS: LIGHT THEME — PASTEL SKY-BLUE, LAVENDER & FROSTED WHITE */
+            /* Primary bg: #DDF2F5 \| Secondary bg: #EAF5FA \| Card: #F8FBFF       */
             /* ================================================================= */
-            --color-surface: #fffdfa;                 /* Soft milky cream mist */
-            --color-surface-container-lowest: #ffffff; /* Crisp porcelain white card */
-            --color-surface-container-low: #fff8f8;    /* Soft pastel strawberry-cream */
-            --color-surface-container-high: #fce7f3;   /* Delicate pastel pink border */
-            --color-surface-variant: #fef2f2;
-            --color-surface-tint: #ec4899;
+            --color-surface: #CFE3E8;                  /* Main background - dull sky-blue */
+            --color-surface-container-lowest: #F8FBFF; /* Card background */
+            --color-surface-container-low: #E4EAF0;    /* Secondary background - dull sky-blue */
+            --color-surface-container-high: #D9E7F0;   /* Borders */
+            --color-surface-variant: #E8E1F8;          /* Background gradient variant */
+            --color-surface-tint: #7FB8D0;             /* Primary accent tint - dull sky-blue */
 
-            --color-on-surface: #2d132c;               /* Deep plum slate contrast */
-            --color-on-surface-variant: #6b4360;       /* Muted berry slate */
-            --color-outline: #a78b9b;                  /* Gentle outline */
-            --color-outline-variant: #fbcfe8;
+            --color-on-surface: #000000;               /* Main text - black */
+            --color-on-surface-variant: #374151;       /* Secondary text - dark grey */
+            --color-outline: #D9E7F0;                  /* Borders */
+            --color-outline-variant: #D9E7F0;
 
-            /* Pastel Yellow & Pink Accents */
-            --color-primary: #ec4899;                  /* Pastel Vibrant Rose Pink */
-            --color-primary-container: #fce7f3;        /* Soft pastel pink pill */
-            --color-on-primary: #ffffff;
-            --color-on-primary-container: #9d174d;
-            --color-primary-fixed: #fdf2f8;
-            --color-on-primary-fixed-variant: #831843;
+            /* Pastel Cyan & Periwinkle Accents - duller */
+            --color-primary: #7FB8D0;                  /* Primary accent - dull sky-blue */
+            --color-primary-container: #E8E1F8;        /* Light container */
+            --color-on-primary: #000000;
+            --color-on-primary-container: #000000;
+            --color-primary-fixed: #E8E1F8;
+            --color-on-primary-fixed-variant: #7FB8D0;
 
-            --color-secondary: #f59e0b;                /* Warm Pastel Honey Yellow */
-            --color-secondary-container: #fef9c3;      /* Soft butter yellow pill */
-            --color-on-secondary: #ffffff;
-            --color-on-secondary-container: #713f12;
-            --color-secondary-fixed: #fef08a;
-            --color-secondary-fixed-dim: #fde047;
+            --color-secondary: #9AA5D8;                /* Secondary accent - dull periwinkle */
+            --color-secondary-container: #F2F8FC;      /* Sidebar / secondary background */
+            --color-on-secondary: #000000;
+            --color-on-secondary-container: #000000;
+            --color-secondary-fixed: #F2F8FC;
+            --color-secondary-fixed-dim: #9AA5D8;
 
-            --color-tertiary: #10b981;                 /* Soft Pastel Mint */
-            --color-tertiary-container: #d1fae5;
-            --color-on-tertiary: #ffffff;
-            --color-tertiary-fixed: #d1fae5;
-            --color-on-tertiary-fixed: #065f46;
-            --color-tertiary-fixed-dim: #a7f3d0;
+            --color-tertiary: #F5E88A;                 /* Highlight */
+            --color-tertiary-container: #F5E88A;
+            --color-on-tertiary: #29394A;
+            --color-tertiary-fixed: #F5E88A;
+            --color-on-tertiary-fixed: #29394A;
+            --color-tertiary-fixed-dim: #F5E88A;
 
-            --color-error: #f43f5e;                    /* Pastel Coral */
-            --color-error-container: #ffe4e6;
-            --color-on-error: #ffffff;
-            --color-on-error-container: #9f1239;
+            --color-error: #EF5350;                    /* Error */
+            --color-error-container: #FDECEC;
+            --color-on-error: #29394A;
+            --color-on-error-container: #EF5350;
 
-            --ticket-notch-bg: #fff8f8;
-            --page-ambient-gradient: radial-gradient(1300px 850px at 15% 0%, #fdf2f8 0%, #fefce8 50%, #fff7ed 100%), #fffaf8;
+            --ticket-notch-bg: #F2F8FC;
+            --page-ambient-gradient: radial-gradient(1300px 850px at 15% 0%, #EAF5FA 0%, #DDF2F5 50%, #E8E1F8 100%), #DDF2F5;
+            color-scheme: light;
         }
 
         html.dark, [data-theme="dark"] {
             /* ================================================================= */
-            /* AERO PASS: MIDNIGHT SUNSET PASTEL (DARK MODE)                     */
-            /* Deep twilight plum & midnight velvet with glowing pink & gold     */
+            /* AERO PASS: DARK NAVY, BLUE & CYAN THEME \(DARK MODE\)                     */
+            /* Already dark - same values     */
             /* ================================================================= */
-            --color-surface: #120e18;                  /* Deep twilight velvet */
-            --color-surface-container-lowest: #1b1424; /* Elevated dark plum card */
-            --color-surface-container-low: #251b32;    /* Elevated container */
-            --color-surface-container-high: #3d284e;   /* Soft luminous plum border */
-            --color-surface-variant: #281d36;
-            --color-surface-tint: #f472b6;
+            --color-surface: #101713;                  /* Deep twilight velvet */
+            --color-surface-container-lowest: #233329; /* Elevated dark plum card */
+            --color-surface-container-low: #19251D;    /* Elevated container */
+            --color-surface-container-high: #2B3D31;   /* Soft luminous plum border */
+            --color-surface-variant: #2B3D31;
+            --color-surface-tint: #34D399;
 
-            --color-on-surface: #fdf2f8;               /* Moonlight rose-white text */
-            --color-on-surface-variant: #d4b8ca;       /* Soft moonlit plum text */
-            --color-outline: #8c6882;
-            --color-outline-variant: #4e3247;
+            --color-on-surface: #F4F7F3;               /* Moonlight rose-white text */
+            --color-on-surface-variant: #A6B5A8;       /* Soft moonlit plum text */
+            --color-outline: #35483B;
+            --color-outline-variant: #35483B;
 
-            /* Luminous Pastel Pink & Gold Dark Accents */
-            --color-primary: #f472b6;                  /* Luminous pastel pink */
-            --color-primary-container: #500724;        /* Deep midnight plum container */
-            --color-on-primary: #120e18;
-            --color-on-primary-container: #fbcfe8;
-            --color-primary-fixed: #2e1025;
-            --color-on-primary-fixed-variant: #f472b6;
+            /* Cyan, Blue & Gold Accents */
+            --color-primary: #34D399;                  /* Cyan */
+            --color-primary-container: #233329;        /* Dark cyan container */
+            --color-on-primary: #101713;
+            --color-on-primary-container: #34D399;
+            --color-primary-fixed: #19251D;
+            --color-on-primary-fixed-variant: #34D399;
 
-            --color-secondary: #fde047;                /* Luminous pastel gold */
-            --color-secondary-container: #451a03;      /* Deep honey amber container */
-            --color-on-secondary: #120e18;
-            --color-on-secondary-container: #fef08a;
-            --color-secondary-fixed: #2b1704;
-            --color-secondary-fixed-dim: #eab308;
+            --color-secondary: #65A982;                /* Blue */
+            --color-secondary-container: #233329;      /* Secondary background */
+            --color-on-secondary: #101713;
+            --color-on-secondary-container: #65A982;
+            --color-secondary-fixed: #19251D;
+            --color-secondary-fixed-dim: #65A982;
 
-            --color-tertiary: #86efac;                 /* Luminous pastel mint */
-            --color-tertiary-container: #064e3b;
-            --color-on-tertiary: #120e18;
-            --color-tertiary-fixed: #064e3b;
-            --color-on-tertiary-fixed: #a7f3d0;
-            --color-tertiary-fixed-dim: #059669;
+            --color-tertiary: #D6B46A;                 /* Gold */
+            --color-tertiary-container: #233329;
+            --color-on-tertiary: #101713;
+            --color-tertiary-fixed: #233329;
+            --color-on-tertiary-fixed: #D6B46A;
+            --color-tertiary-fixed-dim: #D6B46A;
 
-            --color-error: #fda4af;
-            --color-error-container: #4c0519;
-            --color-on-error: #120e18;
-            --color-on-error-container: #fecdd3;
+            --color-error: #F07878;
+            --color-error-container: #233329;
+            --color-on-error: #F4F7F3;
+            --color-on-error-container: #F07878;
 
-            --ticket-notch-bg: #251b32;
-            --page-ambient-gradient: radial-gradient(1300px 850px at 15% 0%, #291227 0%, #1d172e 50%, #261c10 100%), #120e18;
+            --ticket-notch-bg: #19251D;
+            --page-ambient-gradient: radial-gradient(1300px 850px at 15% 0%, #19251D 0%, #101713 50%, #101713 100%), #101713;
         }
 
         /* Ambient Pastel Page Background */
@@ -120,79 +121,88 @@
             transition: background 0.3s ease, color 0.3s ease;
         }
 
-        /* Hero Banner Pastel Yellow & Pink Combo */
+        /* Hero Banner Pastel Sky-Blue & Lavender Combo */
         .pastel-hero-banner {
-            background: linear-gradient(135deg, #fef08a 0%, #fed7aa 35%, #fbcfe8 75%, #f472b6 100%) !important;
-            color: #3b122d !important;
-            border: 2px solid #f9a8d4 !important;
-            box-shadow: 0 12px 35px -5px rgba(244, 114, 182, 0.28) !important;
+            background: linear-gradient(135deg, #EAF5FA 0%, #E8E1F8 35%, #F8FBFF 75%, #8DDCE8 100%) !important;
+            color: #000000 !important;
+            border: 2px solid #8DDCE8 !important;
+            box-shadow: 0 12px 35px -5px rgba(141, 220, 232, 0.3) !important;
         }
         html.dark .pastel-hero-banner {
-            background: linear-gradient(135deg, #3d1c2c 0%, #2e1738 50%, #362713 100%) !important;
-            color: #fdf2f8 !important;
-            border: 2px solid #f472b6 !important;
-            box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.5) !important;
+            background: linear-gradient(135deg, #19251D 0%, #233329 50%, #2B3D31 100%) !important;
+            color: #F4F7F3 !important;
+            border: 2px solid #34D399 !important;
+            box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.6) !important;
         }
 
-        /* Boarding Pass Pastel Header */
+        /* Boarding Pass Sky-Blue Header */
         .pastel-pass-header {
-            background: linear-gradient(135deg, #fef9c3 0%, #fed7aa 50%, #fce7f3 100%) !important;
-            color: #3b122d !important;
-            border-bottom: 2px solid #f9a8d4 !important;
+            background: linear-gradient(135deg, #EAF5FA 0%, #E8E1F8 50%, #F8FBFF 100%) !important;
+            color: #000000 !important;
+            border-bottom: 2px solid #8DDCE8 !important;
         }
         html.dark .pastel-pass-header {
-            background: linear-gradient(135deg, #3d1c2c 0%, #2e1738 50%, #362713 100%) !important;
-            color: #fdf2f8 !important;
-            border-bottom: 2px solid #f472b6 !important;
+            background: linear-gradient(135deg, #19251D 0%, #233329 50%, #2B3D31 100%) !important;
+            color: #F4F7F3 !important;
+            border-bottom: 2px solid #34D399 !important;
         }
 
-        /* Flight Spotlight Card Pastel Header */
+        /* Flight Spotlight Card Sky-Blue Header */
         .pastel-flight-header {
-            background: linear-gradient(135deg, #fef08a 0%, #fed7aa 40%, #fbcfe8 100%) !important;
-            color: #3b122d !important;
-            border: 2px solid #f9a8d4 !important;
-            box-shadow: 0 10px 30px -5px rgba(244, 114, 182, 0.25) !important;
+            background: linear-gradient(135deg, #EAF5FA 0%, #E8E1F8 40%, #8DDCE8 100%) !important;
+            color: #000000 !important;
+            border: 2px solid #8DDCE8 !important;
+            box-shadow: 0 10px 30px -5px rgba(141, 220, 232, 0.3) !important;
         }
         html.dark .pastel-flight-header {
-            background: linear-gradient(135deg, #3d1c2c 0%, #2e1738 50%, #362713 100%) !important;
-            color: #fdf2f8 !important;
-            border: 2px solid #f472b6 !important;
-            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5) !important;
+            background: linear-gradient(135deg, #19251D 0%, #233329 50%, #2B3D31 100%) !important;
+            color: #F4F7F3 !important;
+            border: 2px solid #34D399 !important;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.6) !important;
         }
 
-        /* Pastel Brand Logo Badge (Yellow-Pink Gradient) */
+        /* Brand Logo Badge (Highlight-Cyan Gradient) */
         .pastel-brand-badge {
-            background: linear-gradient(135deg, #fde047 0%, #f472b6 100%) !important;
-            color: #3b122d !important;
-            border: 1.5px solid #f9a8d4 !important;
+            background: linear-gradient(135deg, #F5E88A 0%, #8DDCE8 100%) !important;
+            color: #000000 !important;
+            border: 1.5px solid #8DDCE8 !important;
         }
         html.dark .pastel-brand-badge {
-            background: linear-gradient(135deg, #ca8a04 0%, #db2777 100%) !important;
-            color: #fdf2f8 !important;
-            border: 1.5px solid #f472b6 !important;
+            background: linear-gradient(135deg, #D6B46A 0%, #34D399 100%) !important;
+            color: #101713 !important;
+            border: 1.5px solid #34D399 !important;
         }
 
-        /* Primary Button (Radiant Pastel Pink to Orange-Yellow) */
+        /* Primary Button (Pastel Cyan to Periwinkle) */
         .btn-pastel-primary {
-            background: linear-gradient(135deg, #f472b6 0%, #fb923c 100%) !important;
-            color: #ffffff !important;
-            box-shadow: 0 4px 14px rgba(244, 114, 182, 0.35) !important;
+            background: linear-gradient(135deg, #8DDCE8 0%, #A5B6E8 100%) !important;
+            color: #000000 !important;
+            box-shadow: 0 4px 14px rgba(141, 220, 232, 0.35) !important;
             transition: all 0.2s ease !important;
         }
         .btn-pastel-primary:hover {
-            background: linear-gradient(135deg, #ec4899 0%, #f97316 100%) !important;
-            box-shadow: 0 6px 18px rgba(244, 114, 182, 0.45) !important;
+            background: linear-gradient(135deg, #8DDCE8 0%, #A5B6E8 100%) !important;
+            box-shadow: 0 6px 18px rgba(141, 220, 232, 0.45) !important;
             transform: translateY(-1px) !important;
         }
 
+        html.dark .btn-pastel-primary {
+            background: linear-gradient(135deg, #34D399 0%, #65A982 100%) !important;
+            color: #101713 !important;
+            box-shadow: 0 4px 14px rgba(52, 211, 153, 0.22) !important;
+        }
+        html.dark .btn-pastel-primary:hover {
+            background: linear-gradient(135deg, #34D399 0%, #65A982 100%) !important;
+            box-shadow: 0 6px 18px rgba(52, 211, 153, 0.3) !important;
+        }
         /* Glass card styling */
         .glass-card {
-            background: rgba(255, 255, 255, 0.94);
+            background: rgba(248, 251, 255, 0.94);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
         }
         html.dark .glass-card {
-            background: rgba(27, 20, 36, 0.92);
+            background: rgba(35, 51, 41, 0.92);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
         }
@@ -230,30 +240,30 @@
 
         /* SVG Map Elements in Dark Mode */
         html.dark .map-terminal-envelope {
-            fill: #1b1424 !important;
-            stroke: #3d284e !important;
+            fill: #19251D !important;
+            stroke: #35483B !important;
         }
         html.dark .map-apron-bg {
-            fill: #120e18 !important;
+            fill: #101713 !important;
         }
         html.dark .map-boulevard-bg {
-            fill: #22182d !important;
-            stroke: #3d284e !important;
+            fill: #233329 !important;
+            stroke: #35483B !important;
         }
         html.dark .map-walkway-bg {
-            fill: #271a33 !important;
-            stroke: #3d284e !important;
+            fill: #2B3D31 !important;
+            stroke: #35483B !important;
         }
         html.dark .map-pier-bg {
-            fill: #1f1528 !important;
-            stroke: #3d284e !important;
+            fill: #19251D !important;
+            stroke: #35483B !important;
         }
         html.dark .map-grid-line {
-            stroke: #2e1d3d !important;
+            stroke: #35483B !important;
         }
         html.dark .map-gate-card {
-            fill: #271731 !important;
-            stroke: #f472b6 !important;
+            fill: #233329 !important;
+            stroke: #34D399 !important;
         }
 
         @keyframes navDash {
@@ -270,8 +280,8 @@
             animation: scanLaser 2s ease-in-out infinite;
         }
         @keyframes pulseGlow {
-            0%, 100% { box-shadow: 0 0 15px rgba(244, 114, 182, 0.3); }
-            50% { box-shadow: 0 0 32px rgba(244, 114, 182, 0.6); }
+            0%, 100% { box-shadow: 0 0 15px rgba(37, 198, 218, 0.3); }
+            50% { box-shadow: 0 0 32px rgba(37, 198, 218, 0.6); }
         }
         .pulse-glow-emerald {
             animation: pulseGlow 2.5s infinite;
@@ -285,13 +295,96 @@
             animation: shake 0.35s ease-in-out;
         }
         ::-webkit-scrollbar { width: 6px; height: 6px; }
-        ::-webkit-scrollbar-track { background: rgba(252, 231, 243, 0.5); }
-        ::-webkit-scrollbar-thumb { background: #fbcfe8; border-radius: 9999px; }
-        ::-webkit-scrollbar-thumb:hover { background: #f472b6; }
-        html.dark ::-webkit-scrollbar-track { background: rgba(37, 27, 50, 0.7); }
-        html.dark ::-webkit-scrollbar-thumb { background: #3d284e; }
-        html.dark ::-webkit-scrollbar-thumb:hover { background: #f472b6; }
-    </style>
+        ::-webkit-scrollbar-track { background: rgba(218, 231, 240, 0.5); }
+        ::-webkit-scrollbar-thumb { background: #D9E7F0; border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #8DDCE8; }
+        html.dark ::-webkit-scrollbar-track { background: rgba(25, 37, 29, 0.7); }
+        html.dark ::-webkit-scrollbar-thumb { background: #35483B; }
+        html.dark ::-webkit-scrollbar-thumb:hover { background: #34D399; }
+        /* High-contrast text across the officer console. */
+        html:not(.dark) .text-outline { color: #52657A !important; }
+        html:not(.dark) .text-on-surface-variant { color: #37485B !important; }
+        html:not(.dark) .text-primary { color: #15546B !important; }
+        html:not(.dark) .text-secondary { color: #46558E !important; }
+        html:not(.dark) .text-tertiary { color: #765700 !important; }
+        html.dark .text-outline { color: #A6B5A8 !important; }
+        html.dark .text-on-surface-variant { color: #A6B5A8 !important; }
+        html.dark .text-primary { color: #34D399 !important; }
+        html.dark .text-secondary { color: #65A982 !important; }
+        html.dark .text-tertiary { color: #D6B46A !important; }
+        #officer-view-command, #cmd-pane-map { min-width: 0; }
+        header > div.max-w-7xl { flex-wrap: wrap; }
+        header > div.max-w-7xl > nav { flex-wrap: wrap; }
+        #cmd-pane-map .text-outline { color: #52657A !important; }
+        html.dark #cmd-pane-map .text-outline { color: #A6B5A8 !important; }
+        #cmd-pane-map > .bg-surface-container-lowest { min-width: 0; }
+        #cmd-pane-map h3, #cmd-pane-map p, #cmd-pane-map span { overflow-wrap: anywhere; }
+        #officer-nav-target-pills { overflow: visible; }
+        #officer-nav-target-pills .officer-nav-dest-pill { white-space: normal !important; line-height: 1.35; text-align: left; max-width: 100%; }
+        #officer-nav-target-pills .material-symbols-outlined { flex: 0 0 auto; }
+        #officer-route-stats > div { min-width: 0; }
+        #officer-route-stats span { line-height: 1.4; }
+        #officer-route-stats strong, #officer-route-stats strong.truncate,
+        #officer-route-stats span.truncate { white-space: normal !important; overflow: visible !important; text-overflow: clip !important; overflow-wrap: anywhere; }
+        #officer-route-stats strong { color: #17324D !important; }
+        html.dark #officer-route-stats strong { color: #F4F7F3 !important; }
+        #officer-route-stats #officer-nav-time-stat { color: #765700 !important; }
+        html.dark #officer-route-stats #officer-nav-time-stat { color: #D6B46A !important; }
+        html:not(.dark) #cmd-pane-map svg text[fill="#AAB7C8"] { fill: #52657A !important; }
+        @media (max-width: 767px) {
+            #officer-route-stats { grid-template-columns: minmax(0, 1fr); }
+            #cmd-pane-map > .bg-surface-container-lowest { padding: 1rem; }
+            #cmd-pane-map > .bg-surface-container-lowest > div:first-child { align-items: flex-start; }
+        }
+            /* Dark-only utility palette for surfaces that use fixed light utilities. */
+        html.dark [class~="bg-white"]:not([class*="dark:bg-"]):not([class*="scanline-pulse"]):not([class*="relative p-4 bg-white"]):not([class*="w-28 h-28 bg-white"]) { background-color: #233329 !important; }
+        html.dark [class*="bg-white/"]:not([class*="dark:bg-"]):not([class*="scanline-pulse"]) { background-color: #233329 !important; }
+        html.dark [class*="bg-slate-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-gray-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-teal-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-cyan-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-sky-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-blue-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-emerald-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-rose-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-pink-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-amber-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-orange-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-yellow-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-indigo-50"]:not([class*="dark:bg-"]), html.dark [class*="bg-violet-50"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-purple-50"]:not([class*="dark:bg-"]) { background-color: #19251D !important; }
+        html.dark [class*="bg-slate-100"]:not([class*="dark:bg-"]), html.dark [class*="bg-gray-100"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-sky-100"]:not([class*="dark:bg-"]), html.dark [class*="bg-cyan-100"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-emerald-100"]:not([class*="dark:bg-"]), html.dark [class*="bg-amber-100"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-indigo-100"]:not([class*="dark:bg-"]), html.dark [class*="bg-pink-100"]:not([class*="dark:bg-"]) { background-color: #233329 !important; }
+        html.dark [class*="bg-slate-200"]:not([class*="dark:bg-"]), html.dark [class*="bg-slate-300"]:not([class*="dark:bg-"]),
+        html.dark [class*="bg-gray-200"]:not([class*="dark:bg-"]) { background-color: #2B3D31 !important; }
+        html.dark [class*="border-slate-"]:not([class*="dark:border-"]), html.dark [class*="border-gray-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-teal-"]:not([class*="dark:border-"]), html.dark [class*="border-cyan-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-sky-"]:not([class*="dark:border-"]), html.dark [class*="border-blue-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-emerald-"]:not([class*="dark:border-"]), html.dark [class*="border-rose-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-pink-"]:not([class*="dark:border-"]), html.dark [class*="border-amber-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-orange-"]:not([class*="dark:border-"]), html.dark [class*="border-yellow-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-indigo-"]:not([class*="dark:border-"]), html.dark [class*="border-violet-"]:not([class*="dark:border-"]),
+        html.dark [class*="border-purple-"]:not([class*="dark:border-"]) { border-color: #35483B !important; }
+        html.dark [class*="text-slate-900"]:not([class*="dark:text-"]), html.dark [class*="text-gray-900"]:not([class*="dark:text-"]),
+        html.dark [class*="text-slate-800"]:not([class*="dark:text-"]), html.dark [class*="text-gray-800"]:not([class*="dark:text-"]) { color: #F4F7F3 !important; }
+        html.dark [class*="text-slate-700"]:not([class*="dark:text-"]), html.dark [class*="text-slate-600"]:not([class*="dark:text-"]),
+        html.dark [class*="text-slate-500"]:not([class*="dark:text-"]), html.dark [class*="text-slate-400"]:not([class*="dark:text-"]),
+        html.dark [class*="text-gray-700"]:not([class*="dark:text-"]), html.dark [class*="text-gray-600"]:not([class*="dark:text-"]),
+        html.dark [class*="text-gray-500"]:not([class*="dark:text-"]) { color: #A6B5A8 !important; }
+        html.dark [class*="text-sky-"]:not([class*="dark:text-"]), html.dark [class*="text-cyan-"]:not([class*="dark:text-"]),
+        html.dark [class*="text-teal-"]:not([class*="dark:text-"]), html.dark [class*="text-blue-"]:not([class*="dark:text-"]),
+        html.dark [class*="text-indigo-"]:not([class*="dark:text-"]), html.dark [class*="text-violet-"]:not([class*="dark:text-"]),
+        html.dark [class*="text-purple-"]:not([class*="dark:text-"]) { color: #65A982 !important; }
+        html.dark [class*="text-emerald-"]:not([class*="dark:text-"]), html.dark [class*="text-pink-"]:not([class*="dark:text-"]) { color: #34D399 !important; }
+        html.dark [class*="text-amber-"]:not([class*="dark:text-"]), html.dark [class*="text-yellow-"]:not([class*="dark:text-"]) { color: #E8B85C !important; }
+        html.dark [class*="text-rose-"]:not([class*="dark:text-"]), html.dark [class*="text-red-"]:not([class*="dark:text-"]) { color: #F07878 !important; }
+        html.dark [class*="from-teal-50"][class*="to-cyan-50"]:not([class*="dark:from-"]) { background-image: linear-gradient(110deg, #19251D, #233329 55%, #2B3D31) !important; }
+        html.dark [class*="from-rose-500"][class*="to-pink-500"]:not([class*="dark:from-"]) { background-image: linear-gradient(110deg, #34D399, #65A982) !important; color: #101713 !important; }
+        html.dark [class*="bg-sky-500"][class~="text-white"], html.dark [class*="bg-sky-600"][class~="text-white"],
+        html.dark [class*="bg-emerald-500"][class~="text-white"], html.dark [class*="bg-emerald-600"][class~="text-white"],
+        html.dark [class*="bg-rose-500"][class~="text-white"], html.dark [class*="bg-pink-500"][class~="text-white"] { color: #101713 !important; }
+        html.dark .glass-panel { background: rgba(35, 51, 41, 0.94); border-color: #35483B; }
+        html.dark .scanline-pulse { background-color: #FFFFFF !important; border-color: #35483B !important; }
+        html.dark #qrcode-canvas-container, html.dark #modal-qrcode-canvas, html.dark #digital-pass-card .relative.bg-white,
+        html.dark .scanline-pulse [id*="qrcode"] { background-color: #FFFFFF !important; }
+        html.dark [class*="bg-pink-100"][class*="text-rose-"]:not([class*="dark:text-"]) { color: #34D399 !important; }
+</style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script id="tailwind-config">
         tailwind.config = {
@@ -341,7 +434,7 @@
             }
         };
     </script>
-    <!-- AeroPass Pastel Theme Initialization (Prevents FOUC) -->
+    <!-- AeroPass Navy Theme Initialization (Prevents FOUC) -->
     <script>
         (function() {
             const theme = localStorage.getItem('aeropass_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -494,8 +587,8 @@
                     </span>
                 </div>
 
-                <div class="p-4 rounded-2xl bg-[#faf5ff] dark:bg-[#231536] border border-[#ddd6fe] dark:border-[#462866] shadow-xs flex flex-col">
-                    <div class="flex items-center justify-between text-[#5b21b6] dark:text-[#d8b4fe] mb-1">
+                <div class="p-4 rounded-2xl bg-[#faf5ff] dark:bg-[#233329] border border-[#ddd6fe] dark:border-[#35483B] shadow-xs flex flex-col">
+                    <div class="flex items-center justify-between text-[#5b21b6] dark:text-[#65A982] mb-1">
                         <span class="font-label-mono-sm text-xs uppercase font-bold">Ancillary Baggage Revenue</span>
                         <span class="material-symbols-outlined text-primary text-lg">payments</span>
                     </div>
@@ -640,7 +733,7 @@
                             </div>
                         </div>
                         <div class="flex items-center gap-2">
-                            <span class="px-3 py-1.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 text-xs font-label-mono-sm font-bold flex items-center gap-1.5 shadow-2xs">
+                            <span class="px-3 py-1.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-[#19251D] dark:text-[#34D399] text-xs font-label-mono-sm font-bold flex items-center gap-1.5 shadow-2xs">
                                 <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                                 Concourse Operational • Turnstiles 1-4 Active
                             </span>
@@ -653,9 +746,9 @@
                             <span class="text-xs font-bold font-headline-sm text-on-surface uppercase tracking-wider">Quick Concourse Inspection Targets:</span>
                             <span class="text-[10px] font-label-mono-sm text-outline">Click any gate or sector to trace patrol route</span>
                         </div>
-                        <div class="flex items-center gap-2 overflow-x-auto pb-1" id="officer-nav-target-pills">
+                        <div class="flex flex-wrap items-center gap-2 pb-1" id="officer-nav-target-pills">
                             <button type="button" onclick="officerNavigateRoute('A1')" id="officer-nav-pill-A1"
-                                class="officer-nav-dest-pill px-3.5 py-2 rounded-xl text-xs font-bold font-headline-sm transition-all whitespace-nowrap bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#451a03] dark:to-[#500724] text-[#831843] dark:text-[#fbcfe8] border border-[#f472b6] shadow-xs flex items-center gap-1.5">
+                                class="officer-nav-dest-pill px-3.5 py-2 rounded-xl text-xs font-bold font-headline-sm transition-all whitespace-nowrap bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#19251D] dark:to-[#233329] text-[#831843] dark:text-[#F4F7F3] border border-[#f472b6] shadow-xs flex items-center gap-1.5">
                                 <span class="material-symbols-outlined text-[16px]">flight_takeoff</span>
                                 <span>Gate A1 (SK-492 • London)</span>
                             </button>
@@ -693,7 +786,7 @@
                     </div>
 
                     <!-- Officer Route & Security Stats Info Bar -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                    <div id="officer-route-stats" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                         <div class="bg-surface-container-low p-3.5 rounded-2xl border border-surface-container-high shadow-2xs">
                             <span class="text-[10px] font-label-mono-sm text-outline block uppercase tracking-wider font-semibold">STATION ORIGIN</span>
                             <strong class="text-sm font-bold text-primary block mt-0.5">Security Checkpoint A</strong>
@@ -722,21 +815,21 @@
                         <defs>
                             <!-- Grid Pattern for Airport Floor Plan -->
                             <pattern id="arch-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e2e8f0" stroke-width="0.8" opacity="0.6"/>
+                                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2A4260" stroke-width="0.8" opacity="0.6"/>
                             </pattern>
                             <!-- Linear Gradients for Zones -->
                             <linearGradient id="grad-active-gate" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#fef08a" />
-                                <stop offset="100%" stop-color="#fbcfe8" />
+                                <stop offset="0%" stop-color="#172A45" />
+                                <stop offset="100%" stop-color="#25C6DA" />
                             </linearGradient>
                             <linearGradient id="grad-security" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#f0f7ff" />
-                                <stop offset="100%" stop-color="#e0effe" />
+                                <stop offset="0%" stop-color="#101B2D" />
+                                <stop offset="100%" stop-color="#172A45" />
                             </linearGradient>
                             <linearGradient id="grad-boulevard" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#f8fafc" />
-                                <stop offset="50%" stop-color="#ffffff" />
-                                <stop offset="100%" stop-color="#f8fafc" />
+                                <stop offset="0%" stop-color="#101B2D" />
+                                <stop offset="50%" stop-color="#172A45" />
+                                <stop offset="100%" stop-color="#101B2D" />
                             </linearGradient>
                             <!-- Filter for Soft Drop Shadow -->
                             <filter id="shadow-soft" x="-10%" y="-10%" width="125%" height="125%">
@@ -745,42 +838,42 @@
                         </defs>
 
                         <!-- Base Apron / Tarmac Background -->
-                        <rect x="0" y="0" width="1100" height="560" class="map-apron-bg" fill="#f1f5f9" />
+                        <rect x="0" y="0" width="1100" height="560" class="map-apron-bg" fill="#101B2D" />
 
                         <!-- Terminal 1 Building Envelope (Architectural Outline) -->
-                        <rect x="25" y="20" width="1050" height="520" rx="24" class="map-terminal-envelope" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" />
+                        <rect x="25" y="20" width="1050" height="520" rx="24" class="map-terminal-envelope" fill="#203550" stroke="#2A4260" stroke-width="2" />
                         <rect x="25" y="20" width="1050" height="520" rx="24" fill="url(#arch-grid)" />
 
                         <!-- Compass Rose (North Indicator) -->
                         <g transform="translate(65, 55)">
-                            <circle cx="0" cy="0" r="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
-                            <polygon points="0,-14 4,-2 0,0 -4,-2" fill="#006194" />
-                            <polygon points="0,14 4,2 0,0 -4,2" fill="#94a3b8" />
-                            <text x="0" y="-18" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="bold" fill="#006194" text-anchor="middle">N</text>
-                            <text x="0" y="4" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748b" text-anchor="middle">T1</text>
+                            <circle cx="0" cy="0" r="18" fill="#101B2D" stroke="#2A4260" stroke-width="1.5" />
+                            <polygon points="0,-14 4,-2 0,0 -4,-2" fill="#25C6DA" />
+                            <polygon points="0,14 4,2 0,0 -4,2" fill="#AAB7C8" />
+                            <text x="0" y="-18" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="bold" fill="#25C6DA" text-anchor="middle">N</text>
+                            <text x="0" y="4" font-family="'JetBrains Mono', monospace" font-size="8" fill="#AAB7C8" text-anchor="middle">T1</text>
                         </g>
 
                         <!-- Broad Central Concourse Boulevard (Completely Open, Zero Clutter) -->
-                        <rect x="230" y="165" width="490" height="230" rx="18" class="map-boulevard-bg" fill="url(#grad-boulevard)" stroke="#e2e8f0" stroke-width="1.5" />
+                        <rect x="230" y="165" width="490" height="230" rx="18" class="map-boulevard-bg" fill="url(#grad-boulevard)" stroke="#2A4260" stroke-width="1.5" />
                         
                         <!-- Travelator / Moving Walkway Graphic in Center -->
                         <g opacity="0.85">
-                            <rect x="270" y="265" width="410" height="30" rx="8" class="map-walkway-bg" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5" />
+                            <rect x="270" y="265" width="410" height="30" rx="8" class="map-walkway-bg" fill="#1A3048" stroke="#2A4260" stroke-width="1.5" />
                             <!-- Center Moving Tread Line -->
-                            <line x1="280" y1="280" x2="670" y2="280" stroke="#94a3b8" stroke-width="2" stroke-dasharray="12 8" />
-                            <text x="475" y="260" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" fill="#64748b" letter-spacing="1">CENTRAL CONCOURSE BOULEVARD • MOVING TRAVELATOR</text>
+                            <line x1="280" y1="280" x2="670" y2="280" stroke="#3D5A80" stroke-width="2" stroke-dasharray="12 8" />
+                            <text x="475" y="260" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" fill="#AAB7C8" letter-spacing="1">CENTRAL CONCOURSE BOULEVARD • MOVING TRAVELATOR</text>
                         </g>
 
                         <!-- ========================================== -->
                         <!-- ZONE 1: SECURITY CHECKPOINT A (LEFT) -->
                         <!-- ========================================== -->
                         <g class="cursor-pointer" onclick="officerNavigateRoute('A1')">
-                            <rect x="45" y="165" width="170" height="230" rx="16" fill="url(#grad-security)" stroke="#006194" stroke-width="2" filter="url(#shadow-soft)" />
-                            <rect x="45" y="165" width="170" height="34" rx="16" fill="#006194" />
+                            <rect x="45" y="165" width="170" height="230" rx="16" fill="url(#grad-security)" stroke="#25C6DA" stroke-width="2" filter="url(#shadow-soft)" />
+                            <rect x="45" y="165" width="170" height="34" rx="16" fill="#25C6DA" />
                             <text x="130" y="188" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="12" fill="#ffffff" letter-spacing="1">SECURITY CHECKPOINT A</text>
 
                             <!-- Optical Biometrics E-Gates Status -->
-                            <text x="130" y="222" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="13" fill="#006194">Biometric E-Gates</text>
+                            <text x="130" y="222" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="13" fill="#25C6DA">Biometric E-Gates</text>
                             <text x="130" y="238" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#51606f">TSA PreCheck / Level 4</text>
 
                             <!-- 4 Turnstile Lane Indicators with Green LEDs -->
@@ -881,14 +974,14 @@
                         <!-- ZONE 4: PIER A DEPARTURE GATES (RIGHT WING) -->
                         <!-- ========================================== -->
                         <rect x="730" y="25" width="330" height="505" rx="20" class="map-pier-bg" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
-                        <text x="895" y="42" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" fill="#64748b" letter-spacing="1.5">PIER A INTERNATIONAL CONCOURSE</text>
+                        <text x="895" y="42" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" fill="#AAB7C8" letter-spacing="1.5">PIER A INTERNATIONAL CONCOURSE</text>
 
                         <!-- GATE A1 (ACTIVE PASSENGER BOARDING GATE) -->
                         <g class="cursor-pointer" onclick="officerNavigateRoute('A1')">
                             <!-- Jet Bridge Visual to Aircraft -->
                             <rect x="1035" y="85" width="25" height="35" rx="4" fill="#f472b6" stroke="#fbcfe8" stroke-width="1" />
 
-                            <rect x="745" y="48" width="295" height="130" rx="16" fill="url(#grad-active-gate)" stroke="#f472b6" stroke-width="2.5" filter="url(#shadow-soft)" />
+                            <rect x="745" y="48" width="295" height="130" rx="16" fill="url(#grad-active-gate)" stroke="#25C6DA" stroke-width="2.5" filter="url(#shadow-soft)" />
                             
                             <!-- Header with Pulsing Radar Circle -->
                             <text x="765" y="80" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="18" fill="#831843">GATE A1</text>
@@ -901,14 +994,14 @@
                             </circle>
 
                             <!-- Live Flight Information -->
-                            <rect x="765" y="92" width="130" height="22" rx="6" fill="#ffffff" stroke="#f472b6" stroke-width="1" />
+                            <rect x="765" y="92" width="130" height="22" rx="6" fill="#ffffff" stroke="#25C6DA" stroke-width="1" />
                             <text x="830" y="107" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="bold" fill="#831843">SK-492 • LONDON LHR</text>
 
                             <!-- Boarding Status Pill -->
                             <rect x="905" y="92" width="120" height="22" rx="6" fill="#ec4899" />
                             <text x="965" y="107" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff">BOARDING NOW</text>
 
-                            <line x1="765" y1="126" x2="1025" y2="126" stroke="#f472b6" stroke-width="1" />
+                            <line x1="765" y1="126" x2="1025" y2="126" stroke="#25C6DA" stroke-width="1" />
                             <text x="765" y="146" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#831843">Departs: 10:45 AM • Zone 1</text>
                             <text x="1025" y="146" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="bold" fill="#db2777">SkyPriority Lane</text>
                             <text x="895" y="166" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9d174d">Your Assigned Flight Gate • 320m Walk</text>
@@ -927,7 +1020,7 @@
                             <text x="970" y="226" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="bold" fill="#1d4ed8">ON SCHEDULE</text>
 
                             <text x="765" y="254" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="12" fill="#0f172a">Flight DL-108 • Tokyo Haneda (HND)</text>
-                            <text x="765" y="272" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#64748b">Departs: 12:30 PM • International Departure</text>
+                            <text x="765" y="272" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#AAB7C8">Departs: 12:30 PM • International Departure</text>
 
                             <line x1="765" y1="284" x2="1025" y2="284" stroke="#f1f5f9" stroke-width="1" />
                             <text x="765" y="302" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0284c7">Distance: 410 meters (5 mins walk)</text>
@@ -947,7 +1040,7 @@
                             <text x="970" y="371" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="bold" fill="#1d4ed8">GATE OPEN</text>
 
                             <text x="765" y="399" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="12" fill="#0f172a">Flight AA-772 • Frankfurt (FRA)</text>
-                            <text x="765" y="417" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#64748b">Departs: 02:15 PM • Terminal 1 International</text>
+                            <text x="765" y="417" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#AAB7C8">Departs: 02:15 PM • Terminal 1 International</text>
 
                             <line x1="765" y1="429" x2="1025" y2="429" stroke="#f1f5f9" stroke-width="1" />
                             <text x="765" y="447" font-family="'JetBrains Mono', monospace" font-size="9" fill="#0284c7">Distance: 500 meters (6 mins walk)</text>
@@ -961,7 +1054,7 @@
                             style="animation: navDash 1.2s linear infinite;" />
 
                         <!-- Start Beacon at Checkpoint A -->
-                        <circle cx="215" cy="280" r="6" fill="#006194" stroke="#ffffff" stroke-width="2" />
+                        <circle cx="215" cy="280" r="6" fill="#25C6DA" stroke="#ffffff" stroke-width="2" />
 
                         <!-- End Target Beacon on Gate A1 -->
                         <circle id="officer-svg-nav-target-dot" cx="745" cy="115" r="7" fill="#fbcfe8" stroke="#db2777" stroke-width="2.5" />
@@ -1925,7 +2018,7 @@
             });
             const activeBtn = document.getElementById(`officer-nav-pill-${destKey}`);
             if (activeBtn) {
-                activeBtn.className = 'officer-nav-dest-pill px-3.5 py-2 rounded-xl text-xs font-bold font-headline-sm transition-all whitespace-nowrap bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#451a03] dark:to-[#500724] text-[#831843] dark:text-[#fbcfe8] border border-[#f472b6] shadow-xs flex items-center gap-1.5';
+                activeBtn.className = 'officer-nav-dest-pill px-3.5 py-2 rounded-xl text-xs font-bold font-headline-sm transition-all whitespace-nowrap bg-gradient-to-r from-[#fef08a] to-[#fbcfe8] dark:from-[#19251D] dark:to-[#233329] text-[#831843] dark:text-[#F4F7F3] border border-[#f472b6] shadow-xs flex items-center gap-1.5';
             }
 
             showToast(`Concourse Sector Mapped: ${route.name} (${route.distance})`, 'info');
@@ -1935,3 +2028,11 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
